@@ -15,3 +15,11 @@ p,h1 {
   margin: auto;
   font: 36px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
+
+#frame{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 30%;
+  margin: 50px auto;
+}
