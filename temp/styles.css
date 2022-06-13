@@ -21,9 +21,9 @@ body{
 }
 
 ul {
-  display: flexbox;
+  display: inline;
   text-align: center;
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   width: 17%;
@@ -46,5 +46,35 @@ li a.active {
 
 li a:hover:not(.active) {
   background-color: #555;
+  color: white;
+}
+/*Social media icons*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 20px;
+  height: auto;
+  margin:3px;
+  text-align: center;
+  text-decoration: none;
+  border: 0px solid gray;
+  border-radius: 115px
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #0072b1;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
   color: white;
 }
