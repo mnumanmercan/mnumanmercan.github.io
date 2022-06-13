@@ -5,59 +5,28 @@ body{
   margin:0px;
   padding:0px;
   height: 100%;
-  font: 36px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font: 20px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
-
-.container{
-  width: 100%;
-  height: 100%;
-  background-color: rgb(67, 114, 114);
-}
-
-
-
-img{
-  position: relative;
-  display: flex;
-  left: 15%;
-  width: 70%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.img{
-  border: 0px solid black;
-  border-end-end-radius:90%;
-  
-  background-color: rgb(109, 210, 148);
-}
-
 
 /* Vertical Navbar menu kısmı  */
 
-.menu{
-  display: block;
-  text-align: center;
-  color: white;
 
-}
 
-.navbar{
-  position:sticky;
-  float: left;
-  left: 1px;
-  background-color: rgb(133, 149, 149);
+#profile{
+  width:100%;
   height: 100%;
-  width: 280px;
-  
+  border-radius: 50%;
+  margin-bottom: 6rem;
+  margin-top: 1rem;
 }
-
 
 ul {
+  display: flexbox;
+  text-align: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 25%;
+  width: 17%;
   background-color: #f1f1f1;
   position: fixed;
   height: 100%;
