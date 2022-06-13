@@ -11358,13 +11358,13 @@ p.lead {
   }
   #sideNav .navbar-brand {
     display: flex;
-    margin: auto auto 0;
+    margin: 3rem auto 5rem;
     padding: 0.5rem;
   }
   #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-width: 13rem;
+    max-height: 13rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
   }
   #sideNav .navbar-collapse {
     display: flex;
@@ -11432,4 +11432,9 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+}
+
+#profilfoto{
+  position:static;
+  
 }
