@@ -11438,3 +11438,8 @@ section.resume-section .resume-section-content {
   position:static;
   
 }
+
+.projectLinks{
+  color: #2794a9;
+  text-decoration: none;
+}
