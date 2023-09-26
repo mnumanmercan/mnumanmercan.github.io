@@ -232,6 +232,11 @@ sub {
   bottom: -0.25em;
 }
 
+.jf-brand{
+  width: 100px;
+  height: 100%;
+}
+
 sup {
   top: -0.5em;
 }
