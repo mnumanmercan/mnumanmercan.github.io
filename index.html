@@ -33,6 +33,43 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
+    <style>
+      @keyframes partyColors {
+        0% { background-color: rgba(255, 0, 0, 0.3); }
+        20% { background-color: rgba(255, 255, 0, 0.3); }
+        40% { background-color: rgba(0, 255, 0, 0.3); }
+        60% { background-color: rgba(0, 255, 255, 0.3); }
+        80% { background-color: rgba(0, 0, 255, 0.3); }
+        100% { background-color: rgba(255, 0, 255, 0.3); }
+      }
+
+      #gameDev {
+        position: relative;
+        margin-top: 10px;
+        padding-left: 10px;
+        border: 2px solid #007bff;
+        border-radius: 15px;
+      }
+
+      #gameDev::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        animation: partyColors 2s linear infinite;
+        z-index: -1;
+        transition: all 0.3s ease;
+        border: 2px solid #007bff;
+        border-radius: 15px;
+      }
+
+      #gameDev:hover::before {
+        animation-duration: 20s;
+        background-color: rgba(74, 74, 74, 0.1);
+      }
+    </style>
   </head>
 
   <body id="page-top">
@@ -50,7 +87,7 @@
         <span class="d-none d-lg-block"
           ><img
             class="img-fluid img-profile rounded-circle mx-auto mb-2"
-            src="assets/img/profile.jpg"
+            src="assets/img/MNM.jpg"
             alt="..."
         /></span>
       </a>
@@ -131,17 +168,24 @@
             ></a>
             <a
               class="social-icon"
-              id="social1"
+              id="social2"
               href="https://github.com/MNMercan"
               target="_blank"
               ><i class="fab fa-github"></i
             ></a>
             <a
               class="social-icon"
-              id="social1"
+              id="social3"
               href="https://twitter.com/mnumanmercan"
               target="_blank"
               ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="social-icon"
+              id="social4"
+              href="https://flowcv.com/resume/ang9v04qt7"
+              target="_blank"
+              ><i class="fas fa-file"></i
             ></a>
           </div>
         </div>
@@ -155,6 +199,20 @@
             class="d-flex flex-column flex-md-row justify-content-between mb-5"
           >
             <div class="flex-grow-1">
+              <h3 class="mb-0">Career</h3>
+              <hr />
+              <h4>
+                Insider
+              </h4>
+              <ul>
+                <li class="expList">
+                  <div class="subheading mb-3">Web Developer</div>
+                  <p>
+                    I am part of a team that integrated and developed web applications for partners to achieve better marketing success. 
+                    I experiencing agile working and kanban methods. I'm using here CSS, JS and git technologies.
+                  </p>
+                </li>
+              </ul>
               <h3 class="mb-0">Internship</h3>
               <hr />
               <h4>
@@ -171,7 +229,7 @@
                 </li>
               </ul>
 
-              <h3 class="mb-0">Web Development</h3>
+              <h3 class="mb-0">Web Development Projects</h3>
               <hr />
               <h4>Real Projects</h4>
 
@@ -268,8 +326,8 @@
             class="d-flex flex-column flex-md-row justify-content-between mb-5"
           >
             <div class="flex-grow-1">
-              <h3 class="mb-0">Game Development</h3>
-              <ul>
+              <h3 class="mb-0" id="gameDev">Game Development</h3>
+              <ul id="gameDevList">
                 <li class="expList">
                   <a
                     class="projectLinks"
@@ -302,7 +360,10 @@
                   >
                     <div class="subheading mb-3">Race Cars</div>
                   </a>
-                  <p>I made this game with HTML CSS and Javascript</p>
+                  <p>
+                    I made this game with HTML CSS and Javascript.
+                    There are 3 different vehicles, when you press the button, all 3 cars move a random distance forward, and the luckiest one wins the race.
+                  </p>
                 </li>
                 <li class="expList">
                   <a
@@ -312,7 +373,10 @@
                   >
                     <div class="subheading mb-3">Catch Me If You Can</div>
                   </a>
-                  <p></p>
+                  <p>
+                    A circle game that teleports to a random location when you hover the mouse over the screen.
+                    When you catch the circle and click on it, you win the game. If you can catch it :)
+                  </p>
                 </li>
               </ul>
             </div>
@@ -460,10 +524,10 @@
             <li class="list-inline-item">
               <i class="fab fa-bootstrap" style="color: #7852b3"></i>
             </li>
-            <li class="list-inline-item">
+            <li class="list-inline-item ">
               <i class="" style="vertical-align: 0.125em;"><img width="54px" height="100%" src="./assets/img/Tailwind_CSS_Logo.svg" alt=""></i>
             </li>
-            <li class="list-inline-item ">
+            <li class="list-inline-item">
               <i class="fab fa-js-square" style="color: #323330;"></i>
             </li>
             <li class="list-inline-item">
@@ -581,7 +645,7 @@
             </li>
             <li>
               <span class="fa-li"><i class="fas fa-check"></i></span>
-              Olympic Weightlifting & Crossfit
+              Weightlifting & Crossfit
             </li>
             <li>
               <span class="fa-li"><i class="fas fa-check"></i></span>
@@ -589,13 +653,21 @@
             </li>
             <li>
               <span class="fa-li"><i class="fas fa-check"></i></span>
-              Video Games
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
               <a class="projectLinks" href=""
                 >Photography (Landscape & Nature)</a
               >
+            </li>
+            <li>
+              <span class="fa-li"><i class="fas fa-check"></i></span>
+              Video Games
+              <ul style="list-style-type: none; padding-left: 20px; margin-top: 5px; columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+                <li>Call Of Duty</li>
+                <li>CS Go</li>
+                <li>Ori and the Blind Forest & The Will of the Wisps</li>
+                <li>The Last of Us</li>
+                <li>Crysis</li>
+                <li>Battlefield 1</li>
+              </ul>
             </li>
           </ul>
         </div>
