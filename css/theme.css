@@ -148,3 +148,121 @@ button,
 .theme-toggle {
   cursor: pointer !important;
 }
+
+/* ============================================================
+   Timeline — Experience section
+   ============================================================ */
+
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+/* The vertical connecting line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+/* Individual timeline row */
+.timeline-item {
+  position: relative;
+  margin-bottom: 2.8rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Dot / icon on the line */
+.timeline-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  box-shadow: 0 0 0 4px var(--body-bg), 0 0 0 6px var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+}
+
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 4px var(--body-bg), 0 0 0 7px var(--accent);
+}
+
+/* Content card */
+.timeline-content {
+  background-color: var(--body-bg);
+  border: 1px solid var(--hr-color);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin-left: 0.75rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: var(--accent);
+}
+
+.timeline-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--body-color);
+}
+
+.timeline-company {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.timeline-list li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed var(--hr-color);
+}
+
+.timeline-list li:last-child {
+  border-bottom: none;
+}
+
+.timeline-note {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--social-icon-bg);
+  margin-top: 0.1rem;
+}
+
+.timeline-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 1px 7px;
+  vertical-align: middle;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
