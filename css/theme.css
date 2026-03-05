@@ -1,0 +1,150 @@
+/* ============================================================
+   Theme: Light / Dark mode with CSS custom properties
+   ============================================================ */
+
+/* --- Light theme (default) --------------------------------- */
+:root {
+  --body-bg: #f8fafc;
+  --body-color: #334155;
+  --sidenav-bg: #1e293b;
+  --nav-text: #f1f5f9;
+  --nav-link-active: #e07a5a;
+  --accent: #c0623a;
+  --accent-rgb: 192, 98, 58;
+  --social-icon-bg: #64748b;
+  --social-icon-hover: #c0623a;
+  --project-link: #0369a1;
+  --hr-color: #e2e8f0;
+  --subheading-color: #c0623a;
+  --toggle-bg: #1e293b;
+  --toggle-color: #f1f5f9;
+}
+
+/* --- Dark theme -------------------------------------------- */
+[data-theme="dark"] {
+  --body-bg: #0f172a;
+  --body-color: #cbd5e1;
+  --sidenav-bg: #020617;
+  --nav-text: #e2e8f0;
+  --nav-link-active: #e07a5a;
+  --accent: #e07a5a;
+  --accent-rgb: 224, 122, 90;
+  --social-icon-bg: #334155;
+  --social-icon-hover: #e07a5a;
+  --project-link: #38bdf8;
+  --hr-color: #1e293b;
+  --subheading-color: #e07a5a;
+  --toggle-bg: #f1f5f9;
+  --toggle-color: #0f172a;
+}
+
+/* --- Smooth transitions ------------------------------------ */
+body,
+#sideNav,
+.navbar,
+section,
+.resume-section,
+.resume-section-content,
+a,
+.social-icon,
+.subheading,
+hr,
+h1, h2, h3, h4, h5, h6,
+p, li, span, div {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- Bootstrap variable overrides -------------------------- */
+:root,
+[data-theme="dark"] {
+  --bs-primary: var(--accent);
+  --bs-primary-rgb: var(--accent-rgb);
+}
+
+/* --- Body -------------------------------------------------- */
+body {
+  background-color: var(--body-bg) !important;
+  color: var(--body-color) !important;
+}
+
+/* --- Side nav ---------------------------------------------- */
+#sideNav {
+  background-color: var(--sidenav-bg) !important;
+}
+
+#sideNav .navbar-nav .nav-link {
+  color: var(--nav-text) !important;
+}
+
+#sideNav .navbar-nav .nav-link:hover,
+#sideNav .navbar-nav .nav-link.active {
+  color: var(--nav-link-active) !important;
+}
+
+/* --- Text accent / primary --------------------------------- */
+.text-primary {
+  color: var(--accent) !important;
+}
+
+/* --- Subheadings ------------------------------------------- */
+.subheading {
+  color: var(--subheading-color) !important;
+}
+
+/* --- HR dividers ------------------------------------------- */
+hr {
+  border-color: var(--hr-color) !important;
+  opacity: 1;
+}
+
+/* --- Social icons ------------------------------------------ */
+.social-icons .social-icon {
+  background-color: var(--social-icon-bg) !important;
+}
+
+.social-icons .social-icon:hover {
+  background-color: var(--social-icon-hover) !important;
+}
+
+/* --- Project / external links ------------------------------ */
+.projectLinks {
+  color: var(--project-link) !important;
+  text-decoration: none;
+}
+
+.projectLinks:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* --- Theme toggle button ----------------------------------- */
+.theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--toggle-bg);
+  color: var(--toggle-color);
+  font-size: 1.2rem;
+  cursor: pointer !important;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* --- Cursor pointer on interactive elements ---------------- */
+a,
+button,
+.theme-toggle {
+  cursor: pointer !important;
+}
