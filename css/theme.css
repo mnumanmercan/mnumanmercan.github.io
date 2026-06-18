@@ -266,3 +266,82 @@ button,
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
+
+/* Project entry: title + description + action tags */
+.proj-title {
+  display: block;
+  font-weight: 600;
+  color: var(--body-color);
+}
+
+/* Group a category's sub-heading with a small count/label */
+.timeline-subhead {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--social-icon-bg);
+  margin: 0.9rem 0 0.3rem;
+}
+
+.timeline-list + .timeline-subhead {
+  margin-top: 1.1rem;
+}
+
+/* Live / Code action tags */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.proj-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 4px 9px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid var(--hr-color);
+  transition: transform 0.15s ease, border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.proj-tag i {
+  font-size: 0.78rem;
+}
+
+.proj-tag:hover {
+  transform: translateY(-1px);
+}
+
+.proj-tag.proj-live {
+  color: #fff;
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.proj-tag.proj-live:hover {
+  filter: brightness(1.08);
+}
+
+.proj-tag.proj-code {
+  color: var(--body-color);
+  background-color: transparent;
+}
+
+.proj-tag.proj-code:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Small tech-stack hint under a project */
+.proj-stack {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: var(--social-icon-bg);
+  margin-top: 0.3rem;
+}
