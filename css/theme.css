@@ -345,3 +345,69 @@ button,
   color: var(--social-icon-bg);
   margin-top: 0.3rem;
 }
+
+/* Hover preview popup (e.g. project GIF) */
+.has-preview {
+  position: relative;
+}
+
+.proj-preview {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 18px);
+  width: 280px;
+  max-width: 38vw;
+  border-radius: 10px;
+  border: 1px solid var(--hr-color);
+  background-color: var(--body-bg);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50%) translateX(-10px) scale(0.96);
+  transform-origin: left center;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.3s;
+  z-index: 30;
+}
+
+/* Arrow marker pointing from the popup back to the list item */
+.proj-preview::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 10px 9px 0;
+  border-color: transparent var(--hr-color) transparent transparent;
+  transform: translateY(-50%);
+}
+
+/* Inner triangle to match the popup background (1px inset for the border) */
+.proj-preview::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 1px);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 9px 8px 0;
+  border-color: transparent var(--body-bg) transparent transparent;
+  transform: translateY(-50%);
+}
+
+.has-preview:hover .proj-preview,
+.has-preview:focus-within .proj-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+/* No room for a side popup on narrow screens */
+@media (max-width: 991.98px) {
+  .proj-preview {
+    display: none;
+  }
+}
