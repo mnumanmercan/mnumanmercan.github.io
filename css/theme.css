@@ -353,9 +353,9 @@ button,
 
 .proj-preview {
   position: absolute;
-  top: 50%;
-  left: calc(100% + 18px);
-  width: 280px;
+  top: 0%;
+  left: calc(50% + 18px);
+  width: 200px;
   max-width: 38vw;
   border-radius: 10px;
   border: 1px solid var(--hr-color);
