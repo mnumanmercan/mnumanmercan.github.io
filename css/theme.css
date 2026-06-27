@@ -225,11 +225,32 @@ button,
   color: var(--body-color);
 }
 
+.timeline-company-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
 .timeline-company {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--social-icon-bg);
+  white-space: nowrap;
+}
+
+.timeline-duration {
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 0.5rem;
 }
 
 .timeline-list {
