@@ -36,65 +36,13 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Light/Dark theme overrides -->
     <link href="css/theme.css" rel="stylesheet" />
+    <!-- Projects grid -->
+    <link href="css/projects.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
-    <style>
-      @keyframes partyColors {
-        0% {
-          background-color: rgba(255, 0, 0, 0.3);
-        }
-
-        20% {
-          background-color: rgba(255, 255, 0, 0.3);
-        }
-
-        40% {
-          background-color: rgba(0, 255, 0, 0.3);
-        }
-
-        60% {
-          background-color: rgba(0, 255, 255, 0.3);
-        }
-
-        80% {
-          background-color: rgba(0, 0, 255, 0.3);
-        }
-
-        100% {
-          background-color: rgba(255, 0, 255, 0.3);
-        }
-      }
-
-      #gameDev {
-        position: relative;
-        margin-top: 10px;
-        padding-left: 10px;
-        border: 2px solid #007bff;
-        border-radius: 15px;
-      }
-
-      #gameDev::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        animation: partyColors 2s linear infinite;
-        z-index: -1;
-        transition: all 0.3s ease;
-        border: 2px solid #007bff;
-        border-radius: 15px;
-      }
-
-      #gameDev:hover::before {
-        animation-duration: 20s;
-        background-color: rgba(74, 74, 74, 0.1);
-      }
-    </style>
   </head>
 
   <body id="page-top">
@@ -236,7 +184,8 @@
                 <div class="timeline-company-row">
                   <h4 class="timeline-company">Insider</h4>
                   <span class="timeline-date"
-                    >04/2024 – 08/2025
+                    >04/2024 – 08/2025</span
+                  >
                 </div>
                 <div class="subheading mb-2">Web Developer</div>
                 <p>
@@ -263,7 +212,8 @@
                 <div class="timeline-company-row">
                   <h4 class="timeline-company">JOTFORM</h4>
                   <span class="timeline-date"
-                    >08/2023 – 09/2023
+                    >08/2023 – 09/2023</span
+                  >
                 </div>
                 <div class="subheading mb-2">Learning Management System</div>
                 <p>
@@ -286,28 +236,96 @@
       <!-- Projects-->
       <section class="resume-section" id="projects">
         <div class="resume-section-content">
-          <h2 class="mb-5">Projects</h2>
+          <h2 class="mb-2">Projects</h2>
+          <p class="projects-intro">
+            Everything I've shipped — products, AI experiments, client work,
+            games and research — grouped by category.
+          </p>
 
-          <div class="timeline">
-            <!-- Live Products -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-box-open"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">My Products</h3>
-                <p class="timeline-subhead">Products I Built &amp; Ship</p>
+          <nav class="proj-nav" aria-label="Project categories">
+            <a class="proj-nav-link" href="#proj-products"
+              >Products <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-ai"
+              >AI Engineering <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-apps"
+              >Apps <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-web"
+              >Client Sites <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-games"
+              >Games <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-mobile"
+              >Mobile <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-research"
+              >Research <span class="proj-count"></span
+            ></a>
+            <a class="proj-nav-link" href="#proj-academic"
+              >Academic <span class="proj-count"></span
+            ></a>
+          </nav>
 
-                <ul class="timeline-list">
-                  <li class="has-preview">
-                    <span class="proj-title">Resumark - CV generator app</span>
-                    <span class="timeline-note"
-                      >Full-stack Vue app with Node.js backend. AI supported
-                      resume generation.</span
+          <!-- ADD A NEW PROJECT — copy this card into the grid of the right
+               category group below. Badge data-cat values:
+               product ai app web game mobile research academic.
+               Keep the Live tag only if the project is deployed.
+          <article class="proj-card">
+            <div class="proj-card-head">
+              <span class="proj-cat-badge" data-cat="app"><i class="fas fa-rocket"></i> App</span>
+            </div>
+            <h3 class="proj-card-title">Project Name</h3>
+            <p class="proj-card-desc">One or two lines on what it does and why it matters.</p>
+            <div class="proj-card-foot">
+              <div class="proj-card-stack"><span>React</span><span>Node</span></div>
+              <div class="proj-tags">
+                <a class="proj-tag proj-live" href="LIVE_URL" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                <a class="proj-tag proj-code" href="GITHUB_URL" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
+              </div>
+            </div>
+          </article>
+          -->
+
+          <!-- Products -->
+          <div class="proj-group" id="proj-products">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="product"
+                ><i class="fas fa-box-open"></i
+              ></span>
+              <h3 class="proj-group-title">Products</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">Built &amp; shipped</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card proj-card--featured">
+                <div class="proj-card-body">
+                  <div class="proj-card-head">
+                    <span class="proj-cat-badge" data-cat="product"
+                      ><i class="fas fa-box-open"></i> Product</span
                     >
-                    <span class="timeline-note">An ATS-compatible resume creation platform. Users can select templates, edit their CVs with live preview, and export them as PDFs.</span>
-                    <span class="proj-stack"
-                      >Typescript · Vue · Node · PostgreSQL</span
+                    <span class="proj-cat-badge" data-cat="ai"
+                      ><i class="fas fa-brain"></i> AI</span
                     >
-                    <span class="proj-tags">
+                    <span class="proj-featured-flag"
+                      ><i class="fas fa-star"></i> Featured</span
+                    >
+                  </div>
+                  <h3 class="proj-card-title">Resumark — CV Generator</h3>
+                  <p class="proj-card-desc">
+                    ATS-friendly resume builder with a template gallery,
+                    live-preview editing and one-click PDF export — plus
+                    AI-assisted summary analysis powered by the Claude API.
+                  </p>
+                  <div class="proj-card-foot">
+                    <div class="proj-card-stack">
+                      <span>TypeScript</span><span>Vue</span><span>Node</span
+                      ><span>PostgreSQL</span><span>Claude API</span>
+                    </div>
+                    <div class="proj-tags">
                       <a
                         class="proj-tag proj-code"
                         href="https://github.com/mnumanmercan/CV-generate"
@@ -315,438 +333,618 @@
                         rel="noopener noreferrer"
                         ><i class="fab fa-github"></i> Code</a
                       >
-                    </span>
-                    <img
-                      class="proj-preview"
-                      src="assets/img/cv-gif.webp"
-                      alt="Resumark CV generator preview"
-                      loading="lazy"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-brain"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">AI Engineering Projects</h3>
-                <p class="timeline-subhead">Projects with AI integration</p>
-
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title">AI API practice</span>
-                    <span class="timeline-note"
-                      >AI API practice on Jupyter Notebook with Python and Claude API</span
-                    >
-                    <span class="timeline-note"></span>
-                    <span class="proj-stack"
-                      >Python · Jupyter · Claude API</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/mnumanmercan/AI-API-Practice"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Codes</a
-                      >
-                    </span>
-                  </li>
-                  <li class="has-preview">
-                    <span class="proj-title">Resumark - CV generator app</span>
-                    <span class="timeline-note"
-                      >App with AI assisted resume summary analysis.</span
-                    >
-                    <span class="timeline-note">An ATS-compatible resume creation platform. Users can request AI assisted resume summary analysis and edit their CVs with live preview, and export them as PDFs.</span>
-                    <span class="proj-stack"
-                      >Typescript · Vue · Node · PostgreSQL · Claude API</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/mnumanmercan/CV-generate"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                    <img
-                      class="proj-preview"
-                      src="assets/img/cv-gif.webp"
-                      alt="Resumark CV generator preview"
-                      loading="lazy"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Applications -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-rocket"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Applications</h3>
-                <p class="timeline-subhead">Apps &amp; Tools I Built</p>
-
-                <!-- ADD NEW APPS HERE — copy this <li> and fill in the blanks.
-                   Keep the "Live" tag only if the app is deployed; otherwise remove it.
-              <li>
-                <span class="proj-title">App Name</span>
-                <span class="timeline-note">One line on what it does.</span>
-                <span class="proj-stack">React · Node · PostgreSQL</span>
-                <span class="proj-tags">
-                  <a class="proj-tag proj-live" href="LIVE_URL" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
-                  <a class="proj-tag proj-code" href="GITHUB_URL" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-                </span>
-              </li>
-              -->
-
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title"
-                      >Academic Article Search Engine</span
-                    >
-                    <span class="timeline-note"
-                      >Graph-based search over academic papers with Neo4J and
-                      Neovis.js visualization.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/Neo4J"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Current Weather Application</span>
-                    <span class="timeline-note"
-                      >Real-time weather lookup powered by the OpenWeather
-                      API.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/CurrentWeatherApp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">GPS Car Tracking System</span>
-                    <span class="timeline-note"
-                      >Tracks vehicles in real time from GPS location
-                      data.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/GPSCarTracking"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Random Quotes Generator</span>
-                    <span class="timeline-note"
-                      >Lightweight quote generator built during internship
-                      studies.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/StajCalismalarim/tree/master/Random-Quotes"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Client Websites -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-globe"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Client Websites</h3>
-                <p class="timeline-subhead">Delivered &amp; Live</p>
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title">Navatek İnşaat</span>
-                    <span class="timeline-note"></span>
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-live"
-                        href="https://navatekinsaat.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-arrow-up-right-from-square"></i>
-                        Live</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Klusbedrijf Onmaz</span>
-                    <span class="timeline-note"
-                      >Full-stack renovation &amp; maintenance website built for
-                      a client.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-live"
-                        href="https://www.klusbedrijfonmaz.nl/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-arrow-up-right-from-square"></i>
-                        Live</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Berrak Kindergarten</span>
-                    <span class="timeline-note"
-                      >Promotional site developed and transferred independently
-                      as a live project.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-live"
-                        href="http://özelberrakanaokulu.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-arrow-up-right-from-square"></i>
-                        Live</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Bahmer Car Service</span>
-                    <span class="timeline-note"
-                      >Promotional website for a vehicle repair business —
-                      delivered as a live project.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-live"
-                        href="https://bahmercarservice.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-arrow-up-right-from-square"></i>
-                        Live</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Game Development -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-gamepad"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title" id="gameDev">Game Development</h3>
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title">Maze Game</span>
-                    <span class="timeline-note"
-                      >Smurfs running from Gargamel — a classic maze
-                      chase.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/2020-21-Kou-ProLab-2.-D-nem-"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title"
-                      >Sudoku Solver with Java Threads</span
-                    >
-                    <span class="timeline-note"
-                      >Built to explore multithreading concepts.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/2021-22-Kou-YazLab-1-2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Race Cars</span>
-                    <span class="timeline-note"
-                      >HTML/CSS/JS — three vehicles race by random
-                      distance.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/HelloWorld"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Catch Me If You Can</span>
-                    <span class="timeline-note"
-                      >A circle that teleports on hover — click it to win.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/HelloWorld"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Mobile -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-mobile-alt"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">
-                  Mobile <span class="timeline-badge">Beginner</span>
-                </h3>
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title"
-                      >User Authentication (React Native)</span
-                    >
-                    <span class="timeline-note"
-                      >Firebase authentication flow built in React Native.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/UserAuth-React-Native"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Blockchain & Research -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-link"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Blockchain &amp; Research</h3>
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title"
-                      >Hyperledger Supply Chain with IoT</span
-                    >
-                    <span class="timeline-note"
-                      >Applying Hyperledger blockchain to a logistics supply
-                      chain with IoT.</span
-                    >
-                  </li>
-                  <li>
-                    <span class="proj-title"
-                      >Archive System with Blockchain</span
-                    >
-                    <span class="timeline-note"
-                      >Graduation research project.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://drive.google.com/file/d/1ySFYwIdkOsarwWgIW1GIYYZiyvZXIVRv/view"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-file-pdf"></i> Thesis</a
-                      >
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://www.overleaf.com/read/xbrsxfxdprrf#2a75a8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fas fa-file-lines"></i> Research Paper</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Academic & Team Projects -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-users"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Academic &amp; Team Projects</h3>
-                <ul class="timeline-list">
-                  <li>
-                    <span class="proj-title">Student Information System</span>
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/ProLab1-1-"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Suffix Tree Algorithm</span>
-                    <span class="timeline-note"
-                      >Implemented in C using the graphics.h library.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/Prolab-1-2"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                  <li>
-                    <span class="proj-title">Air Traffic Control</span>
-                    <span class="timeline-note"
-                      >Priority-queue based scheduling simulation.</span
-                    >
-                    <span class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/MNMercan/Prolab1-3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </span>
-                  </li>
-                </ul>
-              </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="proj-card-media">
+                  <img
+                    src="assets/img/cv-gif.webp"
+                    alt="Resumark CV generator preview"
+                    loading="lazy"
+                  />
+                </div>
+              </article>
             </div>
           </div>
-          <!-- /.timeline -->
+
+          <!-- AI Engineering -->
+          <div class="proj-group" id="proj-ai">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="ai"
+                ><i class="fas fa-brain"></i
+              ></span>
+              <h3 class="proj-group-title">AI Engineering</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">AI-integrated builds</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="ai"
+                    ><i class="fas fa-brain"></i> AI</span
+                  >
+                </div>
+                <h3 class="proj-card-title">AI API Practice</h3>
+                <p class="proj-card-desc">
+                  Hands-on Jupyter notebooks exploring the Claude API with
+                  Python — prompting patterns, structured outputs and
+                  integration recipes.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>Python</span><span>Jupyter</span
+                    ><span>Claude API</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/mnumanmercan/AI-API-Practice"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="ai"
+                    ><i class="fas fa-brain"></i> AI</span
+                  >
+                  <span class="proj-cat-badge" data-cat="product"
+                    ><i class="fas fa-box-open"></i> Product</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Resumark — AI Resume Analysis</h3>
+                <p class="proj-card-desc">
+                  The AI side of Resumark: Claude-powered resume summary
+                  analysis with instant feedback in the live editor.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>Claude API</span><span>Node</span><span>Vue</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/mnumanmercan/CV-generate"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Apps -->
+          <div class="proj-group" id="proj-apps">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="app"
+                ><i class="fas fa-rocket"></i
+              ></span>
+              <h3 class="proj-group-title">Apps</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">Tools &amp; utilities</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="app"
+                    ><i class="fas fa-rocket"></i> App</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Academic Article Search Engine</h3>
+                <p class="proj-card-desc">
+                  Graph-powered search over academic papers — relationships
+                  modeled in Neo4j and explored as an interactive network with
+                  Neovis.js.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>Neo4j</span><span>Neovis.js</span
+                    ><span>JavaScript</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/Neo4J"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="app"
+                    ><i class="fas fa-rocket"></i> App</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Current Weather App</h3>
+                <p class="proj-card-desc">
+                  Instant weather lookup for any city, fetching live conditions
+                  from the OpenWeather API.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>JavaScript</span><span>OpenWeather API</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/CurrentWeatherApp"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="app"
+                    ><i class="fas fa-rocket"></i> App</span
+                  >
+                </div>
+                <h3 class="proj-card-title">GPS Car Tracking System</h3>
+                <p class="proj-card-desc">
+                  Follows vehicles in real time by streaming and mapping live
+                  GPS location data.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/GPSCarTracking"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="app"
+                    ><i class="fas fa-rocket"></i> App</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Random Quotes Generator</h3>
+                <p class="proj-card-desc">
+                  A tiny quote machine — one click, one fresh quote. Built
+                  during internship practice.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/StajCalismalarim/tree/master/Random-Quotes"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Client Websites -->
+          <div class="proj-group" id="proj-web">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="web"
+                ><i class="fas fa-globe"></i
+              ></span>
+              <h3 class="proj-group-title">Client Websites</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">Delivered &amp; live</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="web"
+                    ><i class="fas fa-globe"></i> Client</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Navatek İnşaat</h3>
+                <p class="proj-card-desc">
+                  Corporate website for a construction company — designed,
+                  built and delivered live.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-live"
+                      href="https://navatekinsaat.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="web"
+                    ><i class="fas fa-globe"></i> Client</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Klusbedrijf Onmaz</h3>
+                <p class="proj-card-desc">
+                  Full-stack website for a Dutch renovation &amp; maintenance
+                  business, built end-to-end for the client.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-live"
+                      href="https://www.klusbedrijfonmaz.nl/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="web"
+                    ><i class="fas fa-globe"></i> Client</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Berrak Kindergarten</h3>
+                <p class="proj-card-desc">
+                  Promotional website developed independently and handed over
+                  to the client as a live project.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-live"
+                      href="http://özelberrakanaokulu.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="web"
+                    ><i class="fas fa-globe"></i> Client</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Bahmer Car Service</h3>
+                <p class="proj-card-desc">
+                  Promotional website for a vehicle repair business — delivered
+                  and running live.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-live"
+                      href="https://bahmercarservice.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Games -->
+          <div class="proj-group" id="proj-games">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="game"
+                ><i class="fas fa-gamepad"></i
+              ></span>
+              <h3 class="proj-group-title">Games</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">Playful side quests</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="game"
+                    ><i class="fas fa-gamepad"></i> Game</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Maze Game</h3>
+                <p class="proj-card-desc">
+                  A classic maze chase: help the Smurfs outrun Gargamel to the
+                  exit.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/2020-21-Kou-ProLab-2.-D-nem-"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="game"
+                    ><i class="fas fa-gamepad"></i> Game</span
+                  >
+                  <span class="proj-cat-badge" data-cat="academic"
+                    ><i class="fas fa-graduation-cap"></i> Academic</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Sudoku Solver</h3>
+                <p class="proj-card-desc">
+                  Multithreaded Sudoku solver — an exercise in Java
+                  concurrency.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>Java</span><span>Threads</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/2021-22-Kou-YazLab-1-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="game"
+                    ><i class="fas fa-gamepad"></i> Game</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Race Cars</h3>
+                <p class="proj-card-desc">
+                  Three cars, random distances, one winner — built with pure
+                  HTML, CSS and JavaScript.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/HelloWorld"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="game"
+                    ><i class="fas fa-gamepad"></i> Game</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Catch Me If You Can</h3>
+                <p class="proj-card-desc">
+                  A mischievous circle that teleports away on hover — click it
+                  to win.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/HelloWorld"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="proj-group" id="proj-mobile">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="mobile"
+                ><i class="fas fa-mobile-alt"></i
+              ></span>
+              <h3 class="proj-group-title">Mobile</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">First steps in native</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="mobile"
+                    ><i class="fas fa-mobile-alt"></i> Mobile</span
+                  >
+                </div>
+                <h3 class="proj-card-title">User Authentication</h3>
+                <p class="proj-card-desc">
+                  Complete Firebase sign-up and sign-in flow built with React
+                  Native.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>React Native</span><span>Firebase</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/UserAuth-React-Native"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Blockchain & Research -->
+          <div class="proj-group" id="proj-research">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="research"
+                ><i class="fas fa-flask"></i
+              ></span>
+              <h3 class="proj-group-title">Blockchain &amp; Research</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">Thesis &amp; exploration</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="research"
+                    ><i class="fas fa-flask"></i> Research</span
+                  >
+                </div>
+                <h3 class="proj-card-title">
+                  Hyperledger Supply Chain with IoT
+                </h3>
+                <p class="proj-card-desc">
+                  Exploring Hyperledger blockchain for a logistics supply chain
+                  fed by IoT sensor data.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>Hyperledger</span><span>IoT</span>
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="research"
+                    ><i class="fas fa-flask"></i> Research</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Archive System with Blockchain</h3>
+                <p class="proj-card-desc">
+                  Graduation thesis: a tamper-proof document archive system
+                  built on blockchain.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://drive.google.com/file/d/1ySFYwIdkOsarwWgIW1GIYYZiyvZXIVRv/view"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-file-pdf"></i> Thesis</a
+                    >
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://www.overleaf.com/read/xbrsxfxdprrf#2a75a8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fas fa-file-lines"></i> Research Paper</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Academic & Team Projects -->
+          <div class="proj-group" id="proj-academic">
+            <div class="proj-group-head">
+              <span class="proj-group-icon" data-cat="academic"
+                ><i class="fas fa-graduation-cap"></i
+              ></span>
+              <h3 class="proj-group-title">Academic &amp; Team Projects</h3>
+              <span class="proj-group-count"></span>
+              <span class="proj-group-line"></span>
+              <span class="proj-group-sub">University labs</span>
+            </div>
+            <div class="projects-grid">
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="academic"
+                    ><i class="fas fa-graduation-cap"></i> Academic</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Student Information System</h3>
+                <p class="proj-card-desc">
+                  Student records management system — my first team project at
+                  university.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/ProLab1-1-"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="academic"
+                    ><i class="fas fa-graduation-cap"></i> Academic</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Suffix Tree Algorithm</h3>
+                <p class="proj-card-desc">
+                  Suffix tree construction implemented in C and visualized with
+                  the graphics.h library.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-card-stack">
+                    <span>C</span><span>graphics.h</span>
+                  </div>
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/Prolab-1-2"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+              <article class="proj-card">
+                <div class="proj-card-head">
+                  <span class="proj-cat-badge" data-cat="academic"
+                    ><i class="fas fa-graduation-cap"></i> Academic</span
+                  >
+                </div>
+                <h3 class="proj-card-title">Air Traffic Control</h3>
+                <p class="proj-card-desc">
+                  Runway scheduling simulation driven by priority queues.
+                </p>
+                <div class="proj-card-foot">
+                  <div class="proj-tags">
+                    <a
+                      class="proj-tag proj-code"
+                      href="https://github.com/MNMercan/Prolab1-3"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-github"></i> Code</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <!-- /.proj-groups -->
         </div>
       </section>
       <hr class="m-0" />

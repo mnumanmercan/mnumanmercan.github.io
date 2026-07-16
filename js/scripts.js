@@ -51,4 +51,71 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Projects: category groups — counts, quick-nav, scroll reveal, spotlight
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection && projectsSection.querySelector('.proj-group')) {
+        const groups = Array.from(projectsSection.querySelectorAll('.proj-group'));
+        const navLinks = Array.from(projectsSection.querySelectorAll('.proj-nav-link'));
+        const cards = Array.from(projectsSection.querySelectorAll('.proj-card'));
+
+        // Scroll reveal — the js-anim class is added here so cards stay
+        // visible when JS is unavailable
+        projectsSection.querySelectorAll('.projects-grid')
+            .forEach(grid => grid.classList.add('js-anim'));
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach((entry, i) => {
+                if (!entry.isIntersecting) return;
+                entry.target.style.setProperty('--d', `${i * 60}ms`);
+                entry.target.classList.add('in-view');
+                revealObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        cards.forEach(card => revealObserver.observe(card));
+
+        // Per-group project counts (group header + quick-nav chip)
+        groups.forEach(group => {
+            const count = group.querySelectorAll('.proj-card').length;
+            const headCount = group.querySelector('.proj-group-count');
+            if (headCount) headCount.textContent = count;
+            const navCount = projectsSection.querySelector(
+                `.proj-nav-link[href="#${group.id}"] .proj-count`
+            );
+            if (navCount) navCount.textContent = count;
+        });
+
+        // Quick-nav: smooth scroll to the category group
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        navLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                const target = document.querySelector(link.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
+            });
+        });
+
+        // Highlight the chip of the group currently in view
+        const spyObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(link => link.classList.toggle(
+                    'is-active',
+                    link.getAttribute('href') === `#${entry.target.id}`
+                ));
+            });
+        }, { rootMargin: '-25% 0px -65% 0px' });
+        groups.forEach(group => spyObserver.observe(group));
+
+        // Spotlight follows the cursor inside each card (pointer devices only)
+        if (window.matchMedia('(hover: hover)').matches) {
+            projectsSection.addEventListener('mousemove', e => {
+                const card = e.target.closest('.proj-card');
+                if (!card) return;
+                const rect = card.getBoundingClientRect();
+                card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+                card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+            });
+        }
+    }
+
 });
