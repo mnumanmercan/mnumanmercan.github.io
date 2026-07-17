@@ -118,4 +118,20 @@ window.addEventListener('DOMContentLoaded', event => {
         }
     }
 
+    // Experience: subtle scroll reveal for timeline entries
+    const experienceTimeline = document.querySelector('#experience .timeline');
+    if (experienceTimeline) {
+        experienceTimeline.classList.add('js-anim');
+        const timelineObserver = new IntersectionObserver(entries => {
+            entries.forEach((entry, i) => {
+                if (!entry.isIntersecting) return;
+                entry.target.style.setProperty('--d', `${i * 90}ms`);
+                entry.target.classList.add('in-view');
+                timelineObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.2, rootMargin: '0px 0px -40px 0px' });
+        experienceTimeline.querySelectorAll('.timeline-item')
+            .forEach(item => timelineObserver.observe(item));
+    }
+
 });
