@@ -1,1254 +1,1354 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>M. Numan Mercan — Full-Stack Developer</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+      name="description"
+      content="Full-stack developer building clean, type-safe and scalable web apps with TypeScript, React, Vue, Node.js and Go — with a growing focus on AI engineering."
     />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>My Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script
-      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/@coreui/coreui@5.3.1/dist/css/coreui.min.css"
-      rel="stylesheet"
-      integrity="sha384-PDUiPu3vDllMfrUHnurV430Qg8chPZTNhY8RUpq89lq22R3PzypXQifBpcpE1eoB"
-      crossorigin="anonymous"
-    />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
-    <!-- Light/Dark theme overrides -->
-    <link href="css/theme.css" rel="stylesheet" />
-    <!-- Projects grid -->
-    <link href="css/projects.css" rel="stylesheet" />
+    <meta name="author" content="M. Numan Mercan" />
+    <link rel="canonical" href="https://mnumanmercan.github.io/" />
+    <meta name="theme-color" content="#09090c" />
+    <meta name="color-scheme" content="dark light" />
 
+    <!-- Social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mnumanmercan.github.io/" />
+    <meta property="og:title" content="M. Numan Mercan — Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Clean, type-safe and scalable web apps — React & Vue, Node.js & Go, and AI-powered products."
+    />
+    <meta property="og:image" content="https://mnumanmercan.github.io/assets/img/MNM.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@mnumanmercan" />
+
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+    <!-- Apply the saved (or system) theme before first paint — no flash -->
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add("js");
+        try {
+          var theme = localStorage.getItem("theme");
+          if (theme !== "light" && theme !== "dark") {
+            theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          }
+          root.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
     />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+
+    <script src="js/main.js" defer></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "M. Numan Mercan",
+        "jobTitle": "Full-Stack Developer",
+        "url": "https://mnumanmercan.github.io/",
+        "email": "mailto:numan.mercan24@gmail.com",
+        "image": "https://mnumanmercan.github.io/assets/img/MNM.jpg",
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "Kocaeli University" },
+          { "@type": "CollegeOrUniversity", "name": "Konya Technical University" }
+        ],
+        "knowsAbout": ["TypeScript", "React", "Vue", "Node.js", "Go", "AI engineering"],
+        "sameAs": [
+          "https://www.linkedin.com/in/mnmercan/",
+          "https://github.com/mnumanmercan",
+          "https://leetcode.com/u/MNMercan/",
+          "https://x.com/mnumanmercan"
+        ]
+      }
+    </script>
   </head>
 
-  <body id="page-top">
-    <!-- Navigation-->
-    <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
-      id="sideNav"
-    >
-      <a
-        class="navbar-brand js-scroll-trigger"
-        id="profilfoto"
-        href="#page-top"
-      >
-        <span class="d-block d-lg-none">Numan Mercan</span>
-        <span class="d-none d-lg-block"
-          ><img
-            class="img-fluid img-profile rounded-circle mx-auto mb-2"
-            src="assets/img/MNM.jpg"
-            alt="..."
-        /></span>
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarResponsive"
-        aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience"
-              >Experience</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education"
-              >Education</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests"
-              >Interests</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Page Content-->
-    <div class="container-fluid p-0">
-      <!-- About-->
-      <section class="resume-section" id="about">
-        <div class="resume-section-content">
-          <h1 class="mb-0">
-            M. Numan
-            <span class="text-primary">MERCAN</span>
-          </h1>
-          <div class="subheading mb-5">
-            <a
-              href="mailto:name@email.com"
-              style="text-decoration: none; text-transform: lowercase"
-              >numan.mercan24@gmail.com</a
-            >
-          </div>
-          <p class="lead mb-3">
-            Graduated of Computer Engineering at Kocaeli University. I completed
-            the first year of my education at Konya Technical University and 3
-            years at Kocaeli University. I am interested in web, artificial intelligence, game
-            development and researching about blockchain technologies.
-          </p>
-          <p class="lead mb-5">
-            Fullstack Developer with strong proficiency in JavaScript and TypeScript, focused on building clean, type-safe, and scalable web applications. Comfortable working with React and Vue on the frontend and Node.js and Go on the backend. Bring 1.5 years of professional experience, primarily in frontend development with some backend contributions in Go. Increasingly focused on AI engineering, having built AI-powered products and applied AI integration concepts in real-world projects.
-          </p>
-          <div class="social-icons">
-            <a
-              class="social-icon"
-              id="social1"
-              href="https://www.linkedin.com/in/mnmercan/"
-              target="_blank"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a
-              class="social-icon"
-              id="social2"
-              href="https://github.com/mnumanmercan"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="social-icon"
-              id="social5"
-              href="https://leetcode.com/u/MNMercan/"
-              target="_blank"
-            >
-              <img src="assets/img/icons8-leetcode-24.png" />
-            </a>
-            <a
-              class="social-icon"
-              id="social3"
-              href="https://twitter.com/mnumanmercan"
-              target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              class="social-icon"
-              id="social4"
-              href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing"
-              target="_blank"
-              ><i class="fas fa-file"></i
-            ></a>
-          </div>
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Experience-->
-      <section class="resume-section" id="experience">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Experience</h2>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"><span class="progress-bar"></span></div>
+    <div class="backdrop" aria-hidden="true"></div>
 
-          <div class="timeline">
-            <!-- Career -->
-            <div class="timeline-item">
-              <div class="timeline-dot"><i class="fas fa-briefcase"></i></div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Career</h3>
-                <div class="timeline-company-row">
-                  <h4 class="timeline-company">
-                    <a
-                      class="timeline-company-link"
-                      href="https://www.linkedin.com/company/insiderone/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Insider</a>
-                  </h4>
-                  <span class="timeline-date"
-                    >04/2024 – 08/2025 ·
-                    <span class="timeline-duration">1 yr 5 mos</span></span
-                  >
-                </div>
-                <div class="subheading mb-2">Web Developer</div>
-                <p>
-                  I am part of a team that integrated and developed web
-                  applications for partners to achieve better marketing success.
-                  Experienced agile working and kanban methods using CSS, JS
-                  (jQuery included) and Git.
-                </p>
-                <p>
-                  Developed full stack projects with React and Go for internal
-                  side projects. Practiced writing scalable services using
-                  Redis, Docker, and MySQL.
-                </p>
-                <div class="xp-tags">
-                  <span class="xp-tag"
-                    ><i class="fab fa-css3-alt" style="color: #2965f1"></i>
-                    CSS</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-js" style="color: #f0db4f"></i>
-                    JavaScript</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="devicon-jquery-plain" style="color: #0769ad"></i>
-                    jQuery</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-git-alt" style="color: #f05032"></i>
-                    Git</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-react" style="color: #61dafb"></i>
-                    React</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-golang" style="color: #00add8"></i>
-                    Go</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="devicon-redis-plain" style="color: #dc382d"></i>
-                    Redis</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-docker" style="color: #2496ed"></i>
-                    Docker</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="devicon-mysql-plain" style="color: #4479a1"></i>
-                    MySQL</span
-                  >
-                </div>
-              </div>
-            </div>
+    <!-- ============================================================
+         Header
+         ============================================================ -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="M. Numan Mercan — back to top">
+          <span class="brand-mark" aria-hidden="true">nm</span>
+          <span class="brand-name" aria-hidden="true">numan<span class="brand-dot">.</span>mercan</span>
+        </a>
 
-            <!-- Internship -->
-            <div class="timeline-item">
-              <div class="timeline-dot">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-title">Internship</h3>
-                <div class="timeline-company-row">
-                  <h4 class="timeline-company">
-                    <a
-                      class="timeline-company-link"
-                      href="https://www.linkedin.com/company/jotform/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >JOTFORM</a>
-                  </h4>
-                  <span class="timeline-date"
-                    >08/2023 – 09/2023 ·
-                    <span class="timeline-duration">2 mos</span></span
-                  >
-                </div>
-                <div class="subheading mb-2">Learning Management System</div>
-                <p>
-                  With a team of 4 people, we created a full stack Learning
-                  Management System. I took part as a frontend developer.
-                  <a
-                    style="text-decoration: underline"
-                    href="https://www.youtube.com/watch?v=4mUhRrMaXIA&ab_channel=Numan"
-                    target="_blank"
-                    >This project won the "Best Growth Project Award"</a
-                  >.
-                </p>
-                <div class="xp-tags">
-                  <span class="xp-tag"
-                    ><i class="fab fa-react" style="color: #61dafb"></i>
-                    React</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-js" style="color: #f0db4f"></i>
-                    JavaScript</span
-                  >
-                  <span class="xp-tag"
-                    ><i class="fab fa-css3-alt" style="color: #2965f1"></i>
-                    CSS</span
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- /.timeline -->
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Projects-->
-      <section class="resume-section" id="projects">
-        <div class="resume-section-content">
-          <h2 class="mb-2">Projects</h2>
-          <p class="projects-intro">
-            Everything I've shipped — products, AI experiments, client work,
-            games and research — grouped by category.
-          </p>
+        <nav class="nav" aria-label="Primary">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#experience">Experience</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <span class="nav-indicator" aria-hidden="true"></span>
+        </nav>
 
-          <nav class="proj-nav" aria-label="Project categories">
-            <a class="proj-nav-link" href="#proj-products"
-              >Products <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-ai"
-              >AI Engineering <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-apps"
-              >Apps <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-web"
-              >Client Sites <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-games"
-              >Games <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-mobile"
-              >Mobile <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-research"
-              >Research <span class="proj-count"></span
-            ></a>
-            <a class="proj-nav-link" href="#proj-academic"
-              >Academic <span class="proj-count"></span
-            ></a>
-          </nav>
-
-          <!-- ADD A NEW PROJECT — copy this card into the grid of the right
-               category group below. Badge data-cat values:
-               product ai app web game mobile research academic.
-               Keep the Live tag only if the project is deployed.
-          <article class="proj-card">
-            <div class="proj-card-head">
-              <span class="proj-cat-badge" data-cat="app"><i class="fas fa-rocket"></i> App</span>
-            </div>
-            <h3 class="proj-card-title">Project Name</h3>
-            <p class="proj-card-desc">One or two lines on what it does and why it matters.</p>
-            <div class="proj-card-foot">
-              <div class="proj-card-stack"><span>React</span><span>Node</span></div>
-              <div class="proj-tags">
-                <a class="proj-tag proj-live" href="LIVE_URL" target="_blank" rel="noopener noreferrer"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
-                <a class="proj-tag proj-code" href="GITHUB_URL" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Code</a>
-              </div>
-            </div>
-          </article>
-          -->
-
-          <!-- Products -->
-          <div class="proj-group" id="proj-products">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="product"
-                ><i class="fas fa-box-open"></i
-              ></span>
-              <h3 class="proj-group-title">Products</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">Built &amp; shipped</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card proj-card--featured">
-                <div class="proj-card-body">
-                  <div class="proj-card-head">
-                    <span class="proj-cat-badge" data-cat="product"
-                      ><i class="fas fa-box-open"></i> Product</span
-                    >
-                    <span class="proj-cat-badge" data-cat="ai"
-                      ><i class="fas fa-brain"></i> AI</span
-                    >
-                    <span class="proj-featured-flag"
-                      ><i class="fas fa-star"></i> Featured</span
-                    >
-                  </div>
-                  <h3 class="proj-card-title">Resumark — CV Generator</h3>
-                  <p class="proj-card-desc">
-                    ATS-friendly resume builder with a template gallery,
-                    live-preview editing and one-click PDF export — plus
-                    AI-assisted summary analysis powered by the Claude API.
-                  </p>
-                  <div class="proj-card-foot">
-                    <div class="proj-card-stack">
-                      <span>TypeScript</span><span>Vue</span><span>Node</span
-                      ><span>PostgreSQL</span><span>Claude API</span>
-                    </div>
-                    <div class="proj-tags">
-                      <a
-                        class="proj-tag proj-code"
-                        href="https://github.com/mnumanmercan/CV-generate"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><i class="fab fa-github"></i> Code</a
-                      >
-                    </div>
-                  </div>
-                </div>
-                <div class="proj-card-media">
-                  <img
-                    src="assets/img/cv-gif.webp"
-                    alt="Resumark CV generator preview"
-                    loading="lazy"
-                  />
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- AI Engineering -->
-          <div class="proj-group" id="proj-ai">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="ai"
-                ><i class="fas fa-brain"></i
-              ></span>
-              <h3 class="proj-group-title">AI Engineering</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">AI-integrated builds</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="ai"
-                    ><i class="fas fa-brain"></i> AI</span
-                  >
-                </div>
-                <h3 class="proj-card-title">AI API Practice</h3>
-                <p class="proj-card-desc">
-                  Hands-on Jupyter notebooks exploring the Claude API with
-                  Python — prompting patterns, structured outputs and
-                  integration recipes.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>Python</span><span>Jupyter</span
-                    ><span>Claude API</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/mnumanmercan/AI-API-Practice"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="ai"
-                    ><i class="fas fa-brain"></i> AI</span
-                  >
-                  <span class="proj-cat-badge" data-cat="product"
-                    ><i class="fas fa-box-open"></i> Product</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Resumark — AI Resume Analysis</h3>
-                <p class="proj-card-desc">
-                  The AI side of Resumark: Claude-powered resume summary
-                  analysis with instant feedback in the live editor.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>Claude API</span><span>Node</span><span>Vue</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/mnumanmercan/CV-generate"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Apps -->
-          <div class="proj-group" id="proj-apps">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="app"
-                ><i class="fas fa-rocket"></i
-              ></span>
-              <h3 class="proj-group-title">Apps</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">Tools &amp; utilities</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="app"
-                    ><i class="fas fa-rocket"></i> App</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Academic Article Search Engine</h3>
-                <p class="proj-card-desc">
-                  Graph-powered search over academic papers — relationships
-                  modeled in Neo4j and explored as an interactive network with
-                  Neovis.js.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>Neo4j</span><span>Neovis.js</span
-                    ><span>JavaScript</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/Neo4J"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="app"
-                    ><i class="fas fa-rocket"></i> App</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Current Weather App</h3>
-                <p class="proj-card-desc">
-                  Instant weather lookup for any city, fetching live conditions
-                  from the OpenWeather API.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>JavaScript</span><span>OpenWeather API</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/CurrentWeatherApp"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="app"
-                    ><i class="fas fa-rocket"></i> App</span
-                  >
-                </div>
-                <h3 class="proj-card-title">GPS Car Tracking System</h3>
-                <p class="proj-card-desc">
-                  Follows vehicles in real time by streaming and mapping live
-                  GPS location data.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/GPSCarTracking"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="app"
-                    ><i class="fas fa-rocket"></i> App</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Random Quotes Generator</h3>
-                <p class="proj-card-desc">
-                  A tiny quote machine — one click, one fresh quote. Built
-                  during internship practice.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/StajCalismalarim/tree/master/Random-Quotes"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Client Websites -->
-          <div class="proj-group" id="proj-web">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="web"
-                ><i class="fas fa-globe"></i
-              ></span>
-              <h3 class="proj-group-title">Client Websites</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">Delivered &amp; live</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="web"
-                    ><i class="fas fa-globe"></i> Client</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Navatek İnşaat</h3>
-                <p class="proj-card-desc">
-                  Corporate website for a construction company — designed,
-                  built and delivered live.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-live"
-                      href="https://navatekinsaat.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="web"
-                    ><i class="fas fa-globe"></i> Client</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Klusbedrijf Onmaz</h3>
-                <p class="proj-card-desc">
-                  Full-stack website for a Dutch renovation &amp; maintenance
-                  business, built end-to-end for the client.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-live"
-                      href="https://www.klusbedrijfonmaz.nl/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="web"
-                    ><i class="fas fa-globe"></i> Client</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Berrak Kindergarten</h3>
-                <p class="proj-card-desc">
-                  Promotional website developed independently and handed over
-                  to the client as a live project.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-live"
-                      href="http://özelberrakanaokulu.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="web"
-                    ><i class="fas fa-globe"></i> Client</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Bahmer Car Service</h3>
-                <p class="proj-card-desc">
-                  Promotional website for a vehicle repair business — delivered
-                  and running live.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-live"
-                      href="https://bahmercarservice.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-arrow-up-right-from-square"></i> Live</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Games -->
-          <div class="proj-group" id="proj-games">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="game"
-                ><i class="fas fa-gamepad"></i
-              ></span>
-              <h3 class="proj-group-title">Games</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">Playful side quests</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="game"
-                    ><i class="fas fa-gamepad"></i> Game</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Maze Game</h3>
-                <p class="proj-card-desc">
-                  A classic maze chase: help the Smurfs outrun Gargamel to the
-                  exit.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/2020-21-Kou-ProLab-2.-D-nem-"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="game"
-                    ><i class="fas fa-gamepad"></i> Game</span
-                  >
-                  <span class="proj-cat-badge" data-cat="academic"
-                    ><i class="fas fa-graduation-cap"></i> Academic</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Sudoku Solver</h3>
-                <p class="proj-card-desc">
-                  Multithreaded Sudoku solver — an exercise in Java
-                  concurrency.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>Java</span><span>Threads</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/2021-22-Kou-YazLab-1-2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="game"
-                    ><i class="fas fa-gamepad"></i> Game</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Race Cars</h3>
-                <p class="proj-card-desc">
-                  Three cars, random distances, one winner — built with pure
-                  HTML, CSS and JavaScript.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/HelloWorld"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="game"
-                    ><i class="fas fa-gamepad"></i> Game</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Catch Me If You Can</h3>
-                <p class="proj-card-desc">
-                  A mischievous circle that teleports away on hover — click it
-                  to win.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/HelloWorld"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Mobile -->
-          <div class="proj-group" id="proj-mobile">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="mobile"
-                ><i class="fas fa-mobile-alt"></i
-              ></span>
-              <h3 class="proj-group-title">Mobile</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">First steps in native</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="mobile"
-                    ><i class="fas fa-mobile-alt"></i> Mobile</span
-                  >
-                </div>
-                <h3 class="proj-card-title">User Authentication</h3>
-                <p class="proj-card-desc">
-                  Complete Firebase sign-up and sign-in flow built with React
-                  Native.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>React Native</span><span>Firebase</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/UserAuth-React-Native"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Blockchain & Research -->
-          <div class="proj-group" id="proj-research">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="research"
-                ><i class="fas fa-flask"></i
-              ></span>
-              <h3 class="proj-group-title">Blockchain &amp; Research</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">Thesis &amp; exploration</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="research"
-                    ><i class="fas fa-flask"></i> Research</span
-                  >
-                </div>
-                <h3 class="proj-card-title">
-                  Hyperledger Supply Chain with IoT
-                </h3>
-                <p class="proj-card-desc">
-                  Exploring Hyperledger blockchain for a logistics supply chain
-                  fed by IoT sensor data.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>Hyperledger</span><span>IoT</span>
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="research"
-                    ><i class="fas fa-flask"></i> Research</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Archive System with Blockchain</h3>
-                <p class="proj-card-desc">
-                  Graduation thesis: a tamper-proof document archive system
-                  built on blockchain.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://drive.google.com/file/d/1ySFYwIdkOsarwWgIW1GIYYZiyvZXIVRv/view"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-file-pdf"></i> Thesis</a
-                    >
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://www.overleaf.com/read/xbrsxfxdprrf#2a75a8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fas fa-file-lines"></i> Research Paper</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Academic & Team Projects -->
-          <div class="proj-group" id="proj-academic">
-            <div class="proj-group-head">
-              <span class="proj-group-icon" data-cat="academic"
-                ><i class="fas fa-graduation-cap"></i
-              ></span>
-              <h3 class="proj-group-title">Academic &amp; Team Projects</h3>
-              <span class="proj-group-count"></span>
-              <span class="proj-group-line"></span>
-              <span class="proj-group-sub">University labs</span>
-            </div>
-            <div class="projects-grid">
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="academic"
-                    ><i class="fas fa-graduation-cap"></i> Academic</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Student Information System</h3>
-                <p class="proj-card-desc">
-                  Student records management system — my first team project at
-                  university.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/ProLab1-1-"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="academic"
-                    ><i class="fas fa-graduation-cap"></i> Academic</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Suffix Tree Algorithm</h3>
-                <p class="proj-card-desc">
-                  Suffix tree construction implemented in C and visualized with
-                  the graphics.h library.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-card-stack">
-                    <span>C</span><span>graphics.h</span>
-                  </div>
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/Prolab-1-2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-              <article class="proj-card">
-                <div class="proj-card-head">
-                  <span class="proj-cat-badge" data-cat="academic"
-                    ><i class="fas fa-graduation-cap"></i> Academic</span
-                  >
-                </div>
-                <h3 class="proj-card-title">Air Traffic Control</h3>
-                <p class="proj-card-desc">
-                  Runway scheduling simulation driven by priority queues.
-                </p>
-                <div class="proj-card-foot">
-                  <div class="proj-tags">
-                    <a
-                      class="proj-tag proj-code"
-                      href="https://github.com/MNMercan/Prolab1-3"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      ><i class="fab fa-github"></i> Code</a
-                    >
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-          <!-- /.proj-groups -->
-        </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Education-->
-      <section class="resume-section" id="education">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Education</h2>
-
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between mb-5"
+        <div class="header-actions">
+          <button
+            class="cmdk-trigger"
+            type="button"
+            data-cmdk-open
+            aria-label="Open command menu"
+            aria-keyshortcuts="Meta+K Control+K"
           >
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Kocaeli University</h3>
-              <div class="subheading mb-3">Computer Engineering</div>
-              <p>GPA: 3.18/4</p>
+            <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>
+            <span class="cmdk-trigger-label">Search</span>
+            <kbd class="kbd" data-mod-key>⌘K</kbd>
+          </button>
+          <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
+            <svg class="i theme-icon-sun" aria-hidden="true"><use href="assets/icons/sprite.svg#sun" /></svg>
+            <svg class="i theme-icon-moon" aria-hidden="true"><use href="assets/icons/sprite.svg#moon" /></svg>
+          </button>
+          <a
+            class="btn btn-sm btn-outline header-cv"
+            href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+            <svg class="i i-nudge-up" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+          </a>
+          <button
+            class="icon-btn menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Open menu"
+          >
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <nav class="container" aria-label="Mobile">
+          <ol class="mobile-nav">
+            <li><a href="#about"><span class="mobile-nav-index">01</span>About</a></li>
+            <li><a href="#experience"><span class="mobile-nav-index">02</span>Experience</a></li>
+            <li><a href="#projects"><span class="mobile-nav-index">03</span>Projects</a></li>
+            <li><a href="#skills"><span class="mobile-nav-index">04</span>Skills</a></li>
+            <li><a href="#education"><span class="mobile-nav-index">05</span>Education</a></li>
+            <li><a href="#contact"><span class="mobile-nav-index">06</span>Contact</a></li>
+          </ol>
+          <a
+            class="btn btn-primary mobile-menu-cv"
+            href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+            View resume
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================
+           Hero
+           ============================================================ -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="status-pill" data-reveal>
+              <span class="pulse" aria-hidden="true"></span>
+              Building AI-powered products
+            </p>
+
+            <h1 class="hero-title" id="hero-title" data-reveal>
+              M. Numan <span class="text-gradient">Mercan</span>
+            </h1>
+
+            <p class="hero-role" data-reveal>
+              <span class="hero-role-prompt" aria-hidden="true">&gt;</span>
+              <span class="sr-only">Full-stack developer, frontend engineer and AI engineer.</span>
+              <span
+                class="typed"
+                aria-hidden="true"
+                data-typed='["full-stack developer", "frontend engineer", "AI engineer"]'
+                >full-stack developer</span
+              ><span class="caret" aria-hidden="true"></span>
+            </p>
+
+            <p class="hero-lead" data-reveal>
+              I build clean, type-safe and scalable web apps —
+              <strong>React</strong> &amp; <strong>Vue</strong> on the front,
+              <strong>Node.js</strong> &amp; <strong>Go</strong> on the back — and
+              ship AI features on top of LLM APIs.
+            </p>
+
+            <div class="hero-cta" data-reveal>
+              <a class="btn btn-primary" href="#projects">
+                See my work
+                <svg class="i i-nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right" /></svg>
+              </a>
+              <a class="btn btn-ghost" href="#contact">
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#mail" /></svg>
+                Get in touch
+              </a>
             </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">2020-2023</span>
-            </div>
+
+            <ul class="socials" data-reveal aria-label="Profiles">
+              <li>
+                <a class="social" data-link="linkedin" data-tip="LinkedIn" href="https://www.linkedin.com/in/mnmercan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-link="github" data-tip="GitHub" href="https://github.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-link="leetcode" data-tip="LeetCode" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-link="x" data-tip="X / Twitter" href="https://x.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#x" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-link="resume" data-tip="Resume" href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens Google Drive)">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Konya Technical University</h3>
-              <div class="subheading mb-3">Computer Engineering</div>
-              <div>First year of my degree</div>
-              <p>GPA: 3.6/4</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">2019-2020</span>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row justify-content-between">
-            <div class="flex-grow-1">
-              <h3 class="mb-0">Akyazi Konuralp Anadolu High School</h3>
-              <p>GPA: 86/100</p>
-            </div>
-            <div class="flex-shrink-0">
-              <span class="text-primary">2014-2018</span>
-            </div>
+
+          <div class="hero-visual" data-reveal>
+            <figure class="code-window" aria-label="Profile summary written as a TypeScript object">
+              <div class="window-bar">
+                <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="window-tab">
+                  <img src="assets/icons/tech/typescript.svg" alt="" width="14" height="14" />
+                  numan.config.ts
+                </span>
+              </div>
+<pre class="code"><code><span class="line"><span class="tk-k">import type</span> { <span class="tk-t">Engineer</span> } <span class="tk-k">from</span> <span class="tk-s">"./types"</span>;</span>
+<span class="line"> </span>
+<span class="line"><span class="tk-k">export const</span> <span class="tk-v">numan</span> = {</span>
+<span class="line">  <span class="tk-p">role</span>: <span class="tk-s">"Full-Stack Developer"</span>,</span>
+<span class="line">  <span class="tk-p">stack</span>: {</span>
+<span class="line">    <span class="tk-p">frontend</span>: [<span class="tk-s">"TypeScript"</span>, <span class="tk-s">"React"</span>, <span class="tk-s">"Vue"</span>],</span>
+<span class="line">    <span class="tk-p">backend</span>: [<span class="tk-s">"Node.js"</span>, <span class="tk-s">"Go"</span>],</span>
+<span class="line">    <span class="tk-p">data</span>: [<span class="tk-s">"PostgreSQL"</span>, <span class="tk-s">"MySQL"</span>, <span class="tk-s">"Redis"</span>],</span>
+<span class="line">  },</span>
+<span class="line">  <span class="tk-p">focus</span>: <span class="tk-s">"AI engineering"</span>,</span>
+<span class="line">  <span class="tk-p">experience</span>: <span class="tk-s">"1.5 years"</span>,</span>
+<span class="line">  <span class="tk-p">degree</span>: <span class="tk-s">"B.Sc. Computer Engineering"</span>,</span>
+<span class="line">} <span class="tk-k">satisfies</span> <span class="tk-t">Engineer</span>;<span class="code-caret" aria-hidden="true"></span></span></code></pre>
+              <div class="window-status" aria-hidden="true">
+                <span><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#branch" /></svg> main</span>
+                <span class="window-status-ok"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#check" /></svg> 0 problems</span>
+                <span class="window-status-lang">TypeScript</span>
+              </div>
+            </figure>
           </div>
         </div>
-      </section>
-      <hr class="m-0" />
-      <!-- Skills-->
-      <section class="resume-section" id="skills">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Skills</h2>
-          <div class="subheading mb-3">Programming Languages & Tools</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-html5" style="color: #e54c21"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt" style="color: #2449d8"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-bootstrap" style="color: #7852b3"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="" style="vertical-align: 0.125em"
-                ><img
-                  width="54px"
-                  height="100%"
-                  src="./assets/img/Tailwind_CSS_Logo.svg"
-                  alt=""
-              /></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square" style="color: #323330"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-react" style="color: #5ed3f3"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-node-js" style="color: #89bb3c"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-java" style="color: #4f7b99"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-git" style="color: #3a2b00"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-github" style="color: #202020"></i>
-            </li>
-          </ul>
-          <div class="subheading mb-3">In Learning & Practice Proccess</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-ethereum" style="color: #5f658b"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicon-solidity-plain"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-docker" style="color: #009bc6"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-vuejs"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-golang" style="color: #01aed8"></i>
-            </li>
-          </ul>
-          <div class="subheading mb-3">Languages</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <a
-                class="projectLinks"
-                href="https://www.efset.org/cert/qF9gEy"
-                target="_blank"
-                >English, B2</a
-              >
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Turkish, Native
-            </li>
-          </ul>
-          <br />
-          <div class="subheading mb-3">Certificates</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <a
-                class="projectLinks"
-                href="https://www.efset.org/cert/qF9gEy"
-                target="_blank"
-                >EF SET Intermediate Certificate</a
-              >
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <a
-                class="projectLinks"
-                href="https://www.freecodecamp.org/certification/numanmercan/javascript-algorithms-and-data-structures"
-                target="_blank"
-                >JavaScript Algorithms and Data Structures Certificate</a
-              >
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <a
-                class="projectLinks"
-                href="https://www.linkedin.com/in/mnmercan/overlay/Certifications/374407651/treasury?profileId=ACoAADP-yDcBBie3kkJcx5_O4TJIHdG8QiZ69bk"
-                target="_blank"
-                >Jotform Best Growth Project Award</a
-              >
-            </li>
-          </ul>
-          <br /><br />
-          <hr />
-          <div class="subheading mb-3">Competencies</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Web Development , Applications
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Communication Skill
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Empathy
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Team Work
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Math
-            </li>
-          </ul>
+
+        <div class="container">
+          <dl class="stats" data-reveal>
+            <div class="stat">
+              <dt>Years of experience</dt>
+              <dd><span data-count="1.5" data-decimals="1">1.5</span>+</dd>
+            </div>
+            <div class="stat">
+              <dt>Projects built</dt>
+              <dd><span data-count="20" data-count-source="[data-project]">20</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Client sites live</dt>
+              <dd><span data-count="4" data-count-source="[data-client]">4</span></dd>
+            </div>
+            <div class="stat stat--award">
+              <dt>Jotform internship award</dt>
+              <dd>
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#trophy" /></svg>
+                Best Growth Project
+              </dd>
+            </div>
+          </dl>
         </div>
       </section>
-      <hr class="m-0" />
-      <!-- Interests-->
-      <section class="resume-section" id="interests">
-        <div class="resume-section-content">
-          <h2 class="mb-5">Interests & Hobbies</h2>
-          <ul class="fa-ul mb-0">
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Cinema
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Weightlifting & Crossfit
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Reading & Listening Book
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              <a class="projectLinks" href=""
-                >Photography (Landscape & Nature)</a
-              >
-            </li>
-            <li>
-              <span class="fa-li"><i class="fas fa-check"></i></span>
-              Video Games
-              <ul
-                style="
-                  list-style-type: none;
-                  padding-left: 20px;
-                  margin-top: 5px;
-                  columns: 2;
-                  -webkit-columns: 2;
-                  -moz-columns: 2;
-                "
-              >
-                <li>Call Of Duty</li>
-                <li>CS Go</li>
-                <li>Ori and the Blind Forest & The Will of the Wisps</li>
-                <li>The Last of Us</li>
-                <li>Crysis</li>
-                <li>Battlefield 1</li>
+
+      <!-- Tech marquee (the list is duplicated by JS for a seamless loop) -->
+      <div class="marquee" aria-label="Technologies I work with">
+        <div class="marquee-track">
+          <ul class="marquee-list">
+            <li><img src="assets/icons/tech/typescript.svg" alt="" width="22" height="22" />TypeScript</li>
+            <li><img src="assets/icons/tech/javascript.svg" alt="" width="22" height="22" />JavaScript</li>
+            <li><img src="assets/icons/tech/react.svg" alt="" width="22" height="22" />React</li>
+            <li><img src="assets/icons/tech/vuejs.svg" alt="" width="22" height="22" />Vue</li>
+            <li><img src="assets/icons/tech/nodejs.svg" alt="" width="22" height="22" />Node.js</li>
+            <li><img src="assets/icons/tech/go.svg" alt="" width="22" height="22" />Go</li>
+            <li><img src="assets/icons/tech/postgresql.svg" alt="" width="22" height="22" />PostgreSQL</li>
+            <li><img src="assets/icons/tech/mysql.svg" alt="" width="22" height="22" />MySQL</li>
+            <li><img src="assets/icons/tech/redis.svg" alt="" width="22" height="22" />Redis</li>
+            <li><img src="assets/icons/tech/docker.svg" alt="" width="22" height="22" />Docker</li>
+            <li><img src="assets/icons/tech/tailwindcss.svg" alt="" width="22" height="22" />Tailwind CSS</li>
+            <li><img src="assets/icons/tech/python.svg" alt="" width="22" height="22" />Python</li>
+            <li><img src="assets/icons/tech/neo4j.svg" alt="" width="22" height="22" />Neo4j</li>
+            <li><img src="assets/icons/tech/git.svg" alt="" width="22" height="22" />Git</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ============================================================
+           01 · About
+           ============================================================ -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">01</span>About</p>
+            <h2 class="section-title" id="about-title">Building for the web, with an eye on&nbsp;AI.</h2>
+          </header>
+
+          <div class="about-grid">
+            <aside class="about-aside" data-reveal>
+              <div class="photo-frame">
+                <img src="assets/img/MNM.jpg" alt="Portrait of M. Numan Mercan" width="400" height="400" loading="lazy" decoding="async" />
+              </div>
+              <ul class="facts">
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>
+                  Computer Engineering, Kocaeli University
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#briefcase" /></svg>
+                  1.5 years of professional experience
+                </li>
+                <li>
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>
+                  Focused on AI engineering
+                </li>
               </ul>
-            </li>
-          </ul>
+            </aside>
+
+            <div class="about-body">
+              <div class="prose" data-reveal>
+                <p class="prose-lead">
+                  I'm a full-stack developer who cares about clean, type-safe
+                  and scalable code — and about how it feels to use.
+                </p>
+                <p>
+                  Most of my professional work has been on the frontend, with
+                  backend contributions in Go. Today I'm going deeper into
+                  <strong>AI engineering</strong>: building products like
+                  <a href="#projects">Resumark</a> that put LLMs to real use.
+                </p>
+                <p>On the side, I explore blockchain and game development.</p>
+              </div>
+
+              <ul class="capabilities">
+                <li class="cap card" data-cat="app" data-spotlight data-reveal>
+                  <span class="cap-icon" aria-hidden="true">
+                    <svg class="i"><use href="assets/icons/sprite.svg#window" /></svg>
+                  </span>
+                  <h3 class="cap-title">Frontend</h3>
+                  <p class="cap-text">Component-driven, responsive interfaces in React and Vue — written in TypeScript.</p>
+                  <ul class="logo-row" aria-label="Frontend stack">
+                    <li data-tip="TypeScript"><img src="assets/icons/tech/typescript.svg" alt="TypeScript" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="React"><img src="assets/icons/tech/react.svg" alt="React" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Vue"><img src="assets/icons/tech/vuejs.svg" alt="Vue" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Tailwind CSS"><img src="assets/icons/tech/tailwindcss.svg" alt="Tailwind CSS" width="18" height="18" loading="lazy" /></li>
+                  </ul>
+                </li>
+                <li class="cap card" data-cat="web" data-spotlight data-reveal>
+                  <span class="cap-icon" aria-hidden="true">
+                    <svg class="i"><use href="assets/icons/sprite.svg#server" /></svg>
+                  </span>
+                  <h3 class="cap-title">Backend</h3>
+                  <p class="cap-text">APIs and services in Node.js and Go, backed by SQL and Redis, shipped with Docker.</p>
+                  <ul class="logo-row" aria-label="Backend stack">
+                    <li data-tip="Node.js"><img src="assets/icons/tech/nodejs.svg" alt="Node.js" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Go"><img src="assets/icons/tech/go.svg" alt="Go" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="PostgreSQL"><img src="assets/icons/tech/postgresql.svg" alt="PostgreSQL" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Redis"><img src="assets/icons/tech/redis.svg" alt="Redis" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Docker"><img src="assets/icons/tech/docker.svg" alt="Docker" width="18" height="18" loading="lazy" /></li>
+                  </ul>
+                </li>
+                <li class="cap card" data-cat="ai" data-spotlight data-reveal>
+                  <span class="cap-icon" aria-hidden="true">
+                    <svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg>
+                  </span>
+                  <h3 class="cap-title">AI engineering</h3>
+                  <p class="cap-text">LLM-powered features with the Claude API — prompting, structured outputs, integration.</p>
+                  <ul class="logo-row" aria-label="AI stack">
+                    <li data-tip="Claude API"><svg class="i" role="img" aria-label="Claude API"><use href="assets/icons/sprite.svg#sparkles" /></svg></li>
+                    <li data-tip="Python"><img src="assets/icons/tech/python.svg" alt="Python" width="18" height="18" loading="lazy" /></li>
+                    <li data-tip="Jupyter"><img src="assets/icons/tech/jupyter.svg" alt="Jupyter" width="18" height="18" loading="lazy" /></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <div class="interests" data-reveal>
+                <h3 class="mini-title">Off the clock</h3>
+                <ul class="chip-list">
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#film" /></svg>Cinema</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#dumbbell" /></svg>Weightlifting &amp; CrossFit</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#book" /></svg>Books &amp; audiobooks</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#camera" /></svg>Landscape photography</li>
+                  <li class="chip" tabindex="0" data-tip="Ori · The Last of Us · Crysis · Battlefield 1 · Call of Duty · CS:GO">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#gamepad" /></svg>Video games
+                    <span class="sr-only">— favourites: Ori, The Last of Us, Crysis, Battlefield 1, Call of Duty and CS:GO</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <hr class="m-0" />
-      <!-- Awards-->
-    </div>
-    <!-- Theme toggle button -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-      <i class="fas fa-moon"></i>
-    </button>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
+      <!-- ============================================================
+           02 · Experience
+           ============================================================ -->
+      <section class="section" id="experience" aria-labelledby="experience-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">02</span>Experience</p>
+            <h2 class="section-title" id="experience-title">Where I've shipped.</h2>
+          </header>
+
+          <ol class="timeline" id="timeline">
+            <li class="tl-item" data-reveal>
+              <span class="tl-node" aria-hidden="true"></span>
+              <article class="xp card" data-spotlight>
+                <header class="xp-head">
+                  <span class="xp-logo" aria-hidden="true">In</span>
+                  <div>
+                    <h3 class="xp-role">Web Developer</h3>
+                    <p class="xp-company">
+                      <a href="https://www.linkedin.com/company/insiderone/" target="_blank" rel="noopener noreferrer">
+                        Insider
+                        <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                      </a>
+                    </p>
+                  </div>
+                  <p class="xp-when">
+                    <span><time datetime="2024-04">Apr 2024</time> – <time datetime="2025-08">Aug 2025</time></span>
+                    <span class="xp-duration">1 yr 5 mos</span>
+                  </p>
+                </header>
+                <ul class="xp-points">
+                  <li>Integrated and developed <strong>web applications for partners</strong> to drive better marketing results.</li>
+                  <li>Built internal <strong>full-stack tools</strong> with React and Go.</li>
+                  <li>Wrote scalable services with <strong>Redis, Docker and MySQL</strong>.</li>
+                  <li>Worked in an <strong>agile team</strong> with a Kanban workflow.</li>
+                </ul>
+                <ul class="tech-list" aria-label="Technologies used at Insider">
+                  <li class="tech"><img src="assets/icons/tech/javascript.svg" alt="" width="16" height="16" loading="lazy" />JavaScript</li>
+                  <li class="tech"><img src="assets/icons/tech/jquery.svg" alt="" width="16" height="16" loading="lazy" />jQuery</li>
+                  <li class="tech"><img src="assets/icons/tech/css3.svg" alt="" width="16" height="16" loading="lazy" />CSS</li>
+                  <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="16" height="16" loading="lazy" />React</li>
+                  <li class="tech"><img src="assets/icons/tech/go.svg" alt="" width="16" height="16" loading="lazy" />Go</li>
+                  <li class="tech"><img src="assets/icons/tech/redis.svg" alt="" width="16" height="16" loading="lazy" />Redis</li>
+                  <li class="tech"><img src="assets/icons/tech/docker.svg" alt="" width="16" height="16" loading="lazy" />Docker</li>
+                  <li class="tech"><img src="assets/icons/tech/mysql.svg" alt="" width="16" height="16" loading="lazy" />MySQL</li>
+                  <li class="tech"><img src="assets/icons/tech/git.svg" alt="" width="16" height="16" loading="lazy" />Git</li>
+                </ul>
+              </article>
+            </li>
+
+            <li class="tl-item" data-reveal>
+              <span class="tl-node" aria-hidden="true"></span>
+              <article class="xp card" data-spotlight>
+                <header class="xp-head">
+                  <span class="xp-logo" aria-hidden="true">Jf</span>
+                  <div>
+                    <h3 class="xp-role">Frontend Developer Intern</h3>
+                    <p class="xp-company">
+                      <a href="https://www.linkedin.com/company/jotform/" target="_blank" rel="noopener noreferrer">
+                        Jotform
+                        <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                      </a>
+                      <span class="badge">Internship</span>
+                    </p>
+                  </div>
+                  <p class="xp-when">
+                    <span><time datetime="2023-08">Aug 2023</time> – <time datetime="2023-09">Sep 2023</time></span>
+                    <span class="xp-duration">2 mos</span>
+                  </p>
+                </header>
+                <ul class="xp-points">
+                  <li>Built a full-stack <strong>Learning Management System</strong> in a team of four — I owned the frontend.</li>
+                </ul>
+                <a class="award" href="https://www.youtube.com/watch?v=4mUhRrMaXIA&amp;ab_channel=Numan" target="_blank" rel="noopener noreferrer">
+                  <span class="award-icon" aria-hidden="true">
+                    <svg class="i"><use href="assets/icons/sprite.svg#trophy" /></svg>
+                  </span>
+                  <span class="award-text">
+                    <strong>Best Growth Project Award</strong>
+                    <span>Watch the project demo on YouTube</span>
+                  </span>
+                  <svg class="i award-play" aria-hidden="true"><use href="assets/icons/sprite.svg#play" /></svg>
+                </a>
+                <ul class="tech-list" aria-label="Technologies used at Jotform">
+                  <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="16" height="16" loading="lazy" />React</li>
+                  <li class="tech"><img src="assets/icons/tech/javascript.svg" alt="" width="16" height="16" loading="lazy" />JavaScript</li>
+                  <li class="tech"><img src="assets/icons/tech/css3.svg" alt="" width="16" height="16" loading="lazy" />CSS</li>
+                </ul>
+              </article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           03 · Projects
+           ============================================================ -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">03</span>Projects</p>
+            <h2 class="section-title" id="projects-title">Selected work.</h2>
+            <p class="section-lead">Products, client sites, research and experiments — highlights first.</p>
+          </header>
+
+          <!-- Featured ------------------------------------------------ -->
+          <div class="featured">
+            <!-- Resumark -->
+            <article class="feature card" data-project data-spotlight data-reveal>
+              <div class="feature-visual">
+                <div class="tabs" role="tablist" aria-label="Resumark views">
+                  <button class="tab" type="button" role="tab" id="rm-tab-preview" aria-controls="rm-panel-preview" aria-selected="true">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#image" /></svg>Preview
+                  </button>
+                  <button class="tab" type="button" role="tab" id="rm-tab-arch" aria-controls="rm-panel-arch" aria-selected="false" tabindex="-1">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sitemap" /></svg>Architecture
+                  </button>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="rm-panel-preview" aria-labelledby="rm-tab-preview">
+                  <div class="shot">
+                    <img src="assets/img/cv-gif.webp" alt="Resumark editor: a resume updating in the live preview" width="394" height="494" loading="lazy" decoding="async" />
+                  </div>
+                </div>
+
+                <div class="tab-panel" role="tabpanel" id="rm-panel-arch" aria-labelledby="rm-tab-arch">
+                  <div
+                    class="arch"
+                    role="img"
+                    aria-label="Architecture: a Vue and TypeScript client calls a Node.js API, which stores data in PostgreSQL and sends resume summaries to the Claude API for analysis."
+                  >
+                    <div class="arch-node arch-client">
+                      <span class="arch-kind">Client</span>
+                      <span class="arch-name"><img src="assets/icons/tech/vuejs.svg" alt="" width="16" height="16" />Vue + TS</span>
+                      <span class="arch-note">Editor &amp; live preview</span>
+                    </div>
+                    <div class="arch-link arch-link--v arch-l1"><span class="arch-label">HTTP</span></div>
+                    <div class="arch-node arch-api">
+                      <span class="arch-kind">Server</span>
+                      <span class="arch-name"><img src="assets/icons/tech/nodejs.svg" alt="" width="16" height="16" />Node.js</span>
+                      <span class="arch-note">TypeScript API</span>
+                    </div>
+                    <div class="arch-link arch-link--h arch-l2"><span class="arch-label">prompt</span></div>
+                    <div class="arch-node arch-node--ai arch-ai">
+                      <span class="arch-kind">AI</span>
+                      <span class="arch-name"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</span>
+                      <span class="arch-note">Summary analysis</span>
+                    </div>
+                    <div class="arch-link arch-link--v arch-l3"><span class="arch-label">SQL</span></div>
+                    <div class="arch-node arch-db">
+                      <span class="arch-kind">Database</span>
+                      <span class="arch-name"><img src="assets/icons/tech/postgresql.svg" alt="" width="16" height="16" />PostgreSQL</span>
+                      <span class="arch-note">Persistent data</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="feature-body">
+                <div class="feature-tags">
+                  <span class="tag" data-cat="product"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#box" /></svg>Product</span>
+                  <span class="tag" data-cat="ai"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#brain" /></svg>AI</span>
+                </div>
+                <h3 class="feature-title">Resumark</h3>
+                <p class="feature-sub">AI-assisted CV generator</p>
+                <p class="feature-desc">An ATS-friendly resume builder with AI feedback built in.</p>
+                <ul class="feature-points">
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#layers" /></svg>Template gallery</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#bolt" /></svg>Live-preview editor</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>One-click PDF export</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude-powered analysis</li>
+                </ul>
+                <ul class="tech-list" aria-label="Resumark stack">
+                  <li class="tech"><img src="assets/icons/tech/typescript.svg" alt="" width="16" height="16" loading="lazy" />TypeScript</li>
+                  <li class="tech"><img src="assets/icons/tech/vuejs.svg" alt="" width="16" height="16" loading="lazy" />Vue</li>
+                  <li class="tech"><img src="assets/icons/tech/nodejs.svg" alt="" width="16" height="16" loading="lazy" />Node.js</li>
+                  <li class="tech"><img src="assets/icons/tech/postgresql.svg" alt="" width="16" height="16" loading="lazy" />PostgreSQL</li>
+                  <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</li>
+                </ul>
+                <div class="feature-links">
+                  <a class="btn btn-sm btn-outline" href="https://github.com/mnumanmercan/CV-generate" target="_blank" rel="noopener noreferrer">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                    View code
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Academic Article Search Engine -->
+            <article class="feature card" data-project data-spotlight data-reveal>
+              <div class="feature-visual">
+                <figure class="graph-figure">
+                  <svg class="graph" viewBox="0 0 440 280" role="img" aria-labelledby="graph-desc">
+                    <desc id="graph-desc">
+                      A search query node connected to papers, which link to their
+                      authors and to each other. A highlighted path traverses from the
+                      query to a paper, its author, a related paper and that paper's
+                      author.
+                    </desc>
+                    <g class="edges">
+                      <line x1="220" y1="140" x2="128" y2="76" />
+                      <line x1="220" y1="140" x2="318" y2="64" />
+                      <line x1="220" y1="140" x2="356" y2="196" />
+                      <line x1="220" y1="140" x2="112" y2="204" />
+                      <line x1="128" y1="76" x2="40" y2="130" />
+                      <line x1="128" y1="76" x2="222" y2="24" />
+                      <line x1="318" y1="64" x2="222" y2="24" />
+                      <line x1="318" y1="64" x2="412" y2="112" />
+                      <line x1="356" y1="196" x2="412" y2="112" />
+                      <line x1="356" y1="196" x2="250" y2="256" />
+                      <line x1="112" y1="204" x2="40" y2="130" />
+                      <line x1="112" y1="204" x2="250" y2="256" />
+                      <line x1="128" y1="76" x2="112" y2="204" class="edge-cite" />
+                      <line x1="318" y1="64" x2="356" y2="196" class="edge-cite" />
+                    </g>
+                    <g class="trail">
+                      <line x1="220" y1="140" x2="318" y2="64" pathLength="1" style="--d: 0s" />
+                      <line x1="318" y1="64" x2="412" y2="112" pathLength="1" style="--d: 0.45s" />
+                      <line x1="412" y1="112" x2="356" y2="196" pathLength="1" style="--d: 0.9s" />
+                      <line x1="356" y1="196" x2="250" y2="256" pathLength="1" style="--d: 1.35s" />
+                    </g>
+                    <g class="nodes">
+                      <circle class="node node--paper" cx="128" cy="76" r="8" />
+                      <circle class="node node--paper is-hit" cx="318" cy="64" r="8" style="--d: 0.35s" />
+                      <circle class="node node--paper is-hit" cx="356" cy="196" r="8" style="--d: 1.25s" />
+                      <circle class="node node--paper" cx="112" cy="204" r="8" />
+                      <circle class="node node--author" cx="40" cy="130" r="6.5" />
+                      <circle class="node node--author" cx="222" cy="24" r="6.5" />
+                      <circle class="node node--author is-hit" cx="412" cy="112" r="6.5" style="--d: 0.8s" />
+                      <circle class="node node--author is-hit" cx="250" cy="256" r="6.5" style="--d: 1.7s" />
+                      <circle class="query-ring" cx="220" cy="140" r="11" />
+                      <circle class="node node--query" cx="220" cy="140" r="11" />
+                    </g>
+                    <text class="graph-label" x="220" y="172" text-anchor="middle">query</text>
+                  </svg>
+                  <figcaption>
+                    <ul class="graph-legend">
+                      <li><span class="swatch swatch--query" aria-hidden="true"></span>Query</li>
+                      <li><span class="swatch swatch--paper" aria-hidden="true"></span>Paper</li>
+                      <li><span class="swatch swatch--author" aria-hidden="true"></span>Author</li>
+                    </ul>
+                  </figcaption>
+                </figure>
+              </div>
+
+              <div class="feature-body">
+                <div class="feature-tags">
+                  <span class="tag" data-cat="app"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#rocket" /></svg>App</span>
+                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Graph</span>
+                </div>
+                <h3 class="feature-title">Academic Article Search Engine</h3>
+                <p class="feature-sub">Graph-powered paper discovery</p>
+                <p class="feature-desc">Search academic papers through their relationships, not just keywords.</p>
+                <ul class="feature-points">
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#database" /></svg>Graph data model in Neo4j</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Interactive network view</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>Relationship-based search</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Visualized with Neovis.js</li>
+                </ul>
+                <ul class="tech-list" aria-label="Search engine stack">
+                  <li class="tech"><img src="assets/icons/tech/neo4j.svg" alt="" width="16" height="16" loading="lazy" />Neo4j</li>
+                  <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Neovis.js</li>
+                  <li class="tech"><img src="assets/icons/tech/javascript.svg" alt="" width="16" height="16" loading="lazy" />JavaScript</li>
+                </ul>
+                <div class="feature-links">
+                  <a class="btn btn-sm btn-outline" href="https://github.com/MNMercan/Neo4J" target="_blank" rel="noopener noreferrer">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                    View code
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Archive System with Blockchain -->
+            <article class="feature card" data-project data-spotlight data-reveal>
+              <div class="feature-visual">
+                <div class="chain-figure">
+                  <div
+                    class="chain"
+                    role="img"
+                    aria-label="Three documents stored as hash-linked blocks. Each block records the previous block's hash, so changing any document breaks the chain."
+                  >
+                    <div class="block">
+                      <span class="block-no">Block #01 <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg></span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>diploma.pdf</span>
+                      <span class="block-hash">hash <b class="h-a">0x9f3a…c21</b></span>
+                      <span class="block-prev">prev 0x0000…000</span>
+                    </div>
+                    <span class="chain-link" aria-hidden="true"></span>
+                    <div class="block">
+                      <span class="block-no">Block #02 <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg></span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>transcript.pdf</span>
+                      <span class="block-hash">hash <b class="h-b">0x71c2…e8a</b></span>
+                      <span class="block-prev">prev <b class="h-a">0x9f3a…c21</b></span>
+                    </div>
+                    <span class="chain-link" aria-hidden="true"></span>
+                    <div class="block block--new">
+                      <span class="block-no">
+                        Block #03
+                        <span class="block-state" aria-hidden="true">
+                          <span class="block-state-pending">sealing…</span>
+                          <span class="block-state-sealed"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg></span>
+                        </span>
+                      </span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>archive.pdf</span>
+                      <span class="block-hash">hash <b class="h-c">0x4be0…19d</b></span>
+                      <span class="block-prev">prev <b class="h-b">0x71c2…e8a</b></span>
+                    </div>
+                  </div>
+                  <p class="chain-verify">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#circle-check" /></svg>
+                    Chain verified · tamper-evident
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-body">
+                <div class="feature-tags">
+                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#flask" /></svg>Research</span>
+                  <span class="tag" data-cat="academic"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>Thesis</span>
+                </div>
+                <h3 class="feature-title">Archive System with Blockchain</h3>
+                <p class="feature-sub">Graduation thesis</p>
+                <p class="feature-desc">A tamper-proof document archive: every record is hash-linked on a blockchain, so any change is detectable.</p>
+                <ul class="feature-points">
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg>Tamper-proof records</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#link" /></svg>Hash-linked integrity</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>Full thesis write-up</li>
+                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#book" /></svg>Research paper</li>
+                </ul>
+                <div class="feature-links">
+                  <a class="btn btn-sm btn-outline" href="https://drive.google.com/file/d/1ySFYwIdkOsarwWgIW1GIYYZiyvZXIVRv/view" target="_blank" rel="noopener noreferrer">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>
+                    Read thesis
+                  </a>
+                  <a class="btn btn-sm btn-ghost" href="https://www.overleaf.com/read/xbrsxfxdprrf#2a75a8" target="_blank" rel="noopener noreferrer">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                    Research paper
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Client work --------------------------------------------- -->
+          <div class="subsection">
+            <div class="subsection-head" data-reveal>
+              <div>
+                <h3 class="subsection-title">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#globe" /></svg>
+                  Client work
+                </h3>
+                <p class="subsection-note">Designed, built and delivered — all running live.</p>
+              </div>
+            </div>
+
+            <ul class="clients">
+              <li data-reveal>
+                <a class="client card" href="https://navatekinsaat.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
+                  <span class="client-bar" aria-hidden="true">
+                    <span class="window-dots"><i></i><i></i><i></i></span>
+                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>navatekinsaat.com</span>
+                  </span>
+                  <span class="client-body">
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#helmet" /></svg></span>
+                    <span class="client-name">Navatek İnşaat</span>
+                    <span class="client-desc">Corporate website for a construction company.</span>
+                  </span>
+                  <span class="client-foot">
+                    <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                  </span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="client card" href="https://www.klusbedrijfonmaz.nl/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
+                  <span class="client-bar" aria-hidden="true">
+                    <span class="window-dots"><i></i><i></i><i></i></span>
+                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>klusbedrijfonmaz.nl</span>
+                  </span>
+                  <span class="client-body">
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#tools" /></svg></span>
+                    <span class="client-name">Klusbedrijf Onmaz</span>
+                    <span class="client-desc">Full-stack website for a Dutch renovation &amp; maintenance business.</span>
+                  </span>
+                  <span class="client-foot">
+                    <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                  </span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="client card" href="http://özelberrakanaokulu.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
+                  <span class="client-bar" aria-hidden="true">
+                    <span class="window-dots"><i></i><i></i><i></i></span>
+                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#globe" /></svg>özelberrakanaokulu.com</span>
+                  </span>
+                  <span class="client-body">
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#shapes" /></svg></span>
+                    <span class="client-name">Berrak Kindergarten</span>
+                    <span class="client-desc">Promotional website, built independently and handed over live.</span>
+                  </span>
+                  <span class="client-foot">
+                    <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                  </span>
+                </a>
+              </li>
+              <li data-reveal>
+                <a class="client card" href="https://bahmercarservice.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
+                  <span class="client-bar" aria-hidden="true">
+                    <span class="window-dots"><i></i><i></i><i></i></span>
+                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>bahmercarservice.com</span>
+                  </span>
+                  <span class="client-body">
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#car" /></svg></span>
+                    <span class="client-name">Bahmer Car Service</span>
+                    <span class="client-desc">Promotional website for a vehicle repair business.</span>
+                  </span>
+                  <span class="client-foot">
+                    <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Archive --------------------------------------------------- -->
+          <div class="subsection">
+            <div class="subsection-head" data-reveal>
+              <div>
+                <h3 class="subsection-title">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#layers" /></svg>
+                  More projects
+                </h3>
+                <p class="subsection-note">Apps, games, mobile, research and university labs.</p>
+              </div>
+              <div class="filters" role="group" aria-label="Filter projects by category">
+                <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="app" aria-pressed="false">Apps <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="mobile" aria-pressed="false">Mobile <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="research" aria-pressed="false">Research <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="game" aria-pressed="false">Games <span class="filter-count"></span></button>
+                <button class="filter" type="button" data-filter="academic" aria-pressed="false">Academic <span class="filter-count"></span></button>
+              </div>
+            </div>
+
+            <!-- ADD A PROJECT — copy a card below. data-cats takes one or more of:
+                 ai app mobile research game academic (space separated).
+                 The card's data-cat sets the icon color; icons live in
+                 assets/icons/sprite.svg. Omit the link + .p-card-go when there is no URL. -->
+            <div class="archive" id="archive">
+              <article class="p-card card" data-project data-cats="ai" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="ai" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg></span>
+                  <span class="p-card-cat">AI</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/mnumanmercan/AI-API-Practice" target="_blank" rel="noopener noreferrer">AI API Practice</a></h4>
+                <p class="p-card-desc">Notebooks exploring the Claude API — prompting patterns, structured outputs and integration recipes.</p>
+                <p class="p-card-stack">Python · Jupyter · Claude API</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#weather" /></svg></span>
+                  <span class="p-card-cat">App</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/CurrentWeatherApp" target="_blank" rel="noopener noreferrer">Current Weather App</a></h4>
+                <p class="p-card-desc">Instant weather for any city, with live conditions from the OpenWeather API.</p>
+                <p class="p-card-stack">JavaScript · OpenWeather API</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="mobile" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="mobile" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#id-card" /></svg></span>
+                  <span class="p-card-cat">Mobile</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/UserAuth-React-Native" target="_blank" rel="noopener noreferrer">User Authentication</a></h4>
+                <p class="p-card-desc">A complete Firebase sign-up and sign-in flow in React Native.</p>
+                <p class="p-card-stack">React Native · Firebase</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#gps" /></svg></span>
+                  <span class="p-card-cat">App</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/GPSCarTracking" target="_blank" rel="noopener noreferrer">GPS Car Tracking System</a></h4>
+                <p class="p-card-desc">Follows vehicles in real time by streaming and mapping live GPS data.</p>
+                <p class="p-card-stack">Real-time · Maps</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="research" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="research" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#truck" /></svg></span>
+                  <span class="p-card-cat">Research</span>
+                </div>
+                <h4 class="p-card-title">Hyperledger Supply Chain with IoT</h4>
+                <p class="p-card-desc">Hyperledger blockchain for a logistics supply chain fed by IoT sensor data.</p>
+                <p class="p-card-stack">Hyperledger · IoT</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="game academic" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#grid" /></svg></span>
+                  <span class="p-card-cat">Game · Academic</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/2021-22-Kou-YazLab-1-2" target="_blank" rel="noopener noreferrer">Sudoku Solver</a></h4>
+                <p class="p-card-desc">A multithreaded Sudoku solver — an exercise in Java concurrency.</p>
+                <p class="p-card-stack">Java · Threads</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#tree" /></svg></span>
+                  <span class="p-card-cat">Academic</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/Prolab-1-2" target="_blank" rel="noopener noreferrer">Suffix Tree Algorithm</a></h4>
+                <p class="p-card-desc">Suffix tree construction in C, visualized with the graphics.h library.</p>
+                <p class="p-card-stack">C · graphics.h</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#plane" /></svg></span>
+                  <span class="p-card-cat">Academic</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/Prolab1-3" target="_blank" rel="noopener noreferrer">Air Traffic Control</a></h4>
+                <p class="p-card-desc">Runway scheduling simulation driven by priority queues.</p>
+                <p class="p-card-stack">Priority queues · Simulation</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#maze" /></svg></span>
+                  <span class="p-card-cat">Game</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/2020-21-Kou-ProLab-2.-D-nem-" target="_blank" rel="noopener noreferrer">Maze Game</a></h4>
+                <p class="p-card-desc">A classic maze chase: help the Smurfs outrun Gargamel to the exit.</p>
+                <p class="p-card-stack">University lab · Game</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#flag" /></svg></span>
+                  <span class="p-card-cat">Game</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/HelloWorld" target="_blank" rel="noopener noreferrer">Race Cars</a></h4>
+                <p class="p-card-desc">Three cars, random distances, one winner.</p>
+                <p class="p-card-stack">HTML · CSS · JavaScript</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#pointer" /></svg></span>
+                  <span class="p-card-cat">Game</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/HelloWorld" target="_blank" rel="noopener noreferrer">Catch Me If You Can</a></h4>
+                <p class="p-card-desc">A mischievous circle that teleports away on hover — click it to win.</p>
+                <p class="p-card-stack">HTML · CSS · JavaScript</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#users" /></svg></span>
+                  <span class="p-card-cat">Academic</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/ProLab1-1-" target="_blank" rel="noopener noreferrer">Student Information System</a></h4>
+                <p class="p-card-desc">Student records management — my first team project at university.</p>
+                <p class="p-card-stack">Team project · University lab</p>
+              </article>
+
+              <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
+                <div class="p-card-top">
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#quote" /></svg></span>
+                  <span class="p-card-cat">App</span>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </div>
+                <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/StajCalismalarim/tree/master/Random-Quotes" target="_blank" rel="noopener noreferrer">Random Quotes Generator</a></h4>
+                <p class="p-card-desc">A tiny quote machine — one click, one fresh quote.</p>
+                <p class="p-card-stack">JavaScript</p>
+              </article>
+            </div>
+
+            <div class="archive-more">
+              <button class="btn btn-ghost btn-sm" type="button" id="archiveMore" hidden>
+                Show all <span data-more-count></span> projects
+                <svg class="i i-nudge-down" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right" /></svg>
+              </button>
+            </div>
+            <p class="sr-only" id="archiveStatus" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           04 · Skills
+           ============================================================ -->
+      <section class="section" id="skills" aria-labelledby="skills-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">04</span>Skills</p>
+            <h2 class="section-title" id="skills-title">Tools of the trade.</h2>
+          </header>
+
+          <div class="bento">
+            <article class="tile tile--wide card" data-cat="app" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#window" /></svg></span>
+                <h3 class="tile-title">Frontend</h3>
+                <span class="tile-note">daily drivers</span>
+              </header>
+              <ul class="tech-list tech-list--lg">
+                <li class="tech"><img src="assets/icons/tech/typescript.svg" alt="" width="18" height="18" loading="lazy" />TypeScript</li>
+                <li class="tech"><img src="assets/icons/tech/javascript.svg" alt="" width="18" height="18" loading="lazy" />JavaScript</li>
+                <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="18" height="18" loading="lazy" />React</li>
+                <li class="tech"><img src="assets/icons/tech/vuejs.svg" alt="" width="18" height="18" loading="lazy" />Vue</li>
+                <li class="tech"><img src="assets/icons/tech/html5.svg" alt="" width="18" height="18" loading="lazy" />HTML</li>
+                <li class="tech"><img src="assets/icons/tech/css3.svg" alt="" width="18" height="18" loading="lazy" />CSS</li>
+                <li class="tech"><img src="assets/icons/tech/tailwindcss.svg" alt="" width="18" height="18" loading="lazy" />Tailwind CSS</li>
+                <li class="tech"><img src="assets/icons/tech/bootstrap.svg" alt="" width="18" height="18" loading="lazy" />Bootstrap</li>
+                <li class="tech"><img src="assets/icons/tech/jquery.svg" alt="" width="18" height="18" loading="lazy" />jQuery</li>
+              </ul>
+            </article>
+
+            <article class="tile card" data-cat="ai" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg></span>
+                <h3 class="tile-title">AI engineering</h3>
+              </header>
+              <ul class="tech-list tech-list--lg">
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</li>
+                <li class="tech"><img src="assets/icons/tech/python.svg" alt="" width="18" height="18" loading="lazy" />Python</li>
+                <li class="tech"><img src="assets/icons/tech/jupyter.svg" alt="" width="18" height="18" loading="lazy" />Jupyter</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#terminal" /></svg>Prompt design</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#code" /></svg>Structured outputs</li>
+              </ul>
+            </article>
+
+            <article class="tile card" data-cat="web" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#server" /></svg></span>
+                <h3 class="tile-title">Backend &amp; languages</h3>
+              </header>
+              <ul class="tech-list tech-list--lg">
+                <li class="tech"><img src="assets/icons/tech/nodejs.svg" alt="" width="18" height="18" loading="lazy" />Node.js</li>
+                <li class="tech"><img src="assets/icons/tech/go.svg" alt="" width="18" height="18" loading="lazy" />Go</li>
+                <li class="tech"><img src="assets/icons/tech/java.svg" alt="" width="18" height="18" loading="lazy" />Java</li>
+                <li class="tech"><img src="assets/icons/tech/c.svg" alt="" width="18" height="18" loading="lazy" />C</li>
+              </ul>
+            </article>
+
+            <article class="tile card" data-cat="research" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#database" /></svg></span>
+                <h3 class="tile-title">Data &amp; DevOps</h3>
+              </header>
+              <ul class="tech-list tech-list--lg">
+                <li class="tech"><img src="assets/icons/tech/postgresql.svg" alt="" width="18" height="18" loading="lazy" />PostgreSQL</li>
+                <li class="tech"><img src="assets/icons/tech/mysql.svg" alt="" width="18" height="18" loading="lazy" />MySQL</li>
+                <li class="tech"><img src="assets/icons/tech/redis.svg" alt="" width="18" height="18" loading="lazy" />Redis</li>
+                <li class="tech"><img src="assets/icons/tech/neo4j.svg" alt="" width="18" height="18" loading="lazy" />Neo4j</li>
+                <li class="tech"><img src="assets/icons/tech/firebase.svg" alt="" width="18" height="18" loading="lazy" />Firebase</li>
+                <li class="tech"><img src="assets/icons/tech/docker.svg" alt="" width="18" height="18" loading="lazy" />Docker</li>
+                <li class="tech"><img src="assets/icons/tech/git.svg" alt="" width="18" height="18" loading="lazy" />Git</li>
+              </ul>
+            </article>
+
+            <article class="tile card" data-cat="game" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#cubes" /></svg></span>
+                <h3 class="tile-title">Exploring</h3>
+              </header>
+              <ul class="tech-list tech-list--lg">
+                <li class="tech"><img src="assets/icons/tech/solidity.svg" alt="" width="18" height="18" loading="lazy" />Solidity</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#ethereum" /></svg>Ethereum</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#cubes" /></svg>Hyperledger</li>
+                <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="18" height="18" loading="lazy" />React Native</li>
+              </ul>
+            </article>
+
+            <article class="tile tile--full card" data-cat="product" data-spotlight data-reveal>
+              <header class="tile-head">
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#users" /></svg></span>
+                <h3 class="tile-title">Ways of working</h3>
+              </header>
+              <ul class="chip-list">
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#agile" /></svg>Agile &amp; Kanban</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#users" /></svg>Teamwork</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#comments" /></svg>Clear communication</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#heart" /></svg>Empathy</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#math" /></svg>Mathematical thinking</li>
+                <li>
+                  <a class="chip chip--link" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer">
+                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>Problem solving on LeetCode
+                    <svg class="i i-nudge-up" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           05 · Education
+           ============================================================ -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <div class="container">
+          <header class="section-head" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">05</span>Education</p>
+            <h2 class="section-title" id="education-title">Education &amp; credentials.</h2>
+          </header>
+
+          <div class="edu-grid">
+            <div class="edu-col">
+              <h3 class="mini-title">
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>
+                Degree
+              </h3>
+              <div class="edu-stack">
+                <article class="edu card" data-reveal>
+                  <div class="edu-top">
+                    <h4 class="edu-school">Kocaeli University</h4>
+                    <span class="edu-years">2020 – 2023</span>
+                  </div>
+                  <p class="edu-degree">B.Sc. Computer Engineering</p>
+                  <div class="gpa">
+                    <span class="gpa-label" id="gpa-kou">GPA</span>
+                    <div class="meter" role="meter" aria-labelledby="gpa-kou" aria-valuemin="0" aria-valuemax="4" aria-valuenow="3.18" aria-valuetext="3.18 out of 4">
+                      <span class="meter-fill" style="--value: 0.795"></span>
+                    </div>
+                    <span class="gpa-value">3.18<span> / 4</span></span>
+                  </div>
+                </article>
+                <article class="edu card" data-reveal>
+                  <div class="edu-top">
+                    <h4 class="edu-school">Konya Technical University</h4>
+                    <span class="edu-years">2019 – 2020</span>
+                  </div>
+                  <p class="edu-degree">Computer Engineering — first year of the degree</p>
+                  <div class="gpa">
+                    <span class="gpa-label" id="gpa-ktun">GPA</span>
+                    <div class="meter" role="meter" aria-labelledby="gpa-ktun" aria-valuemin="0" aria-valuemax="4" aria-valuenow="3.6" aria-valuetext="3.60 out of 4">
+                      <span class="meter-fill" style="--value: 0.9"></span>
+                    </div>
+                    <span class="gpa-value">3.60<span> / 4</span></span>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="edu-col">
+              <h3 class="mini-title">
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#certificate" /></svg>
+                Certificates &amp; awards
+              </h3>
+              <ul class="certs">
+                <li data-reveal>
+                  <a class="cert card" data-cat="product" href="https://www.linkedin.com/in/mnmercan/overlay/Certifications/374407651/treasury?profileId=ACoAADP-yDcBBie3kkJcx5_O4TJIHdG8QiZ69bk" target="_blank" rel="noopener noreferrer">
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#trophy" /></svg></span>
+                    <span class="cert-text"><strong>Best Growth Project Award</strong><span>Jotform · 2023</span></span>
+                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                  </a>
+                </li>
+                <li data-reveal>
+                  <a class="cert card" data-cat="web" href="https://www.freecodecamp.org/certification/numanmercan/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#code" /></svg></span>
+                    <span class="cert-text"><strong>JavaScript Algorithms &amp; Data Structures</strong><span>freeCodeCamp</span></span>
+                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                  </a>
+                </li>
+                <li data-reveal>
+                  <a class="cert card" data-cat="app" href="https://www.efset.org/cert/qF9gEy" target="_blank" rel="noopener noreferrer">
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#language" /></svg></span>
+                    <span class="cert-text"><strong>EF SET English Certificate</strong><span>EF SET · B2</span></span>
+                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                  </a>
+                </li>
+              </ul>
+
+              <h3 class="mini-title mini-title--spaced">
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#language" /></svg>
+                Languages
+              </h3>
+              <div class="langs" data-reveal>
+                <div class="lang lang--scale" aria-hidden="true">
+                  <span></span>
+                  <span class="levels-scale"><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span></span>
+                  <span></span>
+                </div>
+                <div class="lang">
+                  <span class="lang-name">Turkish</span>
+                  <span class="levels" role="img" aria-label="Turkish: native speaker">
+                    <i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i>
+                  </span>
+                  <span class="lang-level">Native</span>
+                </div>
+                <div class="lang">
+                  <span class="lang-name">English</span>
+                  <span class="levels" role="img" aria-label="English: B2, upper intermediate">
+                    <i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i class="is-on"></i><i></i><i></i>
+                  </span>
+                  <span class="lang-level">B2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           06 · Contact
+           ============================================================ -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <div class="contact-card" data-reveal>
+            <p class="eyebrow"><span class="eyebrow-index">06</span>Contact</p>
+            <h2 class="contact-title" id="contact-title">Let's build something <span class="text-gradient">together.</span></h2>
+            <p class="contact-lead">Have a role, a project or an idea worth exploring? My inbox is open.</p>
+            <div class="contact-actions">
+              <a class="btn btn-primary btn-lg" data-link="email" href="mailto:numan.mercan24@gmail.com">
+                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#mail" /></svg>
+                numan.mercan24@gmail.com
+              </a>
+              <button class="btn btn-ghost btn-lg copy-btn" type="button" data-copy="numan.mercan24@gmail.com">
+                <svg class="i copy-btn-idle" aria-hidden="true"><use href="assets/icons/sprite.svg#copy" /></svg>
+                <svg class="i copy-btn-done" aria-hidden="true"><use href="assets/icons/sprite.svg#check" /></svg>
+                <span class="copy-btn-label">Copy email</span>
+              </button>
+            </div>
+            <ul class="socials socials--center" aria-label="Profiles">
+              <li>
+                <a class="social" data-tip="LinkedIn" href="https://www.linkedin.com/in/mnmercan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-tip="GitHub" href="https://github.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-tip="LeetCode" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-tip="X / Twitter" href="https://x.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#x" /></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social" data-tip="Resume" href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens Google Drive)">
+                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span data-year>2026</span> M. Numan Mercan</p>
+        <p class="footer-built">
+          Hand-built with HTML, CSS &amp; vanilla JS ·
+          <a href="https://github.com/mnumanmercan/mnumanmercan.github.io" target="_blank" rel="noopener noreferrer">View source</a>
+        </p>
+        <p class="footer-hint">
+          <button class="footer-cmdk" type="button" data-cmdk-open>Press <kbd class="kbd" data-mod-key>⌘K</kbd> to navigate</button>
+        </p>
+        <a class="to-top" href="#top" aria-label="Back to top">
+          <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-up" /></svg>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Command palette (⌘K / Ctrl+K) -->
+    <dialog class="cmdk" id="cmdk" aria-label="Command menu">
+      <div class="cmdk-panel">
+        <div class="cmdk-search">
+          <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>
+          <input
+            class="cmdk-input"
+            id="cmdkInput"
+            type="text"
+            placeholder="Jump to a section, copy email, open a link…"
+            autocomplete="off"
+            spellcheck="false"
+            role="combobox"
+            aria-expanded="true"
+            aria-controls="cmdkList"
+            aria-autocomplete="list"
+          />
+          <kbd class="kbd">esc</kbd>
+        </div>
+        <ul class="cmdk-list" id="cmdkList" role="listbox" aria-label="Commands"></ul>
+        <div class="cmdk-foot" aria-hidden="true">
+          <span><kbd class="kbd">↑</kbd><kbd class="kbd">↓</kbd> navigate</span>
+          <span><kbd class="kbd">↵</kbd> select</span>
+          <span><kbd class="kbd">esc</kbd> close</span>
+        </div>
+      </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
   </body>
 </html>
