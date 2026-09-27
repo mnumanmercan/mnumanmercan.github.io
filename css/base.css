@@ -38,6 +38,8 @@
   --tk-prop: #89ddff;
   --tk-type: #f9c97a;
   --tk-var: #ffffff;
+  --tk-number: #ff9e64;
+  --tk-comment: #6c6c7a;
 }
 
 /* --- Dark theme (default) --------------------------------------------------- */
@@ -118,6 +120,29 @@
   --viz-paper: #2a78d6;
   --viz-query: #eb6834;
   --viz-author: #1baf7a;
+}
+
+/* --- Retro terminal mode (Konami code / command palette easter egg) ---------- */
+.retro {
+  --font-sans: var(--font-mono);
+  --accent: #3dff8f;
+  --accent-2: #b8ff5c;
+  --accent-ink: #03140a;
+}
+
+[data-theme="light"].retro {
+  --accent: #0a7d36;
+  --accent-2: #4d7c0f;
+  --accent-ink: #ffffff;
+}
+
+.retro body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 0 1px, transparent 1px 3px);
 }
 
 /* --- Reset ------------------------------------------------------------------ */
@@ -226,7 +251,11 @@ strong {
   font-weight: 600;
 }
 
-.mono {
+.mono,
+code,
+kbd,
+pre,
+samp {
   font-family: var(--font-mono);
 }
 
@@ -279,6 +308,14 @@ strong {
   vertical-align: -0.125em;
 }
 
+/* The inline sprite that holds every <symbol> (kept renderable, just 0×0) */
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 /* --- Layout ------------------------------------------------------------------ */
 .container {
   width: 100%;
@@ -299,8 +336,9 @@ strong {
 
 .eyebrow {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 6px 10px;
   margin-bottom: 16px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -311,6 +349,7 @@ strong {
 
 .eyebrow::after {
   content: "";
+  order: 1;
   width: 44px;
   height: 1px;
   background: linear-gradient(90deg, var(--border-strong), transparent);
@@ -318,6 +357,65 @@ strong {
 
 .eyebrow-index {
   color: var(--accent);
+}
+
+/* "$ command" after the eyebrow, typed out when the section is revealed */
+.eyebrow-cmd {
+  order: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.eyebrow-prompt {
+  color: var(--accent);
+}
+
+.eyebrow-cmd-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--text-2);
+}
+
+.eyebrow-cmd::after {
+  content: "";
+  width: 0.55em;
+  height: 1.1em;
+  margin-left: -0.6ch;
+  background: var(--accent);
+  opacity: 0;
+}
+
+.js .eyebrow-cmd-text {
+  width: 0;
+}
+
+.js .is-visible .eyebrow-cmd-text {
+  width: calc(var(--n, 0) * 1ch);
+  animation: typing calc(var(--n, 10) * 55ms) steps(var(--n, 10)) 0.5s backwards;
+}
+
+.js .is-visible .eyebrow-cmd::after {
+  animation: caret 1.1s steps(1) 0.5s 5;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes caret {
+  0% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 .section-title {

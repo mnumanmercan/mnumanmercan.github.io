@@ -273,7 +273,6 @@
 
 @media (max-width: 960px) {
   .nav,
-  .header-actions .header-cv,
   .cmdk-trigger-label,
   .cmdk-trigger .kbd {
     display: none;

@@ -116,23 +116,14 @@
             aria-label="Open command menu"
             aria-keyshortcuts="Meta+K Control+K"
           >
-            <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>
+            <svg class="i" aria-hidden="true"><use href="#i-search" /></svg>
             <span class="cmdk-trigger-label">Search</span>
             <kbd class="kbd" data-mod-key>⌘K</kbd>
           </button>
           <button class="icon-btn theme-toggle" id="themeToggle" type="button" aria-label="Switch theme">
-            <svg class="i theme-icon-sun" aria-hidden="true"><use href="assets/icons/sprite.svg#sun" /></svg>
-            <svg class="i theme-icon-moon" aria-hidden="true"><use href="assets/icons/sprite.svg#moon" /></svg>
+            <svg class="i theme-icon-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+            <svg class="i theme-icon-moon" aria-hidden="true"><use href="#i-moon" /></svg>
           </button>
-          <a
-            class="btn btn-sm btn-outline header-cv"
-            href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-            <svg class="i i-nudge-up" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
-          </a>
           <button
             class="icon-btn menu-toggle"
             id="menuToggle"
@@ -162,7 +153,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+            <svg class="i" aria-hidden="true"><use href="#i-file" /></svg>
             View resume
           </a>
         </nav>
@@ -193,7 +184,7 @@
               <span
                 class="typed"
                 aria-hidden="true"
-                data-typed='["full-stack developer", "frontend engineer", "AI engineer"]'
+                data-typed='["full-stack developer", "frontend engineer", "AI engineer", "coffee → code compiler"]'
                 >full-stack developer</span
               ><span class="caret" aria-hidden="true"></span>
             </p>
@@ -208,38 +199,44 @@
             <div class="hero-cta" data-reveal>
               <a class="btn btn-primary" href="#projects">
                 See my work
-                <svg class="i i-nudge" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right" /></svg>
+                <svg class="i i-nudge" aria-hidden="true"><use href="#i-arrow-right" /></svg>
               </a>
               <a class="btn btn-ghost" href="#contact">
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#mail" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg>
                 Get in touch
+              </a>
+              <a
+                class="btn btn-ghost"
+                data-link="resume"
+                href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Resume (opens Google Drive)"
+              >
+                <svg class="i" aria-hidden="true"><use href="#i-file" /></svg>
+                Resume
               </a>
             </div>
 
             <ul class="socials" data-reveal aria-label="Profiles">
               <li>
                 <a class="social" data-link="linkedin" data-tip="LinkedIn" href="https://www.linkedin.com/in/mnmercan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-linkedin" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-link="github" data-tip="GitHub" href="https://github.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-github" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-link="leetcode" data-tip="LeetCode" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-leetcode" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-link="x" data-tip="X / Twitter" href="https://x.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#x" /></svg>
-                </a>
-              </li>
-              <li>
-                <a class="social" data-link="resume" data-tip="Resume" href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens Google Drive)">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-x" /></svg>
                 </a>
               </li>
             </ul>
@@ -265,11 +262,12 @@
 <span class="line">  },</span>
 <span class="line">  <span class="tk-p">focus</span>: <span class="tk-s">"AI engineering"</span>,</span>
 <span class="line">  <span class="tk-p">experience</span>: <span class="tk-s">"1.5 years"</span>,</span>
+<span class="line">  <span class="tk-p">bugs</span>: <span class="tk-n">0</span>, <span class="tk-c">// that we know of</span></span>
 <span class="line">  <span class="tk-p">degree</span>: <span class="tk-s">"B.Sc. Computer Engineering"</span>,</span>
 <span class="line">} <span class="tk-k">satisfies</span> <span class="tk-t">Engineer</span>;<span class="code-caret" aria-hidden="true"></span></span></code></pre>
               <div class="window-status" aria-hidden="true">
-                <span><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#branch" /></svg> main</span>
-                <span class="window-status-ok"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#check" /></svg> 0 problems</span>
+                <span><svg class="i" aria-hidden="true"><use href="#i-branch" /></svg> main</span>
+                <span class="window-status-ok"><svg class="i" aria-hidden="true"><use href="#i-check" /></svg> 0 problems</span>
                 <span class="window-status-lang">TypeScript</span>
               </div>
             </figure>
@@ -293,7 +291,7 @@
             <div class="stat stat--award">
               <dt>Jotform internship award</dt>
               <dd>
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#trophy" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-trophy" /></svg>
                 Best Growth Project
               </dd>
             </div>
@@ -329,7 +327,7 @@
       <section class="section" id="about" aria-labelledby="about-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">01</span>About</p>
+            <p class="eyebrow"><span class="eyebrow-index">01</span>About<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">whoami</span></span></p>
             <h2 class="section-title" id="about-title">Building for the web, with an eye on&nbsp;AI.</h2>
           </header>
 
@@ -340,15 +338,15 @@
               </div>
               <ul class="facts">
                 <li>
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-graduation" /></svg>
                   Computer Engineering, Kocaeli University
                 </li>
                 <li>
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#briefcase" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-briefcase" /></svg>
                   1.5 years of professional experience
                 </li>
                 <li>
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>
                   Focused on AI engineering
                 </li>
               </ul>
@@ -372,7 +370,7 @@
               <ul class="capabilities">
                 <li class="cap card" data-cat="app" data-spotlight data-reveal>
                   <span class="cap-icon" aria-hidden="true">
-                    <svg class="i"><use href="assets/icons/sprite.svg#window" /></svg>
+                    <svg class="i"><use href="#i-window" /></svg>
                   </span>
                   <h3 class="cap-title">Frontend</h3>
                   <p class="cap-text">Component-driven, responsive interfaces in React and Vue — written in TypeScript.</p>
@@ -385,7 +383,7 @@
                 </li>
                 <li class="cap card" data-cat="web" data-spotlight data-reveal>
                   <span class="cap-icon" aria-hidden="true">
-                    <svg class="i"><use href="assets/icons/sprite.svg#server" /></svg>
+                    <svg class="i"><use href="#i-server" /></svg>
                   </span>
                   <h3 class="cap-title">Backend</h3>
                   <p class="cap-text">APIs and services in Node.js and Go, backed by SQL and Redis, shipped with Docker.</p>
@@ -399,12 +397,12 @@
                 </li>
                 <li class="cap card" data-cat="ai" data-spotlight data-reveal>
                   <span class="cap-icon" aria-hidden="true">
-                    <svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg>
+                    <svg class="i"><use href="#i-brain" /></svg>
                   </span>
                   <h3 class="cap-title">AI engineering</h3>
                   <p class="cap-text">LLM-powered features with the Claude API — prompting, structured outputs, integration.</p>
                   <ul class="logo-row" aria-label="AI stack">
-                    <li data-tip="Claude API"><svg class="i" role="img" aria-label="Claude API"><use href="assets/icons/sprite.svg#sparkles" /></svg></li>
+                    <li data-tip="Claude API"><svg class="i" role="img" aria-label="Claude API"><use href="#i-sparkles" /></svg></li>
                     <li data-tip="Python"><img src="assets/icons/tech/python.svg" alt="Python" width="18" height="18" loading="lazy" /></li>
                     <li data-tip="Jupyter"><img src="assets/icons/tech/jupyter.svg" alt="Jupyter" width="18" height="18" loading="lazy" /></li>
                   </ul>
@@ -414,12 +412,12 @@
               <div class="interests" data-reveal>
                 <h3 class="mini-title">Off the clock</h3>
                 <ul class="chip-list">
-                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#film" /></svg>Cinema</li>
-                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#dumbbell" /></svg>Weightlifting &amp; CrossFit</li>
-                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#book" /></svg>Books &amp; audiobooks</li>
-                  <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#camera" /></svg>Landscape photography</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-film" /></svg>Cinema</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-dumbbell" /></svg>Weightlifting &amp; CrossFit</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-book" /></svg>Books &amp; audiobooks</li>
+                  <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-camera" /></svg>Landscape photography</li>
                   <li class="chip" tabindex="0" data-tip="Ori · The Last of Us · Crysis · Battlefield 1 · Call of Duty · CS:GO">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#gamepad" /></svg>Video games
+                    <svg class="i" aria-hidden="true"><use href="#i-gamepad" /></svg>Video games
                     <span class="sr-only">— favourites: Ori, The Last of Us, Crysis, Battlefield 1, Call of Duty and CS:GO</span>
                   </li>
                 </ul>
@@ -435,11 +433,22 @@
       <section class="section" id="experience" aria-labelledby="experience-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">02</span>Experience</p>
+            <p class="eyebrow"><span class="eyebrow-index">02</span>Experience<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">git log --author="numan"</span></span></p>
             <h2 class="section-title" id="experience-title">Where I've shipped.</h2>
           </header>
 
           <ol class="timeline" id="timeline">
+            <li class="tl-item tl-head" data-reveal>
+              <span class="tl-node tl-node--head" aria-hidden="true"></span>
+              <p class="tl-head-text">
+                <span class="tl-head-ref">HEAD → main</span>
+                <span class="tl-head-msg">next commit pending<span class="tl-head-dots" aria-hidden="true"></span></span>
+                <a class="tl-head-link" href="#contact">
+                  Let's write it together
+                  <svg class="i" aria-hidden="true"><use href="#i-arrow-right" /></svg>
+                </a>
+              </p>
+            </li>
             <li class="tl-item" data-reveal>
               <span class="tl-node" aria-hidden="true"></span>
               <article class="xp card" data-spotlight>
@@ -450,7 +459,7 @@
                     <p class="xp-company">
                       <a href="https://www.linkedin.com/company/insiderone/" target="_blank" rel="noopener noreferrer">
                         Insider
-                        <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                        <svg class="i" aria-hidden="true"><use href="#i-external" /></svg>
                       </a>
                     </p>
                   </div>
@@ -489,7 +498,7 @@
                     <p class="xp-company">
                       <a href="https://www.linkedin.com/company/jotform/" target="_blank" rel="noopener noreferrer">
                         Jotform
-                        <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                        <svg class="i" aria-hidden="true"><use href="#i-external" /></svg>
                       </a>
                       <span class="badge">Internship</span>
                     </p>
@@ -504,13 +513,13 @@
                 </ul>
                 <a class="award" href="https://www.youtube.com/watch?v=4mUhRrMaXIA&amp;ab_channel=Numan" target="_blank" rel="noopener noreferrer">
                   <span class="award-icon" aria-hidden="true">
-                    <svg class="i"><use href="assets/icons/sprite.svg#trophy" /></svg>
+                    <svg class="i"><use href="#i-trophy" /></svg>
                   </span>
                   <span class="award-text">
                     <strong>Best Growth Project Award</strong>
                     <span>Watch the project demo on YouTube</span>
                   </span>
-                  <svg class="i award-play" aria-hidden="true"><use href="assets/icons/sprite.svg#play" /></svg>
+                  <svg class="i award-play" aria-hidden="true"><use href="#i-play" /></svg>
                 </a>
                 <ul class="tech-list" aria-label="Technologies used at Jotform">
                   <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="16" height="16" loading="lazy" />React</li>
@@ -529,7 +538,7 @@
       <section class="section" id="projects" aria-labelledby="projects-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">03</span>Projects</p>
+            <p class="eyebrow"><span class="eyebrow-index">03</span>Projects<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">ls ~/projects --sort=impact</span></span></p>
             <h2 class="section-title" id="projects-title">Selected work.</h2>
             <p class="section-lead">Products, client sites, research and experiments — highlights first.</p>
           </header>
@@ -541,10 +550,10 @@
               <div class="feature-visual">
                 <div class="tabs" role="tablist" aria-label="Resumark views">
                   <button class="tab" type="button" role="tab" id="rm-tab-preview" aria-controls="rm-panel-preview" aria-selected="true">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#image" /></svg>Preview
+                    <svg class="i" aria-hidden="true"><use href="#i-image" /></svg>Preview
                   </button>
                   <button class="tab" type="button" role="tab" id="rm-tab-arch" aria-controls="rm-panel-arch" aria-selected="false" tabindex="-1">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sitemap" /></svg>Architecture
+                    <svg class="i" aria-hidden="true"><use href="#i-sitemap" /></svg>Architecture
                   </button>
                 </div>
 
@@ -571,10 +580,10 @@
                       <span class="arch-name"><img src="assets/icons/tech/nodejs.svg" alt="" width="16" height="16" />Node.js</span>
                       <span class="arch-note">TypeScript API</span>
                     </div>
-                    <div class="arch-link arch-link--h arch-l2"><span class="arch-label">prompt</span></div>
+                    <div class="arch-link arch-link--v arch-l2"><span class="arch-label">prompt</span></div>
                     <div class="arch-node arch-node--ai arch-ai">
                       <span class="arch-kind">AI</span>
-                      <span class="arch-name"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</span>
+                      <span class="arch-name"><svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>Claude API</span>
                       <span class="arch-note">Summary analysis</span>
                     </div>
                     <div class="arch-link arch-link--v arch-l3"><span class="arch-label">SQL</span></div>
@@ -589,28 +598,28 @@
 
               <div class="feature-body">
                 <div class="feature-tags">
-                  <span class="tag" data-cat="product"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#box" /></svg>Product</span>
-                  <span class="tag" data-cat="ai"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#brain" /></svg>AI</span>
+                  <span class="tag" data-cat="product"><svg class="i" aria-hidden="true"><use href="#i-box" /></svg>Product</span>
+                  <span class="tag" data-cat="ai"><svg class="i" aria-hidden="true"><use href="#i-brain" /></svg>AI</span>
                 </div>
                 <h3 class="feature-title">Resumark</h3>
                 <p class="feature-sub">AI-assisted CV generator</p>
                 <p class="feature-desc">An ATS-friendly resume builder with AI feedback built in.</p>
                 <ul class="feature-points">
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#layers" /></svg>Template gallery</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#bolt" /></svg>Live-preview editor</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>One-click PDF export</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude-powered analysis</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-layers" /></svg>Template gallery</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-bolt" /></svg>Live-preview editor</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-file-pdf" /></svg>One-click PDF export</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>Claude-powered analysis</li>
                 </ul>
                 <ul class="tech-list" aria-label="Resumark stack">
                   <li class="tech"><img src="assets/icons/tech/typescript.svg" alt="" width="16" height="16" loading="lazy" />TypeScript</li>
                   <li class="tech"><img src="assets/icons/tech/vuejs.svg" alt="" width="16" height="16" loading="lazy" />Vue</li>
                   <li class="tech"><img src="assets/icons/tech/nodejs.svg" alt="" width="16" height="16" loading="lazy" />Node.js</li>
                   <li class="tech"><img src="assets/icons/tech/postgresql.svg" alt="" width="16" height="16" loading="lazy" />PostgreSQL</li>
-                  <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</li>
+                  <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>Claude API</li>
                 </ul>
                 <div class="feature-links">
                   <a class="btn btn-sm btn-outline" href="https://github.com/mnumanmercan/CV-generate" target="_blank" rel="noopener noreferrer">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-github" /></svg>
                     View code
                   </a>
                 </div>
@@ -676,26 +685,26 @@
 
               <div class="feature-body">
                 <div class="feature-tags">
-                  <span class="tag" data-cat="app"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#rocket" /></svg>App</span>
-                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Graph</span>
+                  <span class="tag" data-cat="app"><svg class="i" aria-hidden="true"><use href="#i-rocket" /></svg>App</span>
+                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="#i-graph" /></svg>Graph</span>
                 </div>
                 <h3 class="feature-title">Academic Article Search Engine</h3>
                 <p class="feature-sub">Graph-powered paper discovery</p>
                 <p class="feature-desc">Search academic papers through their relationships, not just keywords.</p>
                 <ul class="feature-points">
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#database" /></svg>Graph data model in Neo4j</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Interactive network view</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>Relationship-based search</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Visualized with Neovis.js</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-database" /></svg>Graph data model in Neo4j</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-graph" /></svg>Interactive network view</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-search" /></svg>Relationship-based search</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>Visualized with Neovis.js</li>
                 </ul>
                 <ul class="tech-list" aria-label="Search engine stack">
                   <li class="tech"><img src="assets/icons/tech/neo4j.svg" alt="" width="16" height="16" loading="lazy" />Neo4j</li>
-                  <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graph" /></svg>Neovis.js</li>
+                  <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-graph" /></svg>Neovis.js</li>
                   <li class="tech"><img src="assets/icons/tech/javascript.svg" alt="" width="16" height="16" loading="lazy" />JavaScript</li>
                 </ul>
                 <div class="feature-links">
                   <a class="btn btn-sm btn-outline" href="https://github.com/MNMercan/Neo4J" target="_blank" rel="noopener noreferrer">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-github" /></svg>
                     View code
                   </a>
                 </div>
@@ -712,15 +721,15 @@
                     aria-label="Three documents stored as hash-linked blocks. Each block records the previous block's hash, so changing any document breaks the chain."
                   >
                     <div class="block">
-                      <span class="block-no">Block #01 <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg></span>
-                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>diploma.pdf</span>
+                      <span class="block-no">Block #01 <svg class="i" aria-hidden="true"><use href="#i-lock" /></svg></span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="#i-file" /></svg>diploma.pdf</span>
                       <span class="block-hash">hash <b class="h-a">0x9f3a…c21</b></span>
                       <span class="block-prev">prev 0x0000…000</span>
                     </div>
                     <span class="chain-link" aria-hidden="true"></span>
                     <div class="block">
-                      <span class="block-no">Block #02 <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg></span>
-                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>transcript.pdf</span>
+                      <span class="block-no">Block #02 <svg class="i" aria-hidden="true"><use href="#i-lock" /></svg></span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="#i-file" /></svg>transcript.pdf</span>
                       <span class="block-hash">hash <b class="h-b">0x71c2…e8a</b></span>
                       <span class="block-prev">prev <b class="h-a">0x9f3a…c21</b></span>
                     </div>
@@ -730,16 +739,16 @@
                         Block #03
                         <span class="block-state" aria-hidden="true">
                           <span class="block-state-pending">sealing…</span>
-                          <span class="block-state-sealed"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg></span>
+                          <span class="block-state-sealed"><svg class="i"><use href="#i-lock" /></svg></span>
                         </span>
                       </span>
-                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>archive.pdf</span>
+                      <span class="block-doc"><svg class="i" aria-hidden="true"><use href="#i-file" /></svg>archive.pdf</span>
                       <span class="block-hash">hash <b class="h-c">0x4be0…19d</b></span>
                       <span class="block-prev">prev <b class="h-b">0x71c2…e8a</b></span>
                     </div>
                   </div>
                   <p class="chain-verify">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#circle-check" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-circle-check" /></svg>
                     Chain verified · tamper-evident
                   </p>
                 </div>
@@ -747,25 +756,25 @@
 
               <div class="feature-body">
                 <div class="feature-tags">
-                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#flask" /></svg>Research</span>
-                  <span class="tag" data-cat="academic"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>Thesis</span>
+                  <span class="tag" data-cat="research"><svg class="i" aria-hidden="true"><use href="#i-flask" /></svg>Research</span>
+                  <span class="tag" data-cat="academic"><svg class="i" aria-hidden="true"><use href="#i-graduation" /></svg>Thesis</span>
                 </div>
                 <h3 class="feature-title">Archive System with Blockchain</h3>
                 <p class="feature-sub">Graduation thesis</p>
                 <p class="feature-desc">A tamper-proof document archive: every record is hash-linked on a blockchain, so any change is detectable.</p>
                 <ul class="feature-points">
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#lock" /></svg>Tamper-proof records</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#link" /></svg>Hash-linked integrity</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>Full thesis write-up</li>
-                  <li><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#book" /></svg>Research paper</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-lock" /></svg>Tamper-proof records</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-link" /></svg>Hash-linked integrity</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-file-pdf" /></svg>Full thesis write-up</li>
+                  <li><svg class="i" aria-hidden="true"><use href="#i-book" /></svg>Research paper</li>
                 </ul>
                 <div class="feature-links">
                   <a class="btn btn-sm btn-outline" href="https://drive.google.com/file/d/1ySFYwIdkOsarwWgIW1GIYYZiyvZXIVRv/view" target="_blank" rel="noopener noreferrer">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file-pdf" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-file-pdf" /></svg>
                     Read thesis
                   </a>
                   <a class="btn btn-sm btn-ghost" href="https://www.overleaf.com/read/xbrsxfxdprrf#2a75a8" target="_blank" rel="noopener noreferrer">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-file" /></svg>
                     Research paper
                   </a>
                 </div>
@@ -778,7 +787,7 @@
             <div class="subsection-head" data-reveal>
               <div>
                 <h3 class="subsection-title">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#globe" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-globe" /></svg>
                   Client work
                 </h3>
                 <p class="subsection-note">Designed, built and delivered — all running live.</p>
@@ -790,16 +799,16 @@
                 <a class="client card" href="https://navatekinsaat.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
                   <span class="client-bar" aria-hidden="true">
                     <span class="window-dots"><i></i><i></i><i></i></span>
-                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>navatekinsaat.com</span>
+                    <span class="client-url"><svg class="i"><use href="#i-lock" /></svg>navatekinsaat.com</span>
                   </span>
                   <span class="client-body">
-                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#helmet" /></svg></span>
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="#i-helmet" /></svg></span>
                     <span class="client-name">Navatek İnşaat</span>
                     <span class="client-desc">Corporate website for a construction company.</span>
                   </span>
                   <span class="client-foot">
                     <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
-                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="#i-external" /></svg></span>
                   </span>
                 </a>
               </li>
@@ -807,16 +816,16 @@
                 <a class="client card" href="https://www.klusbedrijfonmaz.nl/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
                   <span class="client-bar" aria-hidden="true">
                     <span class="window-dots"><i></i><i></i><i></i></span>
-                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>klusbedrijfonmaz.nl</span>
+                    <span class="client-url"><svg class="i"><use href="#i-lock" /></svg>klusbedrijfonmaz.nl</span>
                   </span>
                   <span class="client-body">
-                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#tools" /></svg></span>
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="#i-tools" /></svg></span>
                     <span class="client-name">Klusbedrijf Onmaz</span>
                     <span class="client-desc">Full-stack website for a Dutch renovation &amp; maintenance business.</span>
                   </span>
                   <span class="client-foot">
                     <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
-                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="#i-external" /></svg></span>
                   </span>
                 </a>
               </li>
@@ -824,16 +833,16 @@
                 <a class="client card" href="http://özelberrakanaokulu.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
                   <span class="client-bar" aria-hidden="true">
                     <span class="window-dots"><i></i><i></i><i></i></span>
-                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#globe" /></svg>özelberrakanaokulu.com</span>
+                    <span class="client-url"><svg class="i"><use href="#i-globe" /></svg>özelberrakanaokulu.com</span>
                   </span>
                   <span class="client-body">
-                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#shapes" /></svg></span>
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="#i-shapes" /></svg></span>
                     <span class="client-name">Berrak Kindergarten</span>
                     <span class="client-desc">Promotional website, built independently and handed over live.</span>
                   </span>
                   <span class="client-foot">
                     <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
-                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="#i-external" /></svg></span>
                   </span>
                 </a>
               </li>
@@ -841,16 +850,16 @@
                 <a class="client card" href="https://bahmercarservice.com/" target="_blank" rel="noopener noreferrer" data-project data-client data-spotlight>
                   <span class="client-bar" aria-hidden="true">
                     <span class="window-dots"><i></i><i></i><i></i></span>
-                    <span class="client-url"><svg class="i"><use href="assets/icons/sprite.svg#lock" /></svg>bahmercarservice.com</span>
+                    <span class="client-url"><svg class="i"><use href="#i-lock" /></svg>bahmercarservice.com</span>
                   </span>
                   <span class="client-body">
-                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#car" /></svg></span>
+                    <span class="client-icon" aria-hidden="true"><svg class="i"><use href="#i-car" /></svg></span>
                     <span class="client-name">Bahmer Car Service</span>
                     <span class="client-desc">Promotional website for a vehicle repair business.</span>
                   </span>
                   <span class="client-foot">
                     <span class="live"><span class="pulse" aria-hidden="true"></span>Live</span>
-                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg></span>
+                    <span class="client-visit">Visit site<svg class="i" aria-hidden="true"><use href="#i-external" /></svg></span>
                   </span>
                 </a>
               </li>
@@ -862,7 +871,7 @@
             <div class="subsection-head" data-reveal>
               <div>
                 <h3 class="subsection-title">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#layers" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-layers" /></svg>
                   More projects
                 </h3>
                 <p class="subsection-note">Apps, games, mobile, research and university labs.</p>
@@ -880,14 +889,14 @@
 
             <!-- ADD A PROJECT — copy a card below. data-cats takes one or more of:
                  ai app mobile research game academic (space separated).
-                 The card's data-cat sets the icon color; icons live in
-                 assets/icons/sprite.svg. Omit the link + .p-card-go when there is no URL. -->
+                 The card's data-cat sets the icon color; icons are the <symbol>s in the
+                 inline sprite at the end of <body>. Omit the link + .p-card-go when there is no URL. -->
             <div class="archive" id="archive">
               <article class="p-card card" data-project data-cats="ai" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="ai" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg></span>
+                  <span class="cat-icon" data-cat="ai" aria-hidden="true"><svg class="i"><use href="#i-brain" /></svg></span>
                   <span class="p-card-cat">AI</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/mnumanmercan/AI-API-Practice" target="_blank" rel="noopener noreferrer">AI API Practice</a></h4>
                 <p class="p-card-desc">Notebooks exploring the Claude API — prompting patterns, structured outputs and integration recipes.</p>
@@ -896,9 +905,9 @@
 
               <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#weather" /></svg></span>
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="#i-weather" /></svg></span>
                   <span class="p-card-cat">App</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/CurrentWeatherApp" target="_blank" rel="noopener noreferrer">Current Weather App</a></h4>
                 <p class="p-card-desc">Instant weather for any city, with live conditions from the OpenWeather API.</p>
@@ -907,9 +916,9 @@
 
               <article class="p-card card" data-project data-cats="mobile" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="mobile" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#id-card" /></svg></span>
+                  <span class="cat-icon" data-cat="mobile" aria-hidden="true"><svg class="i"><use href="#i-id-card" /></svg></span>
                   <span class="p-card-cat">Mobile</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/UserAuth-React-Native" target="_blank" rel="noopener noreferrer">User Authentication</a></h4>
                 <p class="p-card-desc">A complete Firebase sign-up and sign-in flow in React Native.</p>
@@ -918,9 +927,9 @@
 
               <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#gps" /></svg></span>
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="#i-gps" /></svg></span>
                   <span class="p-card-cat">App</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/GPSCarTracking" target="_blank" rel="noopener noreferrer">GPS Car Tracking System</a></h4>
                 <p class="p-card-desc">Follows vehicles in real time by streaming and mapping live GPS data.</p>
@@ -929,7 +938,7 @@
 
               <article class="p-card card" data-project data-cats="research" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="research" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#truck" /></svg></span>
+                  <span class="cat-icon" data-cat="research" aria-hidden="true"><svg class="i"><use href="#i-truck" /></svg></span>
                   <span class="p-card-cat">Research</span>
                 </div>
                 <h4 class="p-card-title">Hyperledger Supply Chain with IoT</h4>
@@ -939,9 +948,9 @@
 
               <article class="p-card card" data-project data-cats="game academic" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#grid" /></svg></span>
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="#i-grid" /></svg></span>
                   <span class="p-card-cat">Game · Academic</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/2021-22-Kou-YazLab-1-2" target="_blank" rel="noopener noreferrer">Sudoku Solver</a></h4>
                 <p class="p-card-desc">A multithreaded Sudoku solver — an exercise in Java concurrency.</p>
@@ -950,9 +959,9 @@
 
               <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#tree" /></svg></span>
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="#i-tree" /></svg></span>
                   <span class="p-card-cat">Academic</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/Prolab-1-2" target="_blank" rel="noopener noreferrer">Suffix Tree Algorithm</a></h4>
                 <p class="p-card-desc">Suffix tree construction in C, visualized with the graphics.h library.</p>
@@ -961,9 +970,9 @@
 
               <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#plane" /></svg></span>
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="#i-plane" /></svg></span>
                   <span class="p-card-cat">Academic</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/Prolab1-3" target="_blank" rel="noopener noreferrer">Air Traffic Control</a></h4>
                 <p class="p-card-desc">Runway scheduling simulation driven by priority queues.</p>
@@ -972,9 +981,9 @@
 
               <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#maze" /></svg></span>
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="#i-maze" /></svg></span>
                   <span class="p-card-cat">Game</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/2020-21-Kou-ProLab-2.-D-nem-" target="_blank" rel="noopener noreferrer">Maze Game</a></h4>
                 <p class="p-card-desc">A classic maze chase: help the Smurfs outrun Gargamel to the exit.</p>
@@ -983,20 +992,20 @@
 
               <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#flag" /></svg></span>
+                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="#i-flag" /></svg></span>
                   <span class="p-card-cat">Game</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/HelloWorld" target="_blank" rel="noopener noreferrer">Race Cars</a></h4>
                 <p class="p-card-desc">Three cars, random distances, one winner.</p>
-                <p class="p-card-stack">HTML · CSS · JavaScript</p>
+                <p class="p-card-stack">HTML · CSS · JavaScript<span class="race-car" aria-hidden="true"><svg class="i"><use href="#i-car-side" /></svg></span></p>
               </article>
 
               <article class="p-card card" data-project data-cats="game" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="game" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#pointer" /></svg></span>
+                  <span class="cat-icon" data-cat="game" data-dodge aria-hidden="true"><svg class="i"><use href="#i-pointer" /></svg></span>
                   <span class="p-card-cat">Game</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/HelloWorld" target="_blank" rel="noopener noreferrer">Catch Me If You Can</a></h4>
                 <p class="p-card-desc">A mischievous circle that teleports away on hover — click it to win.</p>
@@ -1005,9 +1014,9 @@
 
               <article class="p-card card" data-project data-cats="academic" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#users" /></svg></span>
+                  <span class="cat-icon" data-cat="academic" aria-hidden="true"><svg class="i"><use href="#i-users" /></svg></span>
                   <span class="p-card-cat">Academic</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/ProLab1-1-" target="_blank" rel="noopener noreferrer">Student Information System</a></h4>
                 <p class="p-card-desc">Student records management — my first team project at university.</p>
@@ -1016,9 +1025,9 @@
 
               <article class="p-card card" data-project data-cats="app" data-spotlight data-reveal>
                 <div class="p-card-top">
-                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#quote" /></svg></span>
+                  <span class="cat-icon" data-cat="app" aria-hidden="true"><svg class="i"><use href="#i-quote" /></svg></span>
                   <span class="p-card-cat">App</span>
-                  <svg class="i p-card-go" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i p-card-go" aria-hidden="true"><use href="#i-github" /></svg>
                 </div>
                 <h4 class="p-card-title"><a class="stretched" href="https://github.com/MNMercan/StajCalismalarim/tree/master/Random-Quotes" target="_blank" rel="noopener noreferrer">Random Quotes Generator</a></h4>
                 <p class="p-card-desc">A tiny quote machine — one click, one fresh quote.</p>
@@ -1029,7 +1038,7 @@
             <div class="archive-more">
               <button class="btn btn-ghost btn-sm" type="button" id="archiveMore" hidden>
                 Show all <span data-more-count></span> projects
-                <svg class="i i-nudge-down" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-right" /></svg>
+                <svg class="i i-nudge-down" aria-hidden="true"><use href="#i-arrow-right" /></svg>
               </button>
             </div>
             <p class="sr-only" id="archiveStatus" aria-live="polite"></p>
@@ -1043,14 +1052,14 @@
       <section class="section" id="skills" aria-labelledby="skills-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">04</span>Skills</p>
+            <p class="eyebrow"><span class="eyebrow-index">04</span>Skills<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">npm ls --depth=0</span></span></p>
             <h2 class="section-title" id="skills-title">Tools of the trade.</h2>
           </header>
 
           <div class="bento">
             <article class="tile tile--wide card" data-cat="app" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#window" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-window" /></svg></span>
                 <h3 class="tile-title">Frontend</h3>
                 <span class="tile-note">daily drivers</span>
               </header>
@@ -1069,21 +1078,21 @@
 
             <article class="tile card" data-cat="ai" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#brain" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-brain" /></svg></span>
                 <h3 class="tile-title">AI engineering</h3>
               </header>
               <ul class="tech-list tech-list--lg">
-                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#sparkles" /></svg>Claude API</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-sparkles" /></svg>Claude API</li>
                 <li class="tech"><img src="assets/icons/tech/python.svg" alt="" width="18" height="18" loading="lazy" />Python</li>
                 <li class="tech"><img src="assets/icons/tech/jupyter.svg" alt="" width="18" height="18" loading="lazy" />Jupyter</li>
-                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#terminal" /></svg>Prompt design</li>
-                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#code" /></svg>Structured outputs</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-terminal" /></svg>Prompt design</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-code" /></svg>Structured outputs</li>
               </ul>
             </article>
 
             <article class="tile card" data-cat="web" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#server" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-server" /></svg></span>
                 <h3 class="tile-title">Backend &amp; languages</h3>
               </header>
               <ul class="tech-list tech-list--lg">
@@ -1096,7 +1105,7 @@
 
             <article class="tile card" data-cat="research" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#database" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-database" /></svg></span>
                 <h3 class="tile-title">Data &amp; DevOps</h3>
               </header>
               <ul class="tech-list tech-list--lg">
@@ -1112,32 +1121,32 @@
 
             <article class="tile card" data-cat="game" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#cubes" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-cubes" /></svg></span>
                 <h3 class="tile-title">Exploring</h3>
               </header>
               <ul class="tech-list tech-list--lg">
                 <li class="tech"><img src="assets/icons/tech/solidity.svg" alt="" width="18" height="18" loading="lazy" />Solidity</li>
-                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#ethereum" /></svg>Ethereum</li>
-                <li class="tech"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#cubes" /></svg>Hyperledger</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-ethereum" /></svg>Ethereum</li>
+                <li class="tech"><svg class="i" aria-hidden="true"><use href="#i-cubes" /></svg>Hyperledger</li>
                 <li class="tech"><img src="assets/icons/tech/react.svg" alt="" width="18" height="18" loading="lazy" />React Native</li>
               </ul>
             </article>
 
             <article class="tile tile--full card" data-cat="product" data-spotlight data-reveal>
               <header class="tile-head">
-                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#users" /></svg></span>
+                <span class="tile-icon" aria-hidden="true"><svg class="i"><use href="#i-users" /></svg></span>
                 <h3 class="tile-title">Ways of working</h3>
               </header>
               <ul class="chip-list">
-                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#agile" /></svg>Agile &amp; Kanban</li>
-                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#users" /></svg>Teamwork</li>
-                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#comments" /></svg>Clear communication</li>
-                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#heart" /></svg>Empathy</li>
-                <li class="chip"><svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#math" /></svg>Mathematical thinking</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-agile" /></svg>Agile &amp; Kanban</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-users" /></svg>Teamwork</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-comments" /></svg>Clear communication</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-heart" /></svg>Empathy</li>
+                <li class="chip"><svg class="i" aria-hidden="true"><use href="#i-math" /></svg>Mathematical thinking</li>
                 <li>
                   <a class="chip chip--link" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer">
-                    <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>Problem solving on LeetCode
-                    <svg class="i i-nudge-up" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                    <svg class="i" aria-hidden="true"><use href="#i-leetcode" /></svg>Problem solving on LeetCode
+                    <svg class="i i-nudge-up" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
               </ul>
@@ -1152,14 +1161,14 @@
       <section class="section" id="education" aria-labelledby="education-title">
         <div class="container">
           <header class="section-head" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">05</span>Education</p>
+            <p class="eyebrow"><span class="eyebrow-index">05</span>Education<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">cat ~/.education</span></span></p>
             <h2 class="section-title" id="education-title">Education &amp; credentials.</h2>
           </header>
 
           <div class="edu-grid">
             <div class="edu-col">
               <h3 class="mini-title">
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#graduation" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-graduation" /></svg>
                 Degree
               </h3>
               <div class="edu-stack">
@@ -1196,35 +1205,35 @@
 
             <div class="edu-col">
               <h3 class="mini-title">
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#certificate" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-certificate" /></svg>
                 Certificates &amp; awards
               </h3>
               <ul class="certs">
                 <li data-reveal>
                   <a class="cert card" data-cat="product" href="https://www.linkedin.com/in/mnmercan/overlay/Certifications/374407651/treasury?profileId=ACoAADP-yDcBBie3kkJcx5_O4TJIHdG8QiZ69bk" target="_blank" rel="noopener noreferrer">
-                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#trophy" /></svg></span>
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="#i-trophy" /></svg></span>
                     <span class="cert-text"><strong>Best Growth Project Award</strong><span>Jotform · 2023</span></span>
-                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                    <svg class="i cert-go" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
                 <li data-reveal>
                   <a class="cert card" data-cat="web" href="https://www.freecodecamp.org/certification/numanmercan/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">
-                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#code" /></svg></span>
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="#i-code" /></svg></span>
                     <span class="cert-text"><strong>JavaScript Algorithms &amp; Data Structures</strong><span>freeCodeCamp</span></span>
-                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                    <svg class="i cert-go" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
                 <li data-reveal>
                   <a class="cert card" data-cat="app" href="https://www.efset.org/cert/qF9gEy" target="_blank" rel="noopener noreferrer">
-                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="assets/icons/sprite.svg#language" /></svg></span>
+                    <span class="cert-icon" aria-hidden="true"><svg class="i"><use href="#i-language" /></svg></span>
                     <span class="cert-text"><strong>EF SET English Certificate</strong><span>EF SET · B2</span></span>
-                    <svg class="i cert-go" aria-hidden="true"><use href="assets/icons/sprite.svg#external" /></svg>
+                    <svg class="i cert-go" aria-hidden="true"><use href="#i-external" /></svg>
                   </a>
                 </li>
               </ul>
 
               <h3 class="mini-title mini-title--spaced">
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#language" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-language" /></svg>
                 Languages
               </h3>
               <div class="langs" data-reveal>
@@ -1259,44 +1268,44 @@
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="container">
           <div class="contact-card" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-index">06</span>Contact</p>
+            <p class="eyebrow"><span class="eyebrow-index">06</span>Contact<span class="eyebrow-cmd" aria-hidden="true"><span class="eyebrow-prompt">$</span> <span class="eyebrow-cmd-text">ping numan</span></span></p>
             <h2 class="contact-title" id="contact-title">Let's build something <span class="text-gradient">together.</span></h2>
             <p class="contact-lead">Have a role, a project or an idea worth exploring? My inbox is open.</p>
             <div class="contact-actions">
               <a class="btn btn-primary btn-lg" data-link="email" href="mailto:numan.mercan24@gmail.com">
-                <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#mail" /></svg>
+                <svg class="i" aria-hidden="true"><use href="#i-mail" /></svg>
                 numan.mercan24@gmail.com
               </a>
               <button class="btn btn-ghost btn-lg copy-btn" type="button" data-copy="numan.mercan24@gmail.com">
-                <svg class="i copy-btn-idle" aria-hidden="true"><use href="assets/icons/sprite.svg#copy" /></svg>
-                <svg class="i copy-btn-done" aria-hidden="true"><use href="assets/icons/sprite.svg#check" /></svg>
+                <svg class="i copy-btn-idle" aria-hidden="true"><use href="#i-copy" /></svg>
+                <svg class="i copy-btn-done" aria-hidden="true"><use href="#i-check" /></svg>
                 <span class="copy-btn-label">Copy email</span>
               </button>
             </div>
             <ul class="socials socials--center" aria-label="Profiles">
               <li>
                 <a class="social" data-tip="LinkedIn" href="https://www.linkedin.com/in/mnmercan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#linkedin" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-linkedin" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-tip="GitHub" href="https://github.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#github" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-github" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-tip="LeetCode" href="https://leetcode.com/u/MNMercan/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#leetcode" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-leetcode" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-tip="X / Twitter" href="https://x.com/mnumanmercan" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#x" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-x" /></svg>
                 </a>
               </li>
               <li>
                 <a class="social" data-tip="Resume" href="https://drive.google.com/file/d/1wAUmWbVVhMTdzxk95xocYGxkJTJGIRu2/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Resume (opens Google Drive)">
-                  <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#file" /></svg>
+                  <svg class="i" aria-hidden="true"><use href="#i-file" /></svg>
                 </a>
               </li>
             </ul>
@@ -1309,14 +1318,14 @@
       <div class="container footer-inner">
         <p>© <span data-year>2026</span> M. Numan Mercan</p>
         <p class="footer-built">
-          Hand-built with HTML, CSS &amp; vanilla JS ·
+          Hand-built with HTML, CSS, vanilla JS — and more <code>console.log()</code>s than I'd like to admit ·
           <a href="https://github.com/mnumanmercan/mnumanmercan.github.io" target="_blank" rel="noopener noreferrer">View source</a>
         </p>
         <p class="footer-hint">
           <button class="footer-cmdk" type="button" data-cmdk-open>Press <kbd class="kbd" data-mod-key>⌘K</kbd> to navigate</button>
         </p>
         <a class="to-top" href="#top" aria-label="Back to top">
-          <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#arrow-up" /></svg>
+          <svg class="i" aria-hidden="true"><use href="#i-arrow-up" /></svg>
         </a>
       </div>
     </footer>
@@ -1325,7 +1334,7 @@
     <dialog class="cmdk" id="cmdk" aria-label="Command menu">
       <div class="cmdk-panel">
         <div class="cmdk-search">
-          <svg class="i" aria-hidden="true"><use href="assets/icons/sprite.svg#search" /></svg>
+          <svg class="i" aria-hidden="true"><use href="#i-search" /></svg>
           <input
             class="cmdk-input"
             id="cmdkInput"
@@ -1350,5 +1359,85 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <!-- Icon sprite — Font Awesome Free 6.7.2 (CC BY 4.0, fontawesome.com/license/free);
+         LeetCode glyph from Simple Icons (CC0). Inlined so icons render everywhere,
+         including when index.html is opened straight from disk (file://).
+         Usage: <svg class="i" aria-hidden="true"><use href="#i-github" /></svg>
+         To add one: paste the SVG's <path> into a new <symbol id="i-name" viewBox="…">. -->
+    <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="i-agile" viewBox="0 0 512 512"><path d="M256 96c38.4 0 73.7 13.5 101.3 36.1l-32.6 32.6c-4.6 4.6-5.9 11.5-3.5 17.4s8.3 9.9 14.8 9.9l112 0c8.8 0 16-7.2 16-16l0-112c0-6.5-3.9-12.3-9.9-14.8s-12.9-1.1-17.4 3.5l-34 34C363.4 52.6 312.1 32 256 32c-10.9 0-21.5 .8-32 2.3l0 64.9c10.3-2.1 21-3.2 32-3.2zM132.1 154.7l32.6 32.6c4.6 4.6 11.5 5.9 17.4 3.5s9.9-8.3 9.9-14.8l0-112c0-8.8-7.2-16-16-16L64 48c-6.5 0-12.3 3.9-14.8 9.9s-1.1 12.9 3.5 17.4l34 34C52.6 148.6 32 199.9 32 256c0 10.9 .8 21.5 2.3 32l64.9 0c-2.1-10.3-3.2-21-3.2-32c0-38.4 13.5-73.7 36.1-101.3zM477.7 224l-64.9 0c2.1 10.3 3.2 21 3.2 32c0 38.4-13.5 73.7-36.1 101.3l-32.6-32.6c-4.6-4.6-11.5-5.9-17.4-3.5s-9.9 8.3-9.9 14.8l0 112c0 8.8 7.2 16 16 16l112 0c6.5 0 12.3-3.9 14.8-9.9s1.1-12.9-3.5-17.4l-34-34C459.4 363.4 480 312.1 480 256c0-10.9-.8-21.5-2.3-32zM256 416c-38.4 0-73.7-13.5-101.3-36.1l32.6-32.6c4.6-4.6 5.9-11.5 3.5-17.4s-8.3-9.9-14.8-9.9L64 320c-8.8 0-16 7.2-16 16l0 112c0 6.5 3.9 12.3 9.9 14.8s12.9 1.1 17.4-3.5l34-34C148.6 459.4 199.9 480 256 480c10.9 0 21.5-.8 32-2.3l0-64.9c-10.3 2.1-21 3.2-32 3.2z"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2 160 448c0 17.7 14.3 32 32 32s32-14.3 32-32l0-306.7L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></symbol>
+      <symbol id="i-bolt" viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288l111.5 0L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7l-111.5 0L349.4 44.6z"/></symbol>
+      <symbol id="i-book" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5l0-377.4c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8L0 454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5l0-370.3c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11L304 456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol>
+      <symbol id="i-box" viewBox="0 0 640 512"><path d="M58.9 42.1c3-6.1 9.6-9.6 16.3-8.7L320 64 564.8 33.4c6.7-.8 13.3 2.7 16.3 8.7l41.7 83.4c9 17.9-.6 39.6-19.8 45.1L439.6 217.3c-13.9 4-28.8-1.9-36.2-14.3L320 64 236.6 203c-7.4 12.4-22.3 18.3-36.2 14.3L37.1 170.6c-19.3-5.5-28.8-27.2-19.8-45.1L58.9 42.1zM321.1 128l54.9 91.4c14.9 24.8 44.6 36.6 72.5 28.6L576 211.6l0 167c0 22-15 41.2-36.4 46.6l-204.1 51c-10.2 2.6-20.9 2.6-31 0l-204.1-51C79 419.7 64 400.5 64 378.5l0-167L191.6 248c27.8 8 57.6-3.8 72.5-28.6L318.9 128l2.2 0z"/></symbol>
+      <symbol id="i-brain" viewBox="0 0 512 512"><path d="M184 0c30.9 0 56 25.1 56 56l0 400c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 367.4 0 338.2 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.2-21.4 63.4-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56l0-400c0-30.9 25.1-56 56-56z"/></symbol>
+      <symbol id="i-branch" viewBox="0 0 448 512"><path d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm80-24c0 32.8-19.7 61-48 73.3l0 87.8c18.8-10.9 40.7-17.1 64-17.1l96 0c35.3 0 64-28.7 64-64l0-6.7C307.7 141 288 112.8 288 80c0-44.2 35.8-80 80-80s80 35.8 80 80c0 32.8-19.7 61-48 73.3l0 6.7c0 70.7-57.3 128-128 128l-96 0c-35.3 0-64 28.7-64 64l0 6.7c28.3 12.3 48 40.5 48 73.3c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-32.8 19.7-61 48-73.3l0-6.7 0-198.7C19.7 141 0 112.8 0 80C0 35.8 35.8 0 80 0s80 35.8 80 80zm232 0a24 24 0 1 0 -48 0 24 24 0 1 0 48 0zM80 456a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 512 512"><path d="M184 48l144 0c4.4 0 8 3.6 8 8l0 40L176 96l0-40c0-4.4 3.6-8 8-8zm-56 8l0 40L64 96C28.7 96 0 124.7 0 160l0 96 192 0 128 0 192 0 0-96c0-35.3-28.7-64-64-64l-64 0 0-40c0-30.9-25.1-56-56-56L184 0c-30.9 0-56 25.1-56 56zM512 288l-192 0 0 32c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32-14.3-32-32l0-32L0 288 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-128z"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 512 512"><path d="M149.1 64.8L138.7 96 64 96C28.7 96 0 124.7 0 160L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64l-74.7 0L362.9 64.8C356.4 45.2 338.1 32 317.4 32L194.6 32c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></symbol>
+      <symbol id="i-car" viewBox="0 0 512 512"><path d="M135.2 117.4L109.1 192l293.8 0-26.1-74.6C372.3 104.6 360.2 96 346.6 96L165.4 96c-13.6 0-25.7 8.6-30.2 21.4zM39.6 196.8L74.8 96.3C88.3 57.8 124.6 32 165.4 32l181.2 0c40.8 0 77.1 25.8 90.6 64.3l35.2 100.5c23.2 9.6 39.6 32.5 39.6 59.2l0 144 0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L96 400l0 48c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-48L0 256c0-26.7 16.4-49.6 39.6-59.2zM128 288a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm288 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></symbol>
+      <symbol id="i-car-side" viewBox="0 0 640 512"><path d="M171.3 96L224 96l0 96-112.7 0 30.4-75.9C146.5 104 158.2 96 171.3 96zM272 192l0-96 81.2 0c9.7 0 18.9 4.4 25 12l67.2 84L272 192zm256.2 1L428.2 68c-18.2-22.8-45.8-36-75-36L171.3 32c-39.3 0-74.6 23.9-89.1 60.3L40.6 196.4C16.8 205.8 0 228.9 0 256L0 368c0 17.7 14.3 32 32 32l33.3 0c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80l130.7 0c7.6 45.4 47.1 80 94.7 80s87.1-34.6 94.7-80l33.3 0c17.7 0 32-14.3 32-32l0-48c0-65.2-48.8-119-111.8-127zM434.7 368a48 48 0 1 1 90.5 32 48 48 0 1 1 -90.5-32zM160 336a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol>
+      <symbol id="i-certificate" viewBox="0 0 512 512"><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 448 512"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></symbol>
+      <symbol id="i-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol>
+      <symbol id="i-code" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></symbol>
+      <symbol id="i-coffee" viewBox="0 0 512 512"><path d="M88 0C74.7 0 64 10.7 64 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C120.5 112.3 128 119.9 128 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C119.5 47.7 112 40.1 112 24c0-13.3-10.7-24-24-24zM32 192c-17.7 0-32 14.3-32 32L0 416c0 53 43 96 96 96l192 0c53 0 96-43 96-96l16 0c61.9 0 112-50.1 112-112s-50.1-112-112-112l-48 0L32 192zm352 64l16 0c26.5 0 48 21.5 48 48s-21.5 48-48 48l-16 0 0-96zM224 24c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C232.5 112.3 240 119.9 240 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C231.5 47.7 224 40.1 224 24z"/></symbol>
+      <symbol id="i-comments" viewBox="0 0 640 512"><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.8 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 448 512"><path d="M384 336l-192 0c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l140.1 0L400 115.9 400 320c0 8.8-7.2 16-16 16zM192 384l192 0c35.3 0 64-28.7 64-64l0-204.1c0-12.7-5.1-24.9-14.1-33.9L366.1 14.1c-9-9-21.2-14.1-33.9-14.1L192 0c-35.3 0-64 28.7-64 64l0 256c0 35.3 28.7 64 64 64zM64 128c-35.3 0-64 28.7-64 64L0 448c0 35.3 28.7 64 64 64l192 0c35.3 0 64-28.7 64-64l0-32-48 0 0 32c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256c0-8.8 7.2-16 16-16l32 0 0-48-32 0z"/></symbol>
+      <symbol id="i-cubes" viewBox="0 0 576 512"><path d="M290.8 48.6l78.4 29.7L288 109.5 206.8 78.3l78.4-29.7c1.8-.7 3.8-.7 5.7 0zM136 92.5l0 112.2c-1.3 .4-2.6 .8-3.9 1.3l-96 36.4C14.4 250.6 0 271.5 0 294.7L0 413.9c0 22.2 13.1 42.3 33.5 51.3l96 42.2c14.4 6.3 30.7 6.3 45.1 0L288 457.5l113.5 49.9c14.4 6.3 30.7 6.3 45.1 0l96-42.2c20.3-8.9 33.5-29.1 33.5-51.3l0-119.1c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-1.3-.5-2.6-.9-3.9-1.3l0-112.2c0-23.3-14.4-44.1-36.1-52.4l-96-36.4c-12.8-4.8-26.9-4.8-39.7 0l-96 36.4C150.4 48.4 136 69.3 136 92.5zM392 210.6l-82.4 31.2 0-89.2L392 121l0 89.6zM154.8 250.9l78.4 29.7L152 311.7 70.8 280.6l78.4-29.7c1.8-.7 3.8-.7 5.7 0zm18.8 204.4l0-100.5L256 323.2l0 95.9-82.4 36.2zM421.2 250.9c1.8-.7 3.8-.7 5.7 0l78.4 29.7L424 311.7l-81.2-31.1 78.4-29.7zM523.2 421.2l-77.6 34.1 0-100.5L528 323.2l0 90.7c0 3.2-1.9 6-4.8 7.3z"/></symbol>
+      <symbol id="i-database" viewBox="0 0 448 512"><path d="M448 80l0 48c0 44.2-100.3 80-224 80S0 172.2 0 128L0 80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6L448 288c0 44.2-100.3 80-224 80S0 332.2 0 288L0 186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6l0 85.9c0 44.2-100.3 80-224 80S0 476.2 0 432l0-85.9z"/></symbol>
+      <symbol id="i-dumbbell" viewBox="0 0 640 512"><path d="M96 64c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32l0 160 0 64 0 160c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-64-32 0c-17.7 0-32-14.3-32-32l0-64c-17.7 0-32-14.3-32-32s14.3-32 32-32l0-64c0-17.7 14.3-32 32-32l32 0 0-64zm448 0l0 64 32 0c17.7 0 32 14.3 32 32l0 64c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 64c0 17.7-14.3 32-32 32l-32 0 0 64c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-160 0-64 0-160c0-17.7 14.3-32 32-32l32 0c17.7 0 32 14.3 32 32zM416 224l0 64-192 0 0-64 192 0z"/></symbol>
+      <symbol id="i-ethereum" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"/></symbol>
+      <symbol id="i-external" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z"/></symbol>
+      <symbol id="i-file" viewBox="0 0 384 512"><path d="M64 464c-8.8 0-16-7.2-16-16L48 64c0-8.8 7.2-16 16-16l160 0 0 80c0 17.7 14.3 32 32 32l80 0 0 288c0 8.8-7.2 16-16 16L64 464zM64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-293.5c0-17-6.7-33.3-18.7-45.3L274.7 18.7C262.7 6.7 246.5 0 229.5 0L64 0zm56 256c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l144 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-144 0z"/></symbol>
+      <symbol id="i-file-pdf" viewBox="0 0 512 512"><path d="M64 464l48 0 0 48-48 0c-35.3 0-64-28.7-64-64L0 64C0 28.7 28.7 0 64 0L229.5 0c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3L384 304l-48 0 0-144-80 0c-17.7 0-32-14.3-32-32l0-80L64 48c-8.8 0-16 7.2-16 16l0 384c0 8.8 7.2 16 16 16zM176 352l32 0c30.9 0 56 25.1 56 56s-25.1 56-56 56l-16 0 0 32c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-48 0-80c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24l-16 0 0 48 16 0zm96-80l32 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-32 0c-8.8 0-16-7.2-16-16l0-128c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16l0-64c0-8.8-7.2-16-16-16l-16 0 0 96 16 0zm80-112c0-8.8 7.2-16 16-16l48 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 32 32 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-32 0 0 48c0 8.8-7.2 16-16 16s-16-7.2-16-16l0-64 0-64z"/></symbol>
+      <symbol id="i-film" viewBox="0 0 512 512"><path d="M0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM48 368l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 240l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm368-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM48 112l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16L64 96c-8.8 0-16 7.2-16 16zM416 96c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM160 128l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32L192 96c-17.7 0-32 14.3-32 32zm32 160c-17.7 0-32 14.3-32 32l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0z"/></symbol>
+      <symbol id="i-flag" viewBox="0 0 448 512"><path d="M32 0C49.7 0 64 14.3 64 32l0 16 69-17.2c38.1-9.5 78.3-5.1 113.5 12.5c46.3 23.2 100.8 23.2 147.1 0l9.6-4.8C423.8 28.1 448 43.1 448 66.1l0 279.7c0 13.3-8.3 25.3-20.8 30l-34.7 13c-46.2 17.3-97.6 14.6-141.7-7.4c-37.9-19-81.3-23.7-122.5-13.4L64 384l0 96c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-80 0-66L0 64 0 32C0 14.3 14.3 0 32 0zM64 187.1l64-13.9 0 65.5L64 252.6 64 318l48.8-12.2c5.1-1.3 10.1-2.4 15.2-3.3l0-63.9 38.9-8.4c8.3-1.8 16.7-2.5 25.1-2.1l0-64c13.6 .4 27.2 2.6 40.4 6.4l23.6 6.9 0 66.7-41.7-12.3c-7.3-2.1-14.8-3.4-22.3-3.8l0 71.4c21.8 1.9 43.3 6.7 64 14.4l0-69.8 22.7 6.7c13.5 4 27.3 6.4 41.3 7.4l0-64.2c-7.8-.8-15.6-2.3-23.2-4.5l-40.8-12 0-62c-13-3.8-25.8-8.8-38.2-15c-8.2-4.1-16.9-7-25.8-8.8l0 72.4c-13-.4-26 .8-38.7 3.6L128 173.2 128 98 64 114l0 73.1zM320 335.7c16.8 1.5 33.9-.7 50-6.8l14-5.2 0-71.7-7.9 1.8c-18.4 4.3-37.3 5.7-56.1 4.5l0 77.4zm64-149.4l0-70.8c-20.9 6.1-42.4 9.1-64 9.1l0 69.4c13.9 1.4 28 .5 41.7-2.6l22.3-5.2z"/></symbol>
+      <symbol id="i-flask" viewBox="0 0 448 512"><path d="M288 0L160 0 128 0C110.3 0 96 14.3 96 32s14.3 32 32 32l0 132.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512l309.2 0c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5L320 64c17.7 0 32-14.3 32-32s-14.3-32-32-32L288 0zM192 196.8L192 64l64 0 0 132.8c0 23.7 6.6 46.9 19 67.1L309.5 320l-171 0L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol>
+      <symbol id="i-gamepad" viewBox="0 0 640 512"><path d="M192 64C86 64 0 150 0 256S86 448 192 448l256 0c106 0 192-86 192-192s-86-192-192-192L192 64zM496 168a40 40 0 1 1 0 80 40 40 0 1 1 0-80zM392 304a40 40 0 1 1 80 0 40 40 0 1 1 -80 0zM168 200c0-13.3 10.7-24 24-24s24 10.7 24 24l0 32 32 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-32 0 0 32c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-32-32 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l32 0 0-32z"/></symbol>
+      <symbol id="i-github" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"/></symbol>
+      <symbol id="i-gps" viewBox="0 0 512 512"><path d="M256 0c17.7 0 32 14.3 32 32l0 34.7C368.4 80.1 431.9 143.6 445.3 224l34.7 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-34.7 0C431.9 368.4 368.4 431.9 288 445.3l0 34.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-34.7C143.6 431.9 80.1 368.4 66.7 288L32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l34.7 0C80.1 143.6 143.6 80.1 224 66.7L224 32c0-17.7 14.3-32 32-32zM128 256a128 128 0 1 0 256 0 128 128 0 1 0 -256 0zm128-80a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/></symbol>
+      <symbol id="i-graduation" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9l0 28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5l0-24.6c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
+      <symbol id="i-graph" viewBox="0 0 576 512"><path d="M0 80C0 53.5 21.5 32 48 32l96 0c26.5 0 48 21.5 48 48l0 16 192 0 0-16c0-26.5 21.5-48 48-48l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-16-192 0 0 16c0 1.7-.1 3.4-.3 5L272 288l96 0c26.5 0 48 21.5 48 48l0 96c0 26.5-21.5 48-48 48l-96 0c-26.5 0-48-21.5-48-48l0-96c0-1.7 .1-3.4 .3-5L144 224l-96 0c-26.5 0-48-21.5-48-48L0 80z"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm88 64l0 64-88 0 0-64 88 0zm56 0l88 0 0 64-88 0 0-64zm240 0l0 64-88 0 0-64 88 0zM64 224l88 0 0 64-88 0 0-64zm232 0l0 64-88 0 0-64 88 0zm64 0l88 0 0 64-88 0 0-64zM152 352l0 64-88 0 0-64 88 0zm56 0l88 0 0 64-88 0 0-64zm240 0l0 64-88 0 0-64 88 0z"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 512 512"><path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8l0-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5l0 3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20-.1-.1s0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5l0 3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2l0-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/></symbol>
+      <symbol id="i-helmet" viewBox="0 0 576 512"><path d="M256 32c-17.7 0-32 14.3-32 32l0 2.3 0 99.6c0 5.6-4.5 10.1-10.1 10.1c-3.6 0-7-1.9-8.8-5.1L157.1 87C83 123.5 32 199.8 32 288l0 64 512 0 0-66.4c-.9-87.2-51.7-162.4-125.1-198.6l-48 83.9c-1.8 3.2-5.2 5.1-8.8 5.1c-5.6 0-10.1-4.5-10.1-10.1l0-99.6 0-2.3c0-17.7-14.3-32-32-32l-64 0zM16.6 384C7.4 384 0 391.4 0 400.6c0 4.7 2 9.2 5.8 11.9C27.5 428.4 111.8 480 288 480s260.5-51.6 282.2-67.5c3.8-2.8 5.8-7.2 5.8-11.9c0-9.2-7.4-16.6-16.6-16.6L16.6 384z"/></symbol>
+      <symbol id="i-id-card" viewBox="0 0 576 512"><path d="M528 160l0 256c0 8.8-7.2 16-16 16l-192 0c0-44.2-35.8-80-80-80l-64 0c-44.2 0-80 35.8-80 80l-32 0c-8.8 0-16-7.2-16-16l0-256 480 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l448 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM272 256a64 64 0 1 0 -128 0 64 64 0 1 0 128 0zm104-48c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0zm0 96c-13.3 0-24 10.7-24 24s10.7 24 24 24l80 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-80 0z"/></symbol>
+      <symbol id="i-image" viewBox="0 0 512 512"><path d="M448 80c8.8 0 16 7.2 16 16l0 319.8-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3L48 96c0-8.8 7.2-16 16-16l384 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></symbol>
+      <symbol id="i-keyboard" viewBox="0 0 576 512"><path d="M64 112c-8.8 0-16 7.2-16 16l0 256c0 8.8 7.2 16 16 16l448 0c8.8 0 16-7.2 16-16l0-256c0-8.8-7.2-16-16-16L64 112zM0 128C0 92.7 28.7 64 64 64l448 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128zM176 320l224 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-224 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zm-72-72c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16-96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16-96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16-96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16-96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16zm16-96l16 0c8.8 0 16 7.2 16 16l0 16c0 8.8-7.2 16-16 16l-16 0c-8.8 0-16-7.2-16-16l0-16c0-8.8 7.2-16 16-16z"/></symbol>
+      <symbol id="i-language" viewBox="0 0 640 512"><path d="M0 128C0 92.7 28.7 64 64 64l192 0 48 0 16 0 256 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64l-256 0-16 0-48 0L64 448c-35.3 0-64-28.7-64-64L0 128zm320 0l0 256 256 0 0-256-256 0zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1 73.6 0 8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276l-38 0 19-42.8zM448 164c11 0 20 9 20 20l0 4 44 0 16 0c11 0 20 9 20 20s-9 20-20 20l-2 0-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45L448 228l-72 0c-11 0-20-9-20-20s9-20 20-20l52 0 0-4c0-11 9-20 20-20z"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 576 512"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></symbol>
+      <symbol id="i-leetcode" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></symbol>
+      <symbol id="i-link" viewBox="0 0 640 512"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 448 512"><path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 512 512"><path d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></symbol>
+      <symbol id="i-math" viewBox="0 0 576 512"><path d="M282.6 78.1c8-27.3 33-46.1 61.4-46.1l200 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L344 96 238.7 457c-3.6 12.3-14.1 21.2-26.8 22.8s-25.1-4.6-31.5-15.6L77.6 288 32 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l45.6 0c22.8 0 43.8 12.1 55.3 31.8l65.2 111.8L282.6 78.1zM393.4 233.4c12.5-12.5 32.8-12.5 45.3 0L480 274.7l41.4-41.4c12.5-12.5 32.8-12.5 45.3 0s12.5 32.8 0 45.3L525.3 320l41.4 41.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L480 365.3l-41.4 41.4c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L434.7 320l-41.4-41.4c-12.5-12.5-12.5-32.8 0-45.3z"/></symbol>
+      <symbol id="i-maze" viewBox="0 0 512 512"><path d="M512 96c0 50.2-59.1 125.1-84.6 155c-3.8 4.4-9.4 6.1-14.5 5L320 256c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c53 0 96 43 96 96s-43 96-96 96l-276.4 0c8.7-9.9 19.3-22.6 30-36.8c6.3-8.4 12.8-17.6 19-27.2L416 448c17.7 0 32-14.3 32-32s-14.3-32-32-32l-96 0c-53 0-96-43-96-96s43-96 96-96l39.8 0c-21-31.5-39.8-67.7-39.8-96c0-53 43-96 96-96s96 43 96 96zM117.1 489.1c-3.8 4.3-7.2 8.1-10.1 11.3l-1.8 2-.2-.2c-6 4.6-14.6 4-20-1.8C59.8 473 0 402.5 0 352c0-53 43-96 96-96s96 43 96 96c0 30-21.1 67-43.5 97.9c-10.7 14.7-21.7 28-30.8 38.5l-.6 .7zM128 352a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zM416 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64z"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></symbol>
+      <symbol id="i-plane" viewBox="0 0 640 512"><path d="M381 114.9L186.1 41.8c-16.7-6.2-35.2-5.3-51.1 2.7L89.1 67.4C78 73 77.2 88.5 87.6 95.2l146.9 94.5L136 240 77.8 214.1c-8.7-3.9-18.8-3.7-27.3 .6L18.3 230.8c-9.3 4.7-11.8 16.8-5 24.7l73.1 85.3c6.1 7.1 15 11.2 24.3 11.2l137.7 0c5 0 9.9-1.2 14.3-3.4L535.6 212.2c46.5-23.3 82.5-63.3 100.8-112C645.9 75 627.2 48 600.2 48l-57.4 0c-20.2 0-40.2 4.8-58.2 14L381 114.9zM0 480c0 17.7 14.3 32 32 32l576 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 448c-17.7 0-32 14.3-32 32z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 512 512"><path d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z"/></symbol>
+      <symbol id="i-pointer" viewBox="0 0 320 512"><path d="M0 55.2L0 426c0 12.2 9.9 22 22 22c6.3 0 12.4-2.7 16.6-7.5L121.2 346l58.1 116.3c7.9 15.8 27.1 22.2 42.9 14.3s22.2-27.1 14.3-42.9L179.8 320l118.1 0c12.2 0 22.1-9.9 22.1-22.1c0-6.3-2.7-12.3-7.4-16.5L38.6 37.9C34.3 34.1 28.9 32 23.2 32C10.4 32 0 42.4 0 55.2z"/></symbol>
+      <symbol id="i-quote" viewBox="0 0 448 512"><path d="M0 216C0 149.7 53.7 96 120 96l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72zm256 0c0-66.3 53.7-120 120-120l8 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-8 0c-30.9 0-56 25.1-56 56l0 8 64 0c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-64 0c-35.3 0-64-28.7-64-64l0-32 0-32 0-72z"/></symbol>
+      <symbol id="i-rocket" viewBox="0 0 512 512"><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2l0 82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9l0-107.2c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></symbol>
+      <symbol id="i-search" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></symbol>
+      <symbol id="i-send" viewBox="0 0 512 512"><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></symbol>
+      <symbol id="i-server" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 32zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm48 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0zM64 288c-35.3 0-64 28.7-64 64l0 64c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-64c0-35.3-28.7-64-64-64L64 288zm280 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm56 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></symbol>
+      <symbol id="i-shapes" viewBox="0 0 512 512"><path d="M315.4 15.5C309.7 5.9 299.2 0 288 0s-21.7 5.9-27.4 15.5l-96 160c-5.9 9.9-6.1 22.2-.4 32.2s16.3 16.2 27.8 16.2l192 0c11.5 0 22.2-6.2 27.8-16.2s5.5-22.3-.4-32.2l-96-160zM288 312l0 144c0 22.1 17.9 40 40 40l144 0c22.1 0 40-17.9 40-40l0-144c0-22.1-17.9-40-40-40l-144 0c-22.1 0-40 17.9-40 40zM128 512a128 128 0 1 0 0-256 128 128 0 1 0 0 256z"/></symbol>
+      <symbol id="i-sitemap" viewBox="0 0 576 512"><path d="M208 80c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-8 0 0 40 152 0c30.9 0 56 25.1 56 56l0 32 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-32c0-4.4-3.6-8-8-8l-152 0 0 40 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-40-152 0c-4.4 0-8 3.6-8 8l0 32 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-32c0-30.9 25.1-56 56-56l152 0 0-40-8 0c-26.5 0-48-21.5-48-48l0-64z"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 576 512"><path d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></symbol>
+      <symbol id="i-terminal" viewBox="0 0 576 512"><path d="M9.4 86.6C-3.1 74.1-3.1 53.9 9.4 41.4s32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 9.4 86.6zM256 416l288 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-288 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></symbol>
+      <symbol id="i-tools" viewBox="0 0 512 512"><path d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4l54.1 0 109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109 0-54.1c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7L352 176c-8.8 0-16-7.2-16-16l0-57.4c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></symbol>
+      <symbol id="i-tree" viewBox="0 0 576 512"><path d="M208 80c0-26.5 21.5-48 48-48l64 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-8 0 0 40 152 0c30.9 0 56 25.1 56 56l0 32 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-32c0-4.4-3.6-8-8-8l-152 0 0 40 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-40-152 0c-4.4 0-8 3.6-8 8l0 32 8 0c26.5 0 48 21.5 48 48l0 64c0 26.5-21.5 48-48 48l-64 0c-26.5 0-48-21.5-48-48l0-64c0-26.5 21.5-48 48-48l8 0 0-32c0-30.9 25.1-56 56-56l152 0 0-40-8 0c-26.5 0-48-21.5-48-48l0-64z"/></symbol>
+      <symbol id="i-trophy" viewBox="0 0 576 512"><path d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 640 512"><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol>
+      <symbol id="i-user" viewBox="0 0 448 512"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192l42.7 0c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0L21.3 320C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7l42.7 0C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3l-213.3 0zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352l117.3 0C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7l-330.7 0c-14.7 0-26.7-11.9-26.7-26.7z"/></symbol>
+      <symbol id="i-weather" viewBox="0 0 640 512"><path d="M294.2 1.2c5.1 2.1 8.7 6.7 9.6 12.1l14.1 84.7 84.7 14.1c5.4 .9 10 4.5 12.1 9.6s1.5 10.9-1.6 15.4l-38.5 55c-2.2-.1-4.4-.2-6.7-.2c-23.3 0-45.1 6.2-64 17.1l0-1.1c0-53-43-96-96-96s-96 43-96 96s43 96 96 96c8.1 0 15.9-1 23.4-2.9c-36.6 18.1-63.3 53.1-69.8 94.9l-24.4 17c-4.5 3.2-10.3 3.8-15.4 1.6s-8.7-6.7-9.6-12.1L98.1 317.9 13.4 303.8c-5.4-.9-10-4.5-12.1-9.6s-1.5-10.9 1.6-15.4L52.5 208 2.9 137.2c-3.2-4.5-3.8-10.3-1.6-15.4s6.7-8.7 12.1-9.6L98.1 98.1l14.1-84.7c.9-5.4 4.5-10 9.6-12.1s10.9-1.5 15.4 1.6L208 52.5 278.8 2.9c4.5-3.2 10.3-3.8 15.4-1.6zM144 208a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM639.9 431.9c0 44.2-35.8 80-80 80l-271.9 0c-53 0-96-43-96-96c0-47.6 34.6-87 80-94.6l0-1.3c0-53 43-96 96-96c34.9 0 65.4 18.6 82.2 46.4c13-9.1 28.8-14.4 45.8-14.4c44.2 0 80 35.8 80 80c0 5.9-.6 11.7-1.9 17.2c37.4 6.7 65.8 39.4 65.8 78.7z"/></symbol>
+      <symbol id="i-window" viewBox="0 0 512 512"><path d="M.3 89.5C.1 91.6 0 93.8 0 96L0 224 0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-192 0-128c0-35.3-28.7-64-64-64L64 32c-2.2 0-4.4 .1-6.5 .3c-9.2 .9-17.8 3.8-25.5 8.2C21.8 46.5 13.4 55.1 7.7 65.5c-3.9 7.3-6.5 15.4-7.4 24zM48 224l416 0 0 192c0 8.8-7.2 16-16 16L64 432c-8.8 0-16-7.2-16-16l0-192z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></symbol>
+    </svg>
   </body>
 </html>

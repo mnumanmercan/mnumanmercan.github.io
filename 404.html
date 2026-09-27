@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>404 — Page not found · M. Numan Mercan</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#09090c" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        try {
+          var theme = localStorage.getItem("theme");
+          if (theme !== "light" && theme !== "dark") {
+            theme = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          }
+          root.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap"
+    />
+    <!-- Root-relative paths: GitHub Pages serves this file for any missing URL -->
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <style>
+      .nf {
+        position: relative;
+        isolation: isolate;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: 48px var(--gutter);
+        text-align: center;
+      }
+
+      .nf::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image:
+          linear-gradient(var(--grid-line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+        background-size: 56px 56px;
+        -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 45%, #000 20%, transparent 75%);
+        mask-image: radial-gradient(ellipse 60% 55% at 50% 45%, #000 20%, transparent 75%);
+      }
+
+      .nf-card {
+        display: grid;
+        justify-items: center;
+        gap: 22px;
+        max-width: 640px;
+      }
+
+      .nf .eyebrow {
+        margin: 0;
+      }
+
+      .nf .eyebrow::after {
+        display: none;
+      }
+
+      .nf-title {
+        font-size: clamp(2.1rem, 6vw, 3.6rem);
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+      }
+
+      .nf-title code {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        letter-spacing: -0.02em;
+      }
+
+      .nf-trace {
+        width: 100%;
+        margin: 0;
+        padding: 16px 18px;
+        overflow-x: auto;
+        border: 1px solid var(--code-border);
+        border-radius: var(--radius);
+        background: var(--code-bg);
+        color: #ff8b8b;
+        font-family: var(--font-mono);
+        font-size: 12.5px;
+        line-height: 1.7;
+        text-align: left;
+      }
+
+      .nf-trace span {
+        color: var(--code-muted);
+      }
+
+      .nf-lead {
+        max-width: 460px;
+        color: var(--text-2);
+      }
+
+      .nf .btn .i {
+        rotate: 180deg;
+      }
+
+      .nf .btn:hover .i {
+        translate: -3px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="nf">
+      <div class="nf-card">
+        <p class="eyebrow"><span class="eyebrow-index">404</span>Page not found</p>
+        <h1 class="nf-title">This page returned <code class="text-gradient">undefined</code>.</h1>
+        <pre class="nf-trace"><code>Uncaught TypeError: Cannot read properties of undefined (reading 'page')
+<span>    at Router.resolve (router.js:404:1)
+    at Visitor.followLink (browser:1:1)</span></code></pre>
+        <p class="nf-lead">The link may be broken, or this page never existed. Either way, it's not your fault — probably.</p>
+        <a class="btn btn-primary" href="/">
+          <svg class="i" aria-hidden="true" viewBox="0 0 448 512">
+            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+          </svg>
+          Take me home
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

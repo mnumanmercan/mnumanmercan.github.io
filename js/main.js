@@ -10,13 +10,12 @@
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const isMac = /Mac|iPhone|iPad/i.test(navigator.userAgentData?.platform || navigator.platform || "");
 
-  const SPRITE = "assets/icons/sprite.svg";
   const EMAIL = "numan.mercan24@gmail.com";
 
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
-  const icon = (name) =>
-    `<svg class="i" aria-hidden="true"><use href="${SPRITE}#${name}"></use></svg>`;
+  // Icons live in the inline <svg class="sprite"> at the end of <body>
+  const icon = (name) => `<svg class="i" aria-hidden="true"><use href="#i-${name}"></use></svg>`;
   const scrollBehavior = () => (reducedMotion.matches ? "auto" : "smooth");
 
   /* --- Toast ------------------------------------------------------------- */
@@ -72,9 +71,15 @@
     syncThemeUI();
   }
 
+  const themeQuips = {
+    dark: ["Welcome back to the dark side.", "moon"],
+    light: ["Light mode — a bold choice.", "sun"],
+  };
+
   // Circular reveal from the toggle (View Transitions API), instant fallback.
   function toggleTheme(origin) {
     const next = root.dataset.theme === "dark" ? "light" : "dark";
+    toast(...themeQuips[next]);
     if (!document.startViewTransition || reducedMotion.matches) {
       setTheme(next);
       return;
@@ -570,6 +575,30 @@
       { group: "Links", label: "LinkedIn", icon: "linkedin", keywords: "profile", run: () => openUrl(hrefOf("linkedin")) },
       { group: "Links", label: "LeetCode", icon: "leetcode", keywords: "algorithms problems", run: () => openUrl(hrefOf("leetcode")) },
       { group: "Links", label: "X / Twitter", icon: "x", keywords: "twitter social", run: () => openUrl(hrefOf("x")) },
+      { group: "Just for fun", label: "Brew coffee", icon: "coffee", keywords: "tea caffeine", run: () => toast("418 — I'm a teapot.", "coffee") },
+      {
+        group: "Just for fun",
+        label: "Tabs or spaces?",
+        icon: "keyboard",
+        keywords: "indent format holy war",
+        run: () => {
+          const answers = ["Spaces. Two of them.", "Tabs — and I'll die on this hill.", "Whatever Prettier says."];
+          toast(answers[Math.floor(Math.random() * answers.length)], "keyboard");
+        },
+      },
+      {
+        group: "Just for fun",
+        label: "sudo hire numan",
+        icon: "terminal",
+        keywords: "job recruit role offer",
+        run: () => {
+          toast("Permission granted. Opening your mail client…", "terminal");
+          setTimeout(() => {
+            location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("sudo hire numan")}`;
+          }, 900);
+        },
+      },
+      { group: "Just for fun", label: "Toggle retro terminal mode", icon: "gamepad", keywords: "konami cheat green crt", run: () => toggleRetro() },
     ];
 
     let results = [];
@@ -592,7 +621,8 @@
       });
 
       if (!results.length) {
-        list.innerHTML = '<li class="cmdk-empty" role="presentation">No results — try “projects” or “email”.</li>';
+        list.innerHTML =
+          '<li class="cmdk-empty" role="presentation">No results — even Stack Overflow couldn’t find that one.<br />Try “projects” or “email”.</li>';
         input.removeAttribute("aria-activedescendant");
         return;
       }
@@ -696,6 +726,70 @@
     });
   }
 
+  /* --- Section eyebrows: "$ command" typed out when the section appears ------------------------------------------ */
+  function initTerminalCommands() {
+    $$(".eyebrow-cmd-text").forEach((el) => el.style.setProperty("--n", String(el.textContent.length)));
+  }
+
+  /* --- Small jokes ------------------------------------------------------------------------------------------------- */
+  function toggleRetro() {
+    const on = root.classList.toggle("retro");
+    toast(on ? "Cheat code accepted — retro terminal mode on." : "Back to the future. Retro mode off.", "gamepad");
+  }
+
+  // "Catch Me If You Can": the card's icon dodges the pointer, like the original game — three times, then gives up
+  function initDodge() {
+    if (!finePointer.matches || reducedMotion.matches) return;
+    $$("[data-dodge]").forEach((el) => {
+      const card = el.closest(".p-card");
+      let dodges = 0;
+      el.addEventListener("pointerenter", () => {
+        if (dodges >= 3) {
+          el.dataset.tip = "Fine — you caught me.";
+          el.classList.add("is-caught");
+          return;
+        }
+        dodges += 1;
+        const x = 36 + Math.random() * 110;
+        const y = (Math.random() - 0.5) * 14;
+        el.style.translate = `${x.toFixed(0)}px ${y.toFixed(0)}px`;
+      });
+      card?.addEventListener("pointerleave", () => {
+        dodges = 0;
+        el.style.translate = "";
+        el.classList.remove("is-caught");
+        delete el.dataset.tip;
+      });
+    });
+  }
+
+  // Konami code (↑ ↑ ↓ ↓ ← → ← → B A) toggles retro terminal mode
+  function initKonami() {
+    const sequence = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+    let position = 0;
+    document.addEventListener("keydown", (event) => {
+      const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+      if (key === sequence[position]) position += 1;
+      else position = key === sequence[0] ? 1 : 0;
+      if (position === sequence.length) {
+        position = 0;
+        toggleRetro();
+      }
+    });
+  }
+
+  // A hello for whoever opens DevTools
+  function greetDevelopers() {
+    console.log("%c👋 Hey, fellow developer!", "font: 600 15px system-ui, sans-serif; color: #ff7a4d;");
+    console.log(
+      "%cNo framework, no build step — just HTML, CSS and vanilla JS.\n" +
+        "Source → https://github.com/mnumanmercan/mnumanmercan.github.io\n" +
+        `Hiring? → ${EMAIL}\n\n` +
+        "P.S. ↑ ↑ ↓ ↓ ← → ← → B A",
+      "font: 12px ui-monospace, Menlo, monospace; color: #9a9aa6; line-height: 1.6;"
+    );
+  }
+
   /* --- Misc ----------------------------------------------------------------------------------------------------- */
   function initYear() {
     $$("[data-year]").forEach((el) => {
@@ -716,5 +810,9 @@
   initPointerEffects();
   initCopy();
   initCommandPalette();
+  initTerminalCommands();
+  initDodge();
+  initKonami();
   initYear();
+  greetDevelopers();
 })();
