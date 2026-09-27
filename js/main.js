@@ -726,6 +726,66 @@
     });
   }
 
+  /* --- Name pronunciation: "Numan Mercan" said in Turkish ----------------------------------------------------------
+     1. A recording (button's data-audio), if one is set — same voice on every device.
+     2. Otherwise the device's Turkish speech voice. A male one is preferred when
+        present; voices don't expose gender, so known male voices are matched by
+        name (Windows "Tolga", Edge "Ahmet"). Macs/iPhones use the default "Yelda".
+     3. No Turkish voice at all → the button stays hidden (an English voice would
+        mispronounce the name, which is the whole problem). */
+  function initNamePronunciation() {
+    const button = $("#sayName");
+    if (!button) return;
+
+    const MALE_TURKISH = /\b(ahmet|tolga|male|erkek)\b/i;
+    const synth = "speechSynthesis" in window && typeof SpeechSynthesisUtterance !== "undefined" ? window.speechSynthesis : null;
+    const turkishVoice = () => {
+      const voices = synth?.getVoices().filter((voice) => voice.lang.toLowerCase().startsWith("tr")) || [];
+      return voices.find((voice) => MALE_TURKISH.test(voice.name)) || voices[0];
+    };
+
+    let recording = null;
+    const done = () => button.classList.remove("is-speaking");
+
+    const speak = () => {
+      const voice = turkishVoice();
+      if (!voice) return done();
+      synth.cancel();
+      const utterance = new SpeechSynthesisUtterance("Numan Mercan");
+      utterance.voice = voice;
+      utterance.lang = voice.lang;
+      utterance.rate = 0.8;
+      utterance.onend = utterance.onerror = done;
+      synth.speak(utterance);
+    };
+
+    const updateVisibility = () => {
+      button.hidden = !(recording || turkishVoice());
+    };
+
+    if (button.dataset.audio) {
+      recording = new Audio(button.dataset.audio);
+      recording.preload = "auto";
+      recording.addEventListener("ended", done);
+      recording.addEventListener("error", () => {
+        recording = null; // missing or unplayable file: fall back to the Turkish voice
+        updateVisibility();
+      });
+    }
+    updateVisibility();
+    synth?.addEventListener?.("voiceschanged", updateVisibility);
+
+    button.addEventListener("click", () => {
+      button.classList.add("is-speaking");
+      if (recording) {
+        recording.currentTime = 0;
+        recording.play().catch(speak);
+      } else {
+        speak();
+      }
+    });
+  }
+
   /* --- Section eyebrows: "$ command" typed out when the section appears ------------------------------------------ */
   function initTerminalCommands() {
     $$(".eyebrow-cmd-text").forEach((el) => el.style.setProperty("--n", String(el.textContent.length)));
@@ -811,6 +871,7 @@
   initCopy();
   initCommandPalette();
   initTerminalCommands();
+  initNamePronunciation();
   initDodge();
   initKonami();
   initYear();

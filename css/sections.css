@@ -68,6 +68,63 @@
   letter-spacing: -0.05em;
 }
 
+/* Pronunciation guide under the name */
+.name-say {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+
+.name-say-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.name-say-text {
+  color: var(--text-2);
+}
+
+.name-say-play {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text-2);
+  transition: color var(--dur-fast), border-color var(--dur-fast), scale var(--dur) var(--ease-spring);
+}
+
+.name-say-play .i {
+  width: 13px;
+  height: 13px;
+}
+
+.name-say-play:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+  scale: 1.08;
+}
+
+.name-say-play.is-speaking {
+  border-color: var(--accent);
+  color: var(--accent);
+  animation: speaking 0.9s var(--ease-in-out) infinite;
+}
+
+@keyframes speaking {
+  50% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 18%, transparent);
+  }
+}
+
 .hero-role {
   display: flex;
   align-items: center;
@@ -2313,7 +2370,99 @@
   color: var(--ok);
 }
 
+/* Email split button: mailto link + copy button side by side in one pill */
+.email-pill {
+  display: inline-flex;
+  max-width: 100%;
+  height: 52px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 10px 30px -12px color-mix(in srgb, var(--accent) 80%, transparent);
+  transition: translate var(--dur) var(--ease-out), box-shadow var(--dur);
+}
+
+.email-pill:hover {
+  translate: 0 -1px;
+  box-shadow: 0 16px 36px -12px color-mix(in srgb, var(--accent) 90%, transparent);
+}
+
+.email-pill-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 0 18px 0 24px;
+  border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+  font-weight: 500;
+}
+
+.email-pill-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.email-pill-copy {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 52px;
+  border-left: 1px solid color-mix(in srgb, var(--accent-ink) 22%, transparent);
+  border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+  transition: background-color var(--dur-fast);
+}
+
+.email-pill-copy:hover {
+  background: color-mix(in srgb, var(--accent-ink) 10%, transparent);
+}
+
+.email-pill .i {
+  width: 15px;
+  height: 15px;
+}
+
+.email-pill-copy .i {
+  grid-area: 1 / 1;
+}
+
+/* The check sits on the accent fill, so it keeps the ink colour */
+.email-pill .copy-btn.is-copied .copy-btn-done {
+  color: inherit;
+}
+
 @media (max-width: 520px) {
+  .email-pill {
+    width: 100%;
+  }
+
+  .email-pill-link {
+    flex: 1;
+    padding: 0 12px 0 16px;
+    font-size: 0.92rem;
+  }
+}
+
+/* Smallest phones: drop the mail glyph so the full address still fits */
+@media (max-width: 380px) {
+  .contact-card {
+    padding-inline: 12px;
+  }
+
+  .email-pill-link {
+    padding: 0 10px 0 14px;
+    font-size: 0.86rem;
+  }
+
+  .email-pill-link .i {
+    display: none;
+  }
+
+  .email-pill-copy {
+    width: 44px;
+  }
+
   .contact-actions .btn {
     width: 100%;
   }
